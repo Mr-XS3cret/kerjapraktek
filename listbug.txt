@@ -1,0 +1,37 @@
+LFI ada du website PKSI
+http://pksi.uin-suka.ac.id/downlot.php?file=..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2fetc%2fpasswd
+
+Page Admin tanpa session di semua template web
+a)	Tidak ada session di http://www.uin-suka.ac.id/index.php/access
+b)	Ada menu import file excel di http://www.uin-suka.ac.id/index.php/chapter
+c)	Editor tanpa session di http://www.uin-suka.ac.id/index.php/ckeditor
+
+
+Password yang sangat lemah
+
+user PKSI username :"abeng" password:"daru" 
+walaupun menggunakan md5(one way encription) tetap saja mudah di crack jika password itu begitu mudah.
+password user lain juga sama saja lemah.
+cari ssh brutforce dengan wordlist sesuai dengan hasil cat /etc/passwd membuahkan hasil.
+ternyata password ssh sama dengan password database yang jelas itu akan di tampilkan pada file koneksi.php, atau di database configuration CI.
+
+
+php.ini
+
+safe mode off
+exec semua jalan
+maka semuanya perintah sistem bisa di jalankan dengan termasuk connect back dan bind
+
+
+Database
+
+Sungguh hal yang kurang bijak jika database seluruh dosen dan karyawan UIN Sunan Kalijaga di letakkan dalam server web yang penuh celah seperti ini, dan itu terjadi di server UIN Sunan Kalijaga.
+Password root mysql jelas-jelas di tampilkan dalam file koneksi
+
+
+Susunan Directory
+susunan direktori atau file kurang begitu terstruktur, tidak layak jika folder-folder tersebut merupakan file-file instansi akademik
+
+Sistem Operasi dan Kernel
+Server pertama FreeBSD 8.0 dan server yang kedua FreeBSD 8.2 kedua duanya mempunyai bug yang cukup fatal.Segera di patch.
+

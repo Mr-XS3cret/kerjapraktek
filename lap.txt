@@ -1,0 +1,410 @@
+COVER 
+HALAMAN JUDUL  (lampiran 5) 
+LEMBAR PENGESAHAN (lampiran 6) 
+KATA PENGANTAR 
+DAFTAR ISI 
+DAFTAR GAMBAR 
+DAFTAR TABEL  
+BAB     I    PENDAHULUAN 
+1.1  Latar Belakang 
+
+Keamanan Website adalah hal yang sangat penting terutama untuk web yang isinya berhubungan dengan bisnis atau keuangan. saat ini indonesia menduduki peringkat 
+
+karena begitu besar tingkat kejahatan dunia maya di indonesia menjadikan indonesia menjadi negara yang rawan untuk melakukan transaksi online.Sehingga banyak perusahaan atau penyedia jasa asing enggan mengijinkan pengiriman barang ke indonesia. Dengan kondisi seperti ini jelas sangat merugikan bagi indonesia.
+
+TIdak hanya kasus pencurian kartu kredit indonesia juga dikenal sarang peretas website seperti kasus yang paling terakhir adalah situs polri 
+
+
+JAKARTA, KOMPAS.com — Menteri Komunikasi dan Informatika Tifatul Sembiring mengungkapkan, serangan terhadap situs pemerintah semakin gencar. Di Indonesia, situs Mabes Polri, Lemhannas, TNI, Pertamina, dan situs Kementerian Komunikasi dan Informatika pernah mendapat serangan hacker. Oleh karena itu, ia mengingatkan semua pihak agar meningkatkan kesadaran akan bahaya serangan di dunia maya.
+
+Menurut Tifatul, serangan terhadap situs resmi pemerintah juga pernah dialami situs Pemerintah Estonia, Iran, Swiss, dan Malaysia. Bahkan, lembaga sepertiCIA, Google, dan Fox News juga mendapat serangan.
+
+"Saya menyayangkan sikap-sikap yang terlalu mengabaikan bahaya serangan yang terjadi di dunia maya dan hal ini sudah merupakan masalah serius di seluruh dunia," ujar Tifatul dalam siaran pers yang diterima Kompas, Selasa (19/7/2011).
+
+Ia mengatakan, semua pihak harus menyadari dan siaga, serta membangun sistem pertahanan cyber. Ini tanggung jawab kita semua," ujarnya.
+
+Dalam penelusuran Kemkominfo, masih banyak lembaga dan kementerian negara yang belum membangun sistem keamanan komputer yang baik, bahkan  cenderung mengabaikan aspek keamanan sistem informasi ini.
+
+Tifatul juga mengingatkan bahwa serangan dunia maya dapat berskala yang lebih luas karena tanpa batas. Lemahnya pengamanan dapat mengakibatkan kejadian fatal. Di tingkat negara, bisa mengakibatkan lumpuhnya sistem komputer pemerintah dan lembaga penting lainnya.
+
+http://nasional.kompas.com/read/2011/07/19/13054473/Tifatul.Situs.Pemerintah.Gencar.Di.Hack
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Walaupun pemerintah indonesia sudah mengumumkan tentang undang-undang IT tetap saja mencari pelaku/penjahat dunia maya itu sulit di lakukan.
+
+
+JAKARTA, SELASA- Ulah hacker yang membajak situs Polri terancam pidanan ganda dengan ancaman hukuman maksimal 20 tahun penjara ditambah denda Rp 18.78 miliar. Hal tersebut disampaikan Ketua Harian Lembaga Kajian Hukum Teknologi dari Universitas Indonesia (UI) Edmon Makarim, Selasa (9/9).
+
+"Peng-hack-an tersebut harus dicermati sebagai rangkaian proses, mulai dari dilakukan hingga selesai. Jika ditelaah, bisa lebih dari satu tindak pidana (gabungan tindak pidana). Mulai dari tindakan akses ilegal, intersepsi ilegal, interferensi data, interferensi sistem, dan penyalahgunaan perangkat (misuse of device)," kata Edmon.
+
+Pelaku terancam melanggar UU Nomor 11 Tahun 2008 tentang Informasi dan Transaksi Elektronik (UU ITE). Dalam UU UU Nomor 11 Tahun 2008 menyatakan memberikan perlindungan terhadap informasi pribadi dan memberikan perlindungan yang lebih terhadap informasi yang menyangkut pelayanan publik.
+
+Berdasarkan informasi yang ada, kata Edmon, situs Polri yang di-hack adalah Traffic Management Center (TMC) yang berfungsi memberikan informasi terkini mengenai situasi lalu litas di Kota Jakarta. Hal ini mengakibatkan terganggunya sistem elektronik dan akibatnya sistem tersebut menjadi tidak bekerja sebagaimana seharusnya.
+
+Karena itu, pelaku dapat dikenakan Pasal 33 jo. Pasal 49 jo. Pasal 52 ayat (2) UU Nomor 11 Tahun 2008 tentang Informasi dan Transaksi Elektronik. "Pelaku terancam maksimal pidana pokok ditambah 1/3-nya. Yaitu penjara maksimal 10 tahun ditambah 1/3, jadi 13.33 tahun, serta denda Rp 10 miliar ditambah 1/3, jadi Rp 13.33 miliar," jelas Edmon.
+
+Edmon menambahkan, jika hack dilakukan oleh korporasi, hukumannya menjadi lebih berat. Berdasar Pasal 52 ayat (4), maka pidana pokok ditambah 1/3-nya. Dengan demikian, pelaku terancam penjara maksimal 17.78 tahun ditambah denda Rp 17.78 miliar.
+
+Selain itu, karena tujuan peng-hack-an adalah untuk memfitnah polisi, pelaku terancam melanggar Pasal 27 ayat (3) jo. 45 ayat (1) UU ITE tentang pendistribusian dan pentransmisian Informasi Elektronik yang memiliki muatan penghinaan dan pencemaran nama baik.Pelaku terancam pidana maksimal penjara 6 tahun dan denda maksimal Rp 1 miliar.
+
+"Artinya terdapat gabungan tindak pidana. Jika diakumulasi pelaku terancam pidana maksimal penjara 17.78 tahun ditambah 6 tahun dan denda Rp 17.78 miliar ditambah Rp 1 miliar. Jadi pelaku terancam maksimal penjara 23.78 tahun denda Rp 18.78 miliar," tutur Edmon.
+
+Namun, menurut Edmon, berdasar Pasal 12 Kitab Undang-Undang Hukum Pidana, pidana penjara tidak boleh lebih dari 20 tahun. Oleh karena itu, pelaku hanya dapat dikenai ancaman maksimal penjara 20 tahun dan denda Rp 18.78 miliar.
+
+Edmon menambahkan, ancaman pidana terhadap pelaku dapat diperberat karena melanggar pasal 30 UU ITE yaitu mengkases komputer dan Sistem Elektronik dengan cara yang dilarang. "Jika ini dapat dibuktikan, ancaman pidana terhadap Pelaku dapat diperberat. Menurut Edmon, setiap tindakan yang mengganggu atau membuat sistem menjadi tidak berfungsi adalah 
+suatu tindakan kejahatan.
+
+
+
+
+tidak hanya situs-situs pemerintah, situs-situs pendidikan pun juga terancam diserang oleh peretas website baik dari dalam negeri maupun luar negeri.
+
+seperti bisa kita lihat di situs zone-h.org yaitu situs untuk mensubmit hasil dari defece suatu website, di situs tersebut banyak sekali situs-situs pendidikan yang sudah pernah di deface oleh peretas termasuk situs uin sunan kalijaga yang mempunyai domain www.uin-suka.ac.id
+
+yang telah di deface oleh gorontalo defacer cr3w pada tanggal 2008-10-18 15:44:02
+dan sampai saat ini website uin masih mempunyai bug/celah yang sangat banyak.
+
+padahal sebuah situs akademik jelas harus memberikan informasi  yang valid, seandainya ada peretas yang punya maksud jahat bisa mengubah informasi yang ada dalah situs akademik, tentu ini akan sangat membahayakan.
+
+
+oleh karena itu saya mencoba untuk kerja praktek di PKSI. semoga bisa memberikan banyak masukan untuk keamanan website dan webserver di kampus uin sunan kalijaga.
+
+
+
+
+http://inet.detik.com/read/2012/03/25/091604/1875607/399/cyber-crimemidana-ti
+
+"Indonesia sempat menduduki posisi 5 besar cyber crime tertinggi di dunia, sejak 2011 lalu peringkat itu berangsur ditinggalkan," ujar anggota Komisi I DPR RI Roy Suryo saat berbincang dengan detiksurabaya, di Jatim Park II, Kota Batu, Sabtu (24/3/2012). 
+
+JAKARTA, KOMPAS.com - Ada kabar tak mengenakkan datang dari Symantec terkait hasil monitornya tentang aktivitas ancaman di Internet yang dipaparkan di hotel Grand Hyatt, Jakarta kemarin (29/4). Indonesia kini sudah termasuk dalam peringkat Top 10. Begitu tercantum dalam laporan bertajuk Internet Security Threat Report XV perioda Januari – Desember 2009.
+
+
+http://tekno.kompas.com/read/2010/04/30/10240384/Peringkat.Indonesia.di.CyberCrime
+.Naik
+
+
+
+
+
+
+
+
+1.2  Batasan Kerja Praktek 
+
+
+
+Batasan Kerja Praktek 
+Menguji keamanan webserver domain utama uin sunan kalijaga
+
+
+
+
+
+
+
+1.3  Tujuan Kerja Praktek 
+
+Mencari sebanyak mungkin bug/celah dalam website uin sunan kalijaga
+Berusaha untuk mendapatkan akses tertinggi yaitu root di server uin sunan kalijaga
+
+
+1.4  Manfaat Kerja Praktek 
+
+Laporan Kerja Praktek ini bisa digunakan sebagai acuan pembenahan celah/bug
+dalam laporan kerja praktek ini Saya juga memberikan solusi dan rekomendasi untuk menutup celah/bug yang ada
+Saya juga memberikan solusi patch baik patch disisi web application ataupun di sisi server.
+
+
+
+
+BAB   II   TEMPAT KERJA PRAKTEK 
+2.1 Gambaran Umum Instansi 
+
+
+
+Pusat Komputer dan Sistem Informasi Universitas Islam Negeri Sunan Kalijaga, sebagaimana tercantum dalam Keputusan Menteri Agama Republik Indonesia nomor 390 Tahun 2004 tanggal 3 September 2004 adalah gabungan dari dua lembaga sebelumnya yaitu Pusat Komputer dan Sistem Infromasi. Pusat Komputer (PUSKOM) adalah salah satu dari dua Unit Pelaksana Teknis atau unsur penunjang pada IAIN Sunan Kalijaga (Statuta IAIN Sunan Kalijaga Yogyakarta Tahun 2001 Pasal 121 ayat 3). Unit Pelaksana Teknis lainnya adalah Perpustakaan. Sistem Infromasi, semula merupakan sub bagian dari bagian Perencanaan dan Sistem Informasi (PSI).
+
+Secara yuridis, Pusat Komputer sudah ada sejak diberlakukannya Keputusan Menteri Agama RI nomor 385 Tahun 1993 tanggal 29 Desember 1993, tentang Organisasi dan Tata Kerja IAIN Sunan Kalijaga Yogyakarta. Pasal 60 memuat tentang Pusat Komputer yang menjelaskan bahawa Pusat Komputer adalah unsur penunjang IAIN Sunan Kalijaga di bidang komputer (pasal 60 ayat 1). Pusat Komputer dipimpin oleh seorang kepala, yang ditunjuk di antara pranata komputer senior di lingkungan Pusat Komputer yang bertanggungjawab kepada Rektor dan pembinaannya dilakukan oleh Pembantu Rentor I (pasal 60 ayat 2).
+
+Pusat Komputer sebagai unit pelasana teknis atau unsur penunjang di IAIN Sunan Kalijaga dimuat juga dalam Keputusan Menteri Agama RI Nomor 399 Tahun 1993 tentang statuta Institut Agama Islam Negeri Sunan Kalijaga Yogyakarta. 
+
+Dalam upaya meningkatkan kualitas pelayanan administrasi di IAIN Sunan Kalijaga Yogyakarta diperlukan adanya sarana pendukung berupa pusat komputer yang berkemampuan tinggi, teruji tingkat validitasnya, efisien, efektif dan didukung oleh keakuratan data, kecepatan pengolahan serta keamanan yang terjamin, maka Rektor, Prof. Dr. H.M. Atho Mudzhar, membentuk tim pelaksana penyiapan Program Pusat Komputer IAIN Sunan Kalijaga Yogyakarta.
+
+
+sumber: http://pksi.uin-suka.ac.id/statis-4-tentangpksi.html
+
+
+
+
+
+2.2 Ruang Ligkup Kerja Praktek. 
+
+
+Staf pada UPT. PKSI terdiri atas:
+
+1. Kepala : Agung Fatwanto, S.Si., M.Kom., Ph.D
+
+2. Divisi:
+
+Divisi Infrastruktur: Hendra Hidayat, S.Kom.
+Anggota:
+Rahmadhan Gatra, ST
+Divisi Pengembangan Sistem Informasi: Mustaqim, MT.
+Anggota:
+Salim Athari, S.Kom
+Adi Wirawan, S.Kom
+Prihanto Dwi Rahmanto, S.Kom.
+Divisi SDM: Ratna Windah Lestari, SIP 
+Anggota:
+Rohyati, S.Ag.
+
+Divisi Media: M. Arif Wibisono
+Anggota:
+Daru Prasetyawan, ST
+
+Divisi Layanan IT: Siti Mutmainah, S.Kom.
+Anggota:
+Novi Praci Putri
+Mellyana Cahya Ningrum
+  3. Bendahara: Ratna Windah Lestari, SIP
+
+
+
+
+
+
+
+BAB   III  HASIL DAN PEMBAHASAN 
+
+
+
+3.1 Analisis  
+
+kondisi kerja instansi
+ 
+Kondisi tempat kerja instansi yaitu PKSI Uin sunan kalijaga cukup bagus. Lantai 1 PKSI adalah tempat layanan dan tempat admin website bekerja yaitu mas hendra dan juga tempat semua server kampus UIN SUnan Kalijaga. Di Awal saya Kerja Praktek saya biasanya bekerja di Lantai satu bersama dua teman saya yang sedang KP juga. Saat ini di Lantai satu memang penuh dengan anak-anak SMK yang sedang PKL jadi memang agak penuh.
+Untuk Lantai II adalah ruang multimedia, saya malah lebih kerasan di lantai II ini, karena memang enak, nyaman dan penuh dengan mac. Lantai III dibagi menjadi dua ruangan, ruangan yang pertama dipakai oleh banyak pegawai PKSI dan sering di pakai untuk seminar juga, untuk ruang yang kedua biasanya di pakai untuk rapat.
+Untuk kondisi tempat kerja saya rasa bagus, karena memang dari segi komputer yang digunakan cukup update.
+
+
+
+kondisi SDM,
+
+Kondisi SDM di PKSI menurut saya sedikit memperihatinkan, bukan dari kemampuan pagawai PKSI tapi dari jumlah pegawai PKSI yang menurut saya terlalu sedikit. Dengan SDM yang sangat terbatas PKSI harus melayani semua urusan di kampus UIN sunan kalijaga yang berhubungan dengan layanan IT.
+Mungkin juga karena hal ini sehingga server web di UIN tidak begitu terpelihara. Tapi untuk kinerja SDM di PKSI saya tahu mereka sudah bekerja keras dan maksimal.
+ 
+
+
+3.2 Kegiatan KP
+
+
+
+Footprinting
+
+server ip sekarang 10.0.8.120 (local)
+
+-reverse IP domain check
+
+Analisis Website
+
+website pksi mengunakan cms lokomedia yang rawan akan bug/celah
+Website UIN saat ini beserta semua website fakultas sekarang menggunakan template yang sama dengan menggunakan Framework codeigniter.
+
+
+
+
+
+
+
+
+
+
+Scanning Fingerprinting
+
+finding bug website application
+
+sqli, xss, lfi, rfi
+
+
+Analisis server web
+
+meliputi analisis 
+
+sistem operasi yang digunakan
+service apa saja yang dijalankan
+webserver yang digunakan
+php yang digunakan
+mysql yang digunakan
+
+sbb
+
+FreeBSD pempek.uin-suka.ac.id 8.2-RELEASE FreeBSD 8.2-RELEASE #0: Fri Feb 18 02:24:46 UTC 2011 root@almeida.cse.buffalo.edu:/usr/obj/usr/src/sys/GENERIC i386
+Apache/2.2.17 (FreeBSD) mod_ssl/2.2.17 OpenSSL/0.9.8q DAV/2 PHP/5.3.5 with Suhosin-Patch
+webmaster@uin-suka.ac.id
+
+core prefork http_core mod_so mod_authn_file mod_authn_dbm mod_authn_anon mod_authn_default mod_authn_alias mod_authz_host mod_authz_groupfile mod_authz_user mod_authz_dbm mod_authz_owner mod_authz_default mod_auth_basic mod_auth_digest mod_file_cache mod_cache mod_disk_cache mod_dumpio mod_reqtimeout mod_include mod_filter mod_charset_lite mod_deflate mod_log_config mod_logio mod_env mod_mime_magic mod_cern_meta mod_expires mod_headers mod_usertrack mod_unique_id mod_setenvif mod_version mod_ssl mod_mime mod_dav mod_status mod_autoindex mod_asis mod_info mod_suexec mod_cgi mod_cgid mod_dav_fs mod_vhost_alias mod_negotiation mod_dir mod_imagemap mod_actions mod_speling mod_userdir mod_alias mod_rewrite mod_php5
+
+safemode OFF 
+
+hash support	enabled
+Hashing Engines	
+md2 md4 md5 sha1 sha224 sha256 sha384 sha512 ripemd128 ripemd160 ripemd256 ripemd320 whirlpool tiger128,3 tiger160,3 tiger192,3 tiger128,4 tiger160,4 tiger192,4 snefru snefru256 gost adler32 crc32 crc32b salsa10 salsa20 haval128,3 haval160,3 haval192,3 haval224,3 haval256,3 haval128,4 haval160,4 haval192,4 haval224,4 haval256,4 haval128,5 haval160,5 haval192,5 haval224,5 haval256,5
+
+
+mysqlnd 5.0.7-dev - 091210 - $Revision: 304625 $
+OpenSSL support	enabled
+OpenSSL Library Version	OpenSSL 0.9.8q 2 Dec 2010
+
+
+
+-port scanning
+-service scanning
+
+
+
+
+
+
+Enumeration
+
+list user
+bug lfi on pksi
+
+poorly protected 
+
+session tidak di lindungi
+
+
+
+
+
+
+Gaining Access
+
+masuk page admin
+
+dengan password yang begitu lemah
+
+upload phpshell, bind, backconnect
+
+
+
+
+Privilege Escalation
+
+
+password cracking tidak saya lakukan
+akan memakan waktu yang lama
+manfaatkan kelemahan manusia
+finding ecploit
+
+ngechroot
+
+
+
+
+
+Pilfering
+
+akses dengan user legal biar tidak di ketahui oleh admin yang sebenarnya,
+
+
+
+
+
+
+Covering Tracks
+delete log 
+
+/var/log/apache2/access.log
+
+
+
+
+
+Backdooring
+
+kasih rsa, ssh door bagus
+cron
+
+
+
+
+
+denial of service
+
+mutung
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+3.3 Rekomendasi
+
+
+
+ 
+BAB   IV   PENUTUP 
+
+  4.1 Kesimpulan 
+   
+1.Saat ini website dan server web uin sunan kalijaga masih mempunyai bug/celah yang sangat banyak (seperti yang sudah saya utarakan di bab Pembahasan) solusi yang harus di lakukan adalah membersihkan seluruh file yang mencurigakan (phpshell) kemudian menutup semua celah sesuai dengan yang saya rekomendasikan diatas dan mengepatch/menambal bug yang ada dalam sistem operasi yang digunakan.
+
+
+2. server web UIN saat ini menggunakan sistem operasi FreeBSD 8 di akhir maret 2012 di ganti server dengansistem operasi FreeBSD8.2 yang keduanya ternyata mempunya bug/celah yang bisa menjadikan hacker/peretas mendapatkan akses tertinggi yaitu root, sebaikanya segera di patch, atau mengambil jalan aman dengan menggunakan sistem operasi yang stabil dan tidak mengandung bug/celah.
+
+3.Semua celah itu berbahaya, baik itu celah di website yang timbul dari kesalahan coding, kesalahan atau ketidakpahaman dalam konfigurasi jaringan atau mungkin sistem operasi/aplikasi yang di gunakan mengandung bug/celah oleh karena itu sebagai seorang admin server harus mengantisipasi hal ini.
+
+4.Untuk meminimalisir kesalahan coding yang bisa menimbulkan bug/celah seorang admin web dan admin server seharusnya melakukan testing dulu di komputer local kemudian ketika memang sudah bebas dari celah/bug website bisa di onlinekan
+
+
+5.Tidak ada sistem yang benar-benar aman dan sempurna, sebagai seorang admin sebuah server hanya bisa mengupayakan untuk mengamankan server dengan semaksimal mungkin dan mengurangi risiko-risiko terbentuknya celah/bug yang bisa dimasuki oleh hacker.
+
+
+
+
+
+
+LAMPIRAN
+ 
+
+lampiran gambar, lampiran patch dan lampiran link video youtube..

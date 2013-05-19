@@ -1,0 +1,283 @@
+#tp-cssmenu {
+	margin: 0; /* all lists */
+	padding: 0;
+	float: left;
+}
+#tp-cssmenu ul {
+	margin: 0; /* all lists */
+	padding: 0;
+}
+#tp-cssmenu li {
+	margin: 0; /* all list items */
+	padding: 0 0 0 0;
+	float: left;
+	display: block;
+	background: none;
+	cursor: pointer;
+	position: relative;
+	z-index:100000;
+}
+#tp-cssmenu li ul {
+	width: 14em;
+	position: absolute; /* second-level lists */
+	z-index: 9999999;
+	height: auto;
+	/* width: 15.9em; */
+	padding:0 0 0 0;
+	border-right:1px solid #000;
+	border-bottom:1px solid #000;
+	border-left:1px solid #000;
+}
+#tp-cssmenu ul ul {
+	margin: -3.2em 0 0 14em; /* third-and-above-level lists */
+	padding-bottom:0;
+	background-image:none;
+	padding:0 0 0 0;
+}
+#tp-cssmenu li li {
+	padding: 0 0 0 0;
+	margin: 0;
+	width: 14em;
+		border-bottom:1px solid #111;
+
+}
+#tp-cssmenu ul a {
+}
+#tp-cssmenu li ul {
+	left: -999em; /* using left instead of display to hide menus because display: none isn't read by screen readers */
+}
+#tp-cssmenu li:hover ul ul, #tp-cssmenu li:hover ul ul ul, #tp-cssmenu li:hover ul ul ul ul,
+#tp-cssmenu li.sfhover ul ul, #tp-cssmenu li.havechildsfhover ul ul, #tp-cssmenu li.havechild-activesfhover ul ul, #tp-cssmenu li.activesfhover ul ul,
+#tp-cssmenu li.sfhover ul ul ul, #tp-cssmenu li.havechildsfhover ul ul ul, #tp-cssmenu li.havechild-activesfhover ul ul ul, #tp-cssmenu li.activesfhover ul ul ul,
+#tp-cssmenu li.sfhover ul ul ul ul, #tp-cssmenu li.havechildsfhover ul ul ul ul, #tp-cssmenu li.havechild-activesfhover ul ul ul ul, #tp-cssmenu li.activesfhover ul ul ul ul
+ {
+	left: -999em;
+}
+/* This "unhides" the sub-menus (left: -999em is what hides them) */
+#tp-cssmenu li:hover ul, #tp-cssmenu li li:hover ul, #tp-cssmenu li li li:hover ul,  #tp-cssmenu li li li li:hover ul,
+#tp-cssmenu li.sfhover ul, #tp-cssmenu li.havechildsfhover ul, #tp-cssmenu li.havechild-activesfhover ul, #tp-cssmenu li.activesfhover ul,
+#tp-cssmenu li li.sfhover ul, #tp-cssmenu li li.havesubchildsfhover ul, #tp-cssmenu li li.havesubchild-activesfhover ul, #tp-cssmenu li li.activesfhover ul,
+#tp-cssmenu li li li.sfhover ul, #tp-cssmenu li li li.havesubchildsfhover ul, #tp-cssmenu li li li.havesubchild-activesfhover ul, #tp-cssmenu li li li.activesfhover ul,
+#tp-cssmenu li li li li.sfhover ul, #tp-cssmenu li li li li.havesubchildsfhover ul, #tp-cssmenu li li li li.havesubchild-activesfhover ul, #tp-cssmenu li li li li.activesfhover ul {
+	left: auto;
+}
+/* STYLING THE MENU
+-----------------------------------*/
+/* 1st level */
+#tp-cssmenu li a {
+	margin: 0;
+	padding: 0 15px 0 15px;
+	display: block;
+	font-weight:700;
+	text-decoration: none;
+	text-align:left;
+	font-family:arial;
+	font-size:16px;
+	height:68px;
+	line-height:64px;
+	color:#fff;
+}
+
+#tp-cssmenu li li a {
+	letter-spacing:0;
+	line-height:34px;
+
+	
+}
+#tp-cssmenu li ul li a {
+	height: auto;
+	line-height: 34px;
+	font-size:100%;
+	font-weight:400;
+} 
+#tp-cssmenu li ul li li a {
+	line-height: 34px;
+	padding-left:15px;
+	font-weight:400;
+}
+#tp-cssmenu li li a {
+	border-right:none;
+	color:#fff;
+	font-weight:700;
+}
+#tp-cssmenu li a:hover,
+#tp-cssmenu li a:active,
+#tp-cssmenu li a:focus,
+#tp-cssmenu li li a:hover {
+	color: #E6EDF3;
+}
+#tp-cssmenu li.active a,
+#tp-cssmenu li.active a:hover,
+#tp-cssmenu li a.active:active,
+#tp-cssmenu li a.active:focus {
+	color: #ffffff;}
+#tp-cssmenu li li a:hover,
+#tp-cssmenu li li a:active,
+#tp-cssmenu li li a:focus,
+#tp-cssmenu li li li a:hover,
+#tp-cssmenu li li a.active,
+#tp-cssmenu li li a.active:hover,
+#tp-cssmenu li li a.active:active,
+#tp-cssmenu li li a.active:focus {
+	color: #fff;
+}
+#tp-cssmenu li.fulltpmenuimages img,
+#tp-cssmenu li.fulltpmenuimagessfhover img,
+#tp-cssmenu li a.fulltpmenuimages, 
+#tp-cssmenu li.fulltpmenuimages a,
+#tp-cssmenu li.fulltpmenuimagessfhover a,
+#tp-cssmenu li.tpmenutextandimage  a,
+#tp-cssmenu li.tpmenutextandimagesfhover  a
+{
+	padding:0 10px 0 10px;
+	margin:0;
+	line-height:40px;
+	border-right:none;
+}
+#tp-cssmenu li.tpmenutextandimage li  a {
+	padding-left:10px;
+	padding-right:0;
+	color:#fff;}
+#tp-cssmenu li.tpmenutextandimagesfhover  li a:hover {
+	padding-left:10px;
+	padding-right:0;
+	color:#fff;
+}
+#tp-cssmenu li.tpmenutextandimage li,
+#tp-cssmenu li.tpmenutextandimagesfhover li {
+padding:0;
+	}
+#tp-cssmenu li.tpmenutextandimage img,
+#tp-cssmenu li.tpmenutextandimagesfhover img {
+	vertical-align:middle;
+}
+#tp-cssmenu li.fulltpmenuimages ul li a,
+#tp-cssmenu li.fulltpmenuimagessfhover ul li a {
+	padding-left:10px;}
+#tp-cssmenu li.fulltpmenuimages a {
+	padding:0;
+	margin:0;}
+.tpmenutextandimage img,
+.tpmenutextandimagesfhover img{
+	display: block;
+	padding-top:10px;}
+.fulltpmenuimageschild {}
+.tpmenutextandimagechild {}
+#tp-cssmenu li a.fulltpmenuimages {
+	padding:0;
+	margin:0;}
+#tp-cssmenu li ul li.active {}
+#tp-cssmenu li.parent a{}
+#tp-cssmenu li.parent a:active {
+	color:#fff;
+	}
+#tp-cssmenu li ul li.parent a.haschild ,
+#tp-cssmenu li ul li.parentsfhover a.haschild,
+#tp-cssmenu li ul li.parent li.parent a.haschild ,
+#tp-cssmenu li ul li.parentsfhover li.parentsfhover li a.haschild,
+#tp-cssmenu li ul li.parent li.parent li.parent a.haschild ,
+#tp-cssmenu li ul li.parentsfhover li.parentsfhover li.parentsfhover li a.haschild{
+	background: url(../images/tpmenuright.gif) right top no-repeat;
+	}
+#tp-cssmenu li.parentsfhover li,
+#tp-cssmenu li.active  li.parentsfhover,
+#tp-cssmenu li.parent li ,
+#tp-cssmenu li.active li ,
+#tp-cssmenu li.active li li {
+
+	background: #000000 ;
+	border-top:1px solid #000;
+	height:34px;
+	line-height:34px;
+
+	
+	}
+#tp-cssmenu li ul li.parentsfhover,
+#tp-cssmenu li.active ul li.parentsfhover ,
+#tp-cssmenu li.parent li.parent:hover  {
+	background: #252525 ;
+	
+}
+#tp-cssmenu li{
+
+	}
+#tp-cssmenu li li * {
+	background-image:none;
+	}
+
+#tp-cssmenu li.active {
+	}	
+#tp-cssmenu li li.active {
+}
+#tp-cssmenu li.activesfhover:hover {
+
+	color:#fff;}
+#tp-cssmenu li.activesfhover:hover span,
+#tp-cssmenu li.activesfhover:hover a {
+	color:#fff;}
+#tp-cssmenu li li.activesfhover a {
+	background:none;} 
+#tp-cssmenu li.active li a {
+	line-height: 34px;
+	background:none;}
+#tp-cssmenu li:hover,
+#tp-cssmenu li.sfhover,
+#tp-cssmenu li.havechildsfhover,
+#tp-cssmenu li.havechild-activesfhover {
+	color: #877D7D;
+}
+#tp-cssmenu li:hover a {
+}
+/* 2nd level and above */
+#tp-cssmenu li ul a {
+	margin: 0;
+		font-size:13px;
+	
+
+}
+#tp-cssmenu li.havesubchild,
+#tp-cssmenu li.havesubchild-active {
+}
+#tp-cssmenu li ul a:hover,
+#tp-cssmenu li ul a:active,
+#tp-cssmenu li ul a:focus,
+#tp-cssmenu li.parent li ul a:hover,
+#tp-cssmenu li.parent li ul a:active,
+#tp-cssmenu li.parent li ul a:focus {
+	color: #fff;
+	background: #252525;
+}
+
+#tp-cssmenu li.active ul li a:hover
+{	color:#fff;
+}
+#tp-cssmenu li.active a ,
+#tp-cssmenu li.activesfhover a{
+	background:url(../images/style1/bgactivemenu_a.png) repeat-x top right ;
+	line-height:64px;
+	height:68px;
+	display: block;
+	color:#ffffff;
+}
+.tpsubtitle {
+	display:block;
+	font-size:9px;
+	margin:0;
+	padding:0;
+	font-weight:400;
+	height:11px;
+	line-height:9px;
+	margin-top:-22px;
+	color:#fff;
+	text-transform:uppercase;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	letter-spacing:-1px;
+
+}
+#tp-cssmenu li.active li a {
+	height:34px;
+	line-height:34px;
+
+	}
+#tp-cssmenu li.active span.tpsubtitle {
+	color:#fff;}

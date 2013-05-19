@@ -1,0 +1,40 @@
+Gambar 1.1. Website UIN Sunan Kalijaga ketika di-deface oleh Gorontalo Defacer Crew	2
+
+Gambar 3.1. Reverse IP Domain Check domain pksi.uin-suka.ac.id	14
+
+Gambar 3.2. Download file passwd dari server UIN Sunan Kalijaga	16
+
+Gambar 3.3. Masuk page admin tanpa menggunakan session di website UIN Sunan Kalijaga	19
+
+Gambar 3.4. Scanning Fingerprinting menggunakan php script.	21
+
+Gambar 3.5. Port scanning server web UIN Sunan Kalijaga menggunakan RADMIN tool.	24
+
+Gambar 3.6. Tampilan PHP Shell di server lama UIN Sunan Kalijaga pentesting I (FreeBSD 8.0)	25
+
+Gambar 3.7. Jendela login webshell  di server UIN Sunan Kalijaga pentesting II (FreeBSD 8.2) 26
+
+Gambar 3.8. Web Shell di server web UIN Sunan Kalijaga pentesting II (FreeBSD 8.2)		26
+
+Gambar 3.9. Back connect menggunakan netcat pentesting I		28
+
+Gambar 3.10. Menjalankan script back connect di server web UIN Sunan Kalijaga pentesting I		29
+
+Gambar 3.11. Berhasil mendapatkan akses shell menggunakan back connect pentesting I		30
+
+Gambar 2.12. Bind Connection menggunakan netcat pentesting II	31
+
+Gambar 3.13. Login ssh menggunakan user dan password yang didapatkan dari bruteforce	32
+
+Gambar 3.14. Berhasil mendapatkan akses root di server menggunakan local root exploit	35
+
+Gambar 3.15. Gagal local root exploit pada FreeBSD 8.2 pentesting II	36
+
+Gambar 3.16. Id_rsa_pub attacker yang ada di home root server UIN Sunan Kalijaga (pentesting I)	39
+
+Gambar 3.17. Login ssh user root di server web UIN Sunan Kalijaga (pentesting I) 	39
+
+Gambar 3.18. Berhasil login user root di server web UIN Sunan Kalijaga menggunkan RSA key	40
+
+Gambar 3.19. Whoami, menunjukkan bahwa web123 adalah user root	40
+

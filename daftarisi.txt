@@ -1,0 +1,65 @@
+HALAMAN JUDUL  (lampiran 5) 
+LEMBAR PENGESAHAN (lampiran 6) 
+KATA PENGANTAR 
+DAFTAR ISI 
+DAFTAR GAMBAR 
+DAFTAR TABEL 
+
+
+BAB     I    PENDAHULUAN
+
+1.1	Latar Belakang
+1.2	Batasan Kerja Praktek
+1.3	Tujuan Kerja Praktek
+1.4	Manfaat Kerja Praktek 
+
+
+BAB   II   TEMPAT KERJA PRAKTEK
+
+2.1	Gambaran Umum Instansi 
+	2.1.1	Visi PKSI UIN Sunan Kalijaga Yogyakarta
+	2.1.2	Strategi PKSI UIN Sunan Kalijaga Yogyakarta
+	2.1.3	Prinsip PKSI UIN Sunan Kalijaga Yogyakarta
+2.2	Ruang Ligkup Kerja Praktek
+
+
+BAB   III  HASIL DAN PEMBAHASAN
+3.1	Analisis 
+	3.1.1	Kondisi Tempat Kerja
+	3.1.2	Kondisi SDM di PKSI UIN Sunan Kalijaga
+3.2	Kegiatan KP
+	3.2.1	Footprinting
+		3.2.1.1	Check IP server target.
+		3.2.1.2	Reverse IP domain check
+			3.2.1.2.1 Rekomendasi Footprinting
+		3.2.1.3	Analisis Keamanan Website (web application)
+			3.2.1.3.1 LFI di Website PKSI UIN Sunan Kalijaga
+			3.2.1.3.2	Multi Bug di Semua Website
+				3.2.1.3.2.1 Rekomendasi
+	3.2.2	Scanning Fingerprinting
+		3.2.2.1 Identifikasi Server
+		3.2.2.2	Port scanning 
+	3.2.3	Enumeration dan Gaining Access
+		3.2.3.1 Rekomendasi
+	3.2.4	Privilege Escalation
+	3.2.5	Pilfering
+	3.2.6	Backdooring
+		3.2.6.1 Rekomendasi
+	3.2.7	Covering Tracks
+		3.2.7.1 Rekomendasi
+	3.2.8	Denial Of Service
+
+
+BAB   IV   PENUTUP
+
+4.1 Kesimpulan 
+4.2	Saran
+
+LAMPIRAN
+Lampiran 1 Script downlot.php yang ada di website PKSI UIN Sunan Kalijaga
+Lampiran 2 Local root exploit FreeBSD mbufs() sendfile cache poisoning local privilege escalation
+Lampiran 3 File local root ProFTPd
+Lampiran 4 Table ringkasan bug list
+
+
+

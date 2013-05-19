@@ -1,0 +1,10 @@
+Sherman, Chris. "Everything You Ever Wanted to Know About URL." SearchEngineWatch. Ed. Danny Sullivan. 
+24 Aug. 2004. 4 Sept. 2004 http://searchenginewatch.com/searchday/article.php/3398511.
+
+
+lampiran gambar, lampiran patch dan lampiran link video youtube..
+http://www.moneyma.com/tech-news/internet/total-number-of-websites-in-this-world/
+http://packetstormsecurity.org/filedesc/freebsd-cache.c.html
+patch
+http://security.freebsd.org/advisories/FreeBSD-SA-10:07.mbuf.asc
+

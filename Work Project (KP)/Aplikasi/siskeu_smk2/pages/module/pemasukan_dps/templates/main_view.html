@@ -1,0 +1,30 @@
+<!-- patTemplate:tmpl name="article" -->
+<h3>{HEADLINE}</h3>
+<div id="loading" style="display:none;"><img src="../images/loading.gif" alt="loading..." /></div>
+<div id="result" style="display:none;"></div>
+<form id="myForm" method="POST" action="{URL_PROSES}">
+<table border="0" cellspacing="0">
+	<tr class='table-common-even'>
+		<td>NIS</td><td>:</td><td><input type="text" name="nis" maxlength="8" size="15"></input></td><td width=53%></td>
+	</tr>
+	<tr>
+		<td>Nominal</td><td>:</td><td><input type="text" name="jumlah" maxlength="" size="25"></input></td><td width=53%></td></th>
+	</tr>
+	<tr class='table-common-even'>
+		<td>Jenis Pembayaran</td><td>:</td>
+		<td>
+			<!-- patTemplate:tmpl name="data" -->
+			<input type='hidden' name='dps' value="{ID}"></input>{NAMA}<br />
+			<!-- /patTemplate:tmpl -->
+		</td><td width=53%></td></th>
+	</tr>
+	<tr><td colspan=4><hr /></td></tr>
+	<tr class='table-common-even'>
+		<th colspan=3>
+			<input type="Submit" value="Submit"></input>
+			<input type="Reset" value="Reset"></input>
+		</th><td width=53%></td></th>
+	</tr>
+</table>
+</form>
+<!-- /patTemplate:tmpl -->

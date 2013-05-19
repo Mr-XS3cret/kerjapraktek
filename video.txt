@@ -1,0 +1,6 @@
+http://youtu.be/S3rjDCqhq4o Back Connect dengan nc di Server UIN Sunan Kalijaga 
+http://youtu.be/4-WsU0yvyXs Explorasi Server UIN Sunan Kalijaga (KP 2012) 
+http://youtu.be/ZzkCxzWsfwY access root FreeBSD 8 Server UIN Sunan Kalijaga dengan public Key (KP 2012) 
+http://youtu.be/wdd5ltqeajs Rooting Local Exploit FreeBSD 8 Server UIN Sunan Kalijaga Yogyakarta (KP 2012) 
+
+http://youtu.be/3e20Uv2P7_s Backdoor di Server UIN Sunan Kalijaga 

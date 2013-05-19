@@ -1,0 +1,21 @@
+<!-- patTemplate:tmpl name="article" -->
+<h3>{HEADLINE}</h3>
+<table class="table-common">
+	<tr>
+		<th>No.</th>
+		<th>Tanggal Setoran</th>
+		<th>Total Disetorkan</th>
+		<th>Keterangan</th>
+		<th>Ubah</th>
+	</tr>
+	<!-- patTemplate:tmpl name="data" -->
+	<tr class={CLASS_NAME}>
+		<td>{NO}</td>
+		<td>{TANGGAL}</td>
+		<td>{TOTAL}</td>
+		<td>{KETERANGAN}</td>
+		<td><a href='{URL_EDIT}' title="Ubah Data"><img src="../images/button-edit.gif" alt="Ubah"/></a></td>
+	</tr>
+	<!-- /patTemplate:tmpl -->
+</table>
+<!-- /patTemplate:tmpl -->

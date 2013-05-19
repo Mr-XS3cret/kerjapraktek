@@ -1,0 +1,84 @@
+table{
+	font: 11px/20px Verdana, sans-serif; 
+	border: 1px solid #99ff99;
+	background-color:#ffffcc;
+}
+
+.table-common {
+	clear: both;
+	font-family: Arial, Tahoma, sans-serif; 
+	font-size: 0.9em;
+	border-collapse: collapse;
+	margin: 0px 0px 0px 1px;
+	border: 1px solid #AFBDCF;
+}
+
+.table-common th {
+	color: #ffffff;
+	font-size: 1.1em;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 0.2em 0.4em;
+	border: 1px solid #AFBDCF;
+	border-top: 1px solid #AFBDCF;
+	border-bottom: 1px solid #AFBDCF;
+	background-color: #0473b8;
+	background-repeat: repeat-x;
+	margin: 0px;
+	border-collapse: separate;
+}
+
+.table-common td {
+	color: #333333;
+	padding: 0.2em 0.4em;
+	vertical-align: top;
+	border: 1px solid #AFBDCF;	
+	border-top: none;
+	border-collapse: collapse;
+	background-color: #FFFFFF;
+	white-space: normal;
+}
+
+.table-common a {
+	color: #A0410D;
+	text-decoration: none;
+	display: block;
+}
+
+.table-common a:hover {
+	color: #B94505;
+	text-decoration: underline;
+}
+
+.table-common a img{
+	border: none; 
+}
+
+.table-common-even {
+	background-color:#ffff99 !important;
+}
+
+.table-common-even td {
+	font-size:12px;
+	color:#000;
+}
+
+.table-common-home {
+   margin: 5px 5px 5px 5px;
+   border: none;
+   background:transparent;
+}
+
+.table-common-home td{
+   border:none;
+}
+
+.table-common-home a img{
+   border:1px solid #ffffff;
+   padding: 5px 5px 5px 5px;
+}
+
+.table-common-home img:hover{
+   border: 1px solid #0473b8;
+}
+

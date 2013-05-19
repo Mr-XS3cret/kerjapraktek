@@ -1,0 +1,99 @@
+
+server 1 172.16.4.201
+server 2 10.0.8.120
+
+access bisa ngerubah permision ...wah parah
+ridwan ridwan page uin
+walau sudah pindah ke server lain...
+
+http://pksi.uin-suka.ac.id/downlot.php?file=..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2fetc%2fpasswd
+
+
+WEB SERVER UIN SUNAN KALIJAGA
+
+
+WEB APP
+
+LFI bug on PKSI ss
+Masih banyak SQLI juga
+
+web uin utama..sessionnya parah
+http://www.uin-suka.ac.id/index.php/access
+langsung bisa masuk ke page admin
+
+PASSWORD YANG LEMAH
+
+password week on PKSI abeng daru
+password user lain juga sama saja lemah.
+password ssh sama dengan bassword koneksi on iks, fishum dsb kalo bisa tidak
+cari ssh brutforce dengan wordlist sesuai dengan hasil cat /etc/passwd
+
+
+PHP.INI DAN KONFIGURASI SISTEM
+
+safe mode off
+exec all jalan
+maka semuanya perintah sistem bisa di jalankan dengan php.
+bisa connect back dan bind
+
+
+DATABASE
+
+db simpeg di taruh di server bahaya dan kurang melindungi privasi.
+user db root megaloman01 di taruh di sembarang temapat.
+patch file config harus di lindungi
+
+SUSUNAN DIREKTORY
+file2 ditaruhnya kok kayak sembarangan seperti bukan milih kampus/ instansi akademik
+
+
+KERNEL
+FreeBsd 8.0 release.. di patch dulu, itu bahaya.
+kernel bisa di local exploit dengan bug freebsd-cache
+
+
+HOW TO EXPLOIT
+
+saya masuk dengan ssh bruteforce dengan user list di /etc/passwd ternyata ada password dari ssh yang lemah.
+
+tanam shell di mana-mana dengan diawali dengan (.) sehingga akan terhidden.
+mencoba untuk mendapatkan akese root dengan mencari local root exploit yang sesuai dengan versi kernel dan OS yang di pakai.
+OS menggunakan FreeBSD 8.0
+Bisa saya root dengan exploit
+bug freebsd-cache
+
+TIPS
+
+1. Web App harus di test dulu sebelum siap di onlinekan.
+satu server jangan digunakan banyak web. Hati-hati dalam penggunaan variable dalam php atau asp, mayoritas bug ada di sqli, lfi dan rfi.
+patch sqli,lfi, rfi.
+
+2. Bila kita memberikan authority untuk admin web, pada halaman admin jangan sampai ada form upload yang mengijinkan upload semua file, cukup untuk upload dokumen atau gambar.
+script upload harus di filter
+
+3. Dari segi human.
+mohon memberikan password yang bagus, yang kuat kalau perlu sering diganti. Jangan mudah percaya atau memberikan password kepada orang lain. Minimalisir login di komputer umum dan di jaringan yang tidak secure (wifi, hub dsb).
+
+4. konfigurasi php.ini
+apa saja fungsi-fungsi php yang sekiranya perlu di enable, jika tidak perlu ya di disable saja, apalagi seperti fungsi-fungsi yang bisa mengakses sistem.
+
+5. Gunakan .htaccess secara maksimal, file ini sebenarnya sangat sakti, jangan sampai dalam setiap direktory tidak ada index, sehingga isi dari direktory itu bisa di tampilkan, dengan file .htaccess ini bisa di konfigurasi.
+
+6. Sebaiknya server database dan server web dipisah itu akan mengurangi resiko.
+
+7. Gunakan versi kernel yang memang benar-benar sudah stable. kalaupun kita menggunakan versi current atau rillis, siap-siaplah untuk selalu update informasi dan pathching jika ada bug.
+
+8. Tugas seorang Network administrator adalah mengamati log, amati log, adakah yang mencoba bruteforce, adakah client / user yang mengakses file-file aneh berextensi php?, sekarang sudah ada aplikasi yang bisa memonitoring log dengan bagus, bahkan bisa send via email pada admin jika terjadi apa-apa pada server.
+
+9. Bila ada file mencurigakan coba di buka, bila di enkripsi coba di dekripsi bisa jadi itu adalah shell atau backdoor.
+
+10. Gunakan maldetect untuk pendeteksi malware, virus, shell, rootkit, backdoor dsb.
+
+11. Akses ssh dibatasi hanya untuk IP tertentu atau group user tertentu saja. pengamanan di sshd config
+misal dengan rsa matikan login dengan password
+dsb
+
+no 100% system secure 
+
+analisis sistem saya lakukan tanggal 20 -27 Februari, tanggal 26 saya memperoleh akses root.
+

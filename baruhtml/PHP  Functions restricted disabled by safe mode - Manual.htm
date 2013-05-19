@@ -1,0 +1,671 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0057)http://php.net/manual/en/features.safe-mode.functions.php -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head profile="http://purl.org/NET/erdf/profile"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <title>PHP: Functions restricted/disabled by safe mode - Manual</title>
+ <style type="text/css" media="all">
+  @import url("http://static.php.net/www.php.net/styles/site.css");
+  @import url("http://static.php.net/www.php.net/styles/phpnet.css");
+  
+ </style>
+ <!--[if IE]><![if gte IE 6]><![endif]-->
+  <style type="text/css" media="print">
+   @import url("http://static.php.net/www.php.net/styles/print.css");
+  </style>
+ <!--[if IE]><![endif]><![endif]-->
+ 
+ <link rel="shortcut icon" href="http://static.php.net/www.php.net/favicon.ico">
+ <link rel="contents" href="http://www.php.net/manual/en/index.php">
+ <link rel="index" href="http://www.php.net/manual/en/features.safe-mode.php">
+ <link rel="prev" href="http://www.php.net/manual/en/ini.sect.safe-mode.php">
+ <link rel="next" href="http://www.php.net/manual/en/features.commandline.php">
+ <link rel="schema.dc" href="http://purl.org/dc/elements/1.1/">
+ <link rel="schema.rdfs" href="http://www.w3.org/2000/01/rdf-schema#">
+ <link rev="canonical" rel="self alternate shorter shorturl shortlink" href="http://php.net/safe-mode.functions">
+ <link rel="license" href="http://creativecommons.org/licenses/by/3.0/" about="#content">
+ <link rel="canonical" href="./PHP  Functions restricted disabled by safe mode - Manual_files/PHP  Functions restricted disabled by safe mode - Manual.htm">
+ <script type="text/javascript" src="./PHP  Functions restricted disabled by safe mode - Manual_files/userprefs.js"></script>
+ <!--<base href="http://www.php.net/manual/en/features.safe-mode.functions.php">--><base href=".">
+ <meta http-equiv="Content-language" content="en">
+            <script type="text/javascript" src="./PHP  Functions restricted disabled by safe mode - Manual_files/jquery.min.js"></script>
+            <script type="text/javascript" src="./PHP  Functions restricted disabled by safe mode - Manual_files/jquery-ui.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    var toggleImage = function(elem) {
+        if ($(elem).hasClass("shown")) {
+            $(elem).removeClass("shown").addClass("hidden");
+            $("img", elem).attr("src", "/images/notes-add.gif");
+        }
+        else {
+            $(elem).removeClass("hidden").addClass("shown");
+            $("img", elem).attr("src", "/images/notes-reject.gif");
+        }
+    };
+
+    $(".refsect1 h3.title").each(function() {
+        url = "https://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=" + $(this).parent().parent().attr("id") + "%23" + $(this).parent().attr("id");
+        $(this).parent().prepend("<div class='reportbug'><a href='" + url + "'>Report a bug</a></div>");
+        $(this).prepend("<a class='toggler shown' href='#'><img src='/images/notes-reject.gif' alt='reject note' /></a> ");
+    });
+    $("#usernotes .head").each(function() {
+        $(this).prepend("<a class='toggler shown' href='#'><img src='/images/notes-reject.gif' alt='reject note' /></a> ");
+    });
+    $(".refsect1 h3.title .toggler").click(function() {
+        $(this).parent().siblings().slideToggle("slow");
+        toggleImage(this);
+        return false;
+    });
+    $("#usernotes .head .toggler").click(function() {
+        $(this).parent().next().slideToggle("slow");
+        toggleImage(this);
+        return false;
+    });
+});
+</script>
+
+</head>
+<body>
+
+<div id="headnav">
+ <a href="http://www.php.net/" rel="home"><img src="./PHP  Functions restricted disabled by safe mode - Manual_files/php.gif" alt="PHP" width="120" height="67" id="phplogo"></a>
+ <div id="headmenu">
+  <a href="http://www.php.net/downloads.php">downloads</a> |
+  <a href="http://www.php.net/docs.php">documentation</a> |
+  <a href="http://www.php.net/FAQ.php">faq</a> |
+  <a href="http://www.php.net/support.php">getting help</a> |
+  <a href="http://www.php.net/mailing-lists.php">mailing lists</a> |
+  <a href="http://www.php.net/license">licenses</a> |
+  <a href="https://wiki.php.net/">wiki</a> |
+  <a href="https://bugs.php.net/">reporting bugs</a> |
+  <a href="http://www.php.net/sites.php">php.net sites</a> |
+  <a href="http://www.php.net/links.php">links</a> |
+  <a href="http://www.php.net/conferences/">conferences</a> |
+  <a href="http://www.php.net/my.php">my php.net</a>
+ </div>
+</div>
+
+<div id="headsearch">
+ <form method="post" action="http://www.php.net/search.php" id="topsearch">
+  <p>
+   <span title="Keyboard shortcut: Alt+S (Win), Ctrl+S (Apple)">
+    <span class="shortkey">s</span>earch for
+   </span>
+   <input type="text" name="pattern" value="" size="30" accesskey="s">
+   <span>in the</span>
+   <select name="show">
+    <option value="all">all php.net sites</option>
+    <option value="local">this mirror only</option>
+    <option value="quickref" selected="selected">function list</option>
+    <option value="manual">online documentation</option>
+    <option value="bugdb">bug database</option>
+    <option value="news_archive">Site News Archive</option>
+    <option value="changelogs">All Changelogs</option>
+    <option value="pear">just pear.php.net</option>
+    <option value="pecl">just pecl.php.net</option>
+    <option value="talks">just talks.php.net</option>
+    <option value="maillist">general mailing list</option>
+    <option value="devlist">developer mailing list</option>
+    <option value="phpdoc">documentation mailing list</option>
+   </select>
+   <input type="image" src="./PHP  Functions restricted disabled by safe mode - Manual_files/small_submit_white.gif" class="submit" alt="search">
+   <input type="hidden" name="lang" value="en">
+  </p>
+ </form>
+</div>
+
+<div id="layout_2">
+ <div id="leftbar">
+<!--UdmComment-->
+<ul class="toc">
+ <li class="header home"><a href="http://www.php.net/manual/en/index.php">PHP Manual</a></li>
+ <li class="header up"><a href="http://www.php.net/manual/en/features.php">Features</a></li>
+ <li class="header up"><a href="http://www.php.net/manual/en/features.safe-mode.php">Safe Mode</a></li>
+ <li><a href="http://www.php.net/manual/en/ini.sect.safe-mode.php">Security and Safe Mode</a></li>
+ <li class="active"><a href="http://www.php.net/manual/en/features.safe-mode.functions.php">Functions restricted/disabled by safe mode</a></li>
+</ul><!--/UdmComment-->
+
+ </div>
+ <div id="content" class="manual/en">
+<!--UdmComment-->
+<div class="manualnavbar manualnavbar_top">
+ <span class="next">
+  <a href="http://www.php.net/manual/en/features.commandline.php">Command line usage<img src="./PHP  Functions restricted disabled by safe mode - Manual_files/caret-r.gif" alt="&gt;" width="11" height="7"></a>
+ </span>
+ <span class="prev">
+  <a href="http://www.php.net/manual/en/ini.sect.safe-mode.php"><img src="./PHP  Functions restricted disabled by safe mode - Manual_files/caret-l.gif" alt="&lt;" width="11" height="7">Security and Safe Mode</a>
+ </span>
+ <hr>
+ <span class="lastupdated">[<a href="https://edit.php.net/?project=PHP&perm=en/features.safe-mode.functions.php">edit</a>] Last updated: Fri, 06 Apr 2012</span>
+ <div class="langchooser">
+  <form action="http://www.php.net/manual/change.php" method="get">
+   <p>view this page in </p><fieldset><select name="page">
+    <option value="pt_BR/features.safe-mode.functions.php">Brazilian Portuguese</option>
+    <option value="zh/features.safe-mode.functions.php">Chinese (Simplified)</option>
+    <option value="fr/features.safe-mode.functions.php">French</option>
+    <option value="de/features.safe-mode.functions.php">German</option>
+    <option value="ja/features.safe-mode.functions.php">Japanese</option>
+    <option value="pl/features.safe-mode.functions.php">Polish</option>
+    <option value="ro/features.safe-mode.functions.php">Romanian</option>
+    <option value="ru/features.safe-mode.functions.php">Russian</option>
+    <option value="fa/features.safe-mode.functions.php">Persian</option>
+    <option value="es/features.safe-mode.functions.php">Spanish</option>
+    <option value="tr/features.safe-mode.functions.php">Turkish</option>
+    <option value="help-translate.php">Other</option>
+   </select>
+   <input type="image" src="./PHP  Functions restricted disabled by safe mode - Manual_files/small_submit.gif" id="changeLangImage" alt="Change language">
+  </fieldset></form>
+ </div>
+</div>
+<!--/UdmComment-->
+
+<div id="features.safe-mode.functions" class="sect1">
+   <h2 class="title">Functions restricted/disabled by safe mode</h2>
+   <p class="para">
+    This is a still probably incomplete and possibly incorrect listing
+    of the functions limited by 
+    <a href="http://www.php.net/manual/en/features.safe-mode.php" class="link">safe mode</a>.
+    
+    </p><table class="doctable table">
+     <caption><strong>Safe mode limited functions</strong></caption>
+     
+      <thead>
+       <tr>
+        <th>Function</th>
+        <th>Limitations</th>
+       </tr>
+
+      </thead>
+
+      <tbody class="tbody">
+       <tr>
+        <td><span class="function"><strong>dbmopen()</strong></span></td>
+        <td>Checks whether the files or directories being operated
+upon have the same UID (owner) as the script that is being executed.</td>
+       </tr>
+
+       <tr>
+        <td><span class="function"><a href="http://www.php.net/manual/en/function.dbase-open.php" class="function">dbase_open()</a></span></td>
+        <td>Checks whether the files or directories being operated
+upon have the same UID (owner) as the script that is being executed.</td>
+       </tr>
+
+       <tr>
+        <td><span class="function"><a href="http://www.php.net/manual/en/function.filepro.php" class="function">filepro()</a></span></td>
+        <td>Checks whether the files or directories being operated
+upon have the same UID (owner) as the script that is being executed.</td>
+       </tr>
+
+       <tr>
+        <td><span class="function"><a href="http://www.php.net/manual/en/function.filepro-rowcount.php" class="function">filepro_rowcount()</a></span></td>
+        <td>Checks whether the files or directories being operated
+upon have the same UID (owner) as the script that is being executed.</td>
+       </tr>
+
+       <tr>
+        <td><span class="function"><a href="http://www.php.net/manual/en/function.filepro-retrieve.php" class="function">filepro_retrieve()</a></span></td>
+        <td>Checks whether the files or directories being operated
+upon have the same UID (owner) as the script that is being executed.</td>
+       </tr>
+
+       <tr>
+        <td>ifx_*</td>
+        <td>sql_safe_mode restrictions, (!= safe mode)</td>
+        
+       </tr>
+
+       <tr>
+        <td>ingres_*</td>
+        <td>sql_safe_mode restrictions, (!= safe mode)</td>
+        
+       </tr>
+
+       <tr>
+        <td>mysql_*</td>
+        <td>sql_safe_mode restrictions, (!= safe mode)</td>
+        
+       </tr>
+
+       <tr>
+        <td><span class="function"><a href="http://www.php.net/manual/en/function.pg-lo-import.php" class="function">pg_lo_import()</a></span></td>
+        <td>Checks whether the files or directories being operated
+upon have the same UID (owner) as the script that is being executed.</td>
+        
+       </tr>
+
+       <tr>
+        <td><span class="function"><a href="http://www.php.net/manual/en/function.posix-mkfifo.php" class="function">posix_mkfifo()</a></span></td>
+        <td>Checks whether the directory in which
+the script is operating has the same UID (owner) as the script that is being
+executed.</td>
+       </tr>
+
+       <tr>
+        <td><span class="function"><a href="http://www.php.net/manual/en/function.putenv.php" class="function">putenv()</a></span></td>
+        <td>Obeys the safe_mode_protected_env_vars and 
+        safe_mode_allowed_env_vars ini-directives. See also the documentation
+        on <span class="function"><a href="http://www.php.net/manual/en/function.putenv.php" class="function">putenv()</a></span></td>
+        
+       </tr>
+
+       <tr>
+        <td><span class="function"><a href="http://www.php.net/manual/en/function.move-uploaded-file.php" class="function">move_uploaded_file()</a></span></td>
+        <td>Checks whether the files or directories being operated
+upon have the same UID (owner) as the script that is being executed. </td>
+       </tr>
+
+
+       
+
+       <tr>
+        <td><span class="function"><a href="http://www.php.net/manual/en/function.chdir.php" class="function">chdir()</a></span></td>
+        <td>Checks whether the directory in which
+the script is operating has the same UID (owner) as the script that is being
+executed.</td>
+       </tr>
+
+       <tr>
+        <td><span class="function"><a href="http://www.php.net/manual/en/function.dl.php" class="function">dl()</a></span></td>
+        <td>This function is disabled when PHP is running in <a href="http://www.php.net/manual/en/features.safe-mode.php" class="link">safe mode</a>.</td>
+       </tr>
+
+       <tr>
+        <td><a href="http://www.php.net/manual/en/language.operators.execution.php" class="link">backtick operator</a></td>
+        <td>This function is disabled when PHP is running in <a href="http://www.php.net/manual/en/features.safe-mode.php" class="link">safe mode</a>.</td>
+       </tr>
+
+       <tr>
+        <td><span class="function"><a href="http://www.php.net/manual/en/function.shell-exec.php" class="function">shell_exec()</a></span> (functional equivalent 
+        of backticks)</td>
+        <td>This function is disabled when PHP is running in <a href="http://www.php.net/manual/en/features.safe-mode.php" class="link">safe mode</a>.</td>
+       </tr>
+
+       <tr>
+        <td><span class="function"><a href="http://www.php.net/manual/en/function.exec.php" class="function">exec()</a></span></td>
+        <td>You can only execute executables within the <a href="http://www.php.net/manual/en/ini.sect.safe-mode.php#ini.safe-mode-exec-dir" class="link">safe_mode_exec_dir</a>.
+        For practical reasons it's currently not allowed to have
+        <em>..</em> components in the path to the executable.
+        <span class="function"><a href="http://www.php.net/manual/en/function.escapeshellcmd.php" class="function">escapeshellcmd()</a></span> is executed on the argument of this
+        function.</td>
+       </tr>
+
+       <tr>
+        <td><span class="function"><a href="http://www.php.net/manual/en/function.system.php" class="function">system()</a></span></td>
+        <td>You can only execute executables within the <a href="http://www.php.net/manual/en/ini.sect.safe-mode.php#ini.safe-mode-exec-dir" class="link">safe_mode_exec_dir</a>.
+        For practical reasons it's currently not allowed to have
+        <em>..</em> components in the path to the executable.
+        <span class="function"><a href="http://www.php.net/manual/en/function.escapeshellcmd.php" class="function">escapeshellcmd()</a></span> is executed on the argument of this
+        function.</td>
+       </tr>
+
+       <tr>
+        <td><span class="function"><a href="http://www.php.net/manual/en/function.passthru.php" class="function">passthru()</a></span></td>
+        <td>You can only execute executables within the <a href="http://www.php.net/manual/en/ini.sect.safe-mode.php#ini.safe-mode-exec-dir" class="link">safe_mode_exec_dir</a>.
+        For practical reasons it's currently not allowed to have
+        <em>..</em> components in the path to the executable.
+        <span class="function"><a href="http://www.php.net/manual/en/function.escapeshellcmd.php" class="function">escapeshellcmd()</a></span> is executed on the argument of this
+        function.</td>
+       </tr>
+
+       <tr>
+        <td><span class="function"><a href="http://www.php.net/manual/en/function.popen.php" class="function">popen()</a></span></td>
+        <td>You can only execute executables within the <a href="http://www.php.net/manual/en/ini.sect.safe-mode.php#ini.safe-mode-exec-dir" class="link">safe_mode_exec_dir</a>.
+        For practical reasons it's currently not allowed to have
+        <em>..</em> components in the path to the executable.
+        <span class="function"><a href="http://www.php.net/manual/en/function.escapeshellcmd.php" class="function">escapeshellcmd()</a></span> is executed on the argument of this
+        function.</td>
+        
+       </tr>
+
+       <tr>
+        <td><span class="function"><a href="http://www.php.net/manual/en/function.fopen.php" class="function">fopen()</a></span></td>
+        <td>Checks whether the directory in which
+the script is operating has the same UID (owner) as the script that is being
+executed.</td>
+       </tr>
+
+       <tr>
+        <td><span class="function"><a href="http://www.php.net/manual/en/function.mkdir.php" class="function">mkdir()</a></span></td>
+        <td>Checks whether the directory in which
+the script is operating has the same UID (owner) as the script that is being
+executed.</td>
+       </tr>
+
+       <tr>
+        <td><span class="function"><a href="http://www.php.net/manual/en/function.rmdir.php" class="function">rmdir()</a></span></td>
+        <td>Checks whether the directory in which
+the script is operating has the same UID (owner) as the script that is being
+executed.</td>
+       </tr>
+
+       <tr>
+        <td><span class="function"><a href="http://www.php.net/manual/en/function.rename.php" class="function">rename()</a></span></td>
+        <td>Checks whether the files or directories being operated
+upon have the same UID (owner) as the script that is being executed. Checks whether the directory in which
+the script is operating has the same UID (owner) as the script that is being
+executed.</td>
+       </tr>
+
+       <tr>
+        <td><span class="function"><a href="http://www.php.net/manual/en/function.unlink.php" class="function">unlink()</a></span></td>
+        <td>Checks whether the files or directories being operated
+upon have the same UID (owner) as the script that is being executed. Checks whether the directory in which
+the script is operating has the same UID (owner) as the script that is being
+executed.</td>
+       </tr>
+
+       <tr>
+        <td><span class="function"><a href="http://www.php.net/manual/en/function.copy.php" class="function">copy()</a></span></td>
+        <td>Checks whether the files or directories being operated
+upon have the same UID (owner) as the script that is being executed. Checks whether the directory in which
+the script is operating has the same UID (owner) as the script that is being
+executed. (on 
+        <em><code class="parameter">source</code></em> and 
+        <em><code class="parameter">target</code></em>)</td>
+       </tr>
+
+       <tr>
+        <td><span class="function"><a href="http://www.php.net/manual/en/function.chgrp.php" class="function">chgrp()</a></span></td>
+        <td>Checks whether the files or directories being operated
+upon have the same UID (owner) as the script that is being executed.</td>
+       </tr>
+
+       <tr>
+        <td><span class="function"><a href="http://www.php.net/manual/en/function.chown.php" class="function">chown()</a></span></td>
+        <td>Checks whether the files or directories being operated
+upon have the same UID (owner) as the script that is being executed.</td>
+       </tr>
+
+       <tr>
+        <td><span class="function"><a href="http://www.php.net/manual/en/function.chmod.php" class="function">chmod()</a></span></td>
+        <td>Checks whether the files or directories being operated
+upon have the same UID (owner) as the script that is being executed. In addition, you cannot  
+        set the SUID, SGID and sticky bits</td>
+       </tr>
+
+       <tr>
+        <td><span class="function"><a href="http://www.php.net/manual/en/function.touch.php" class="function">touch()</a></span></td>
+        <td>Checks whether the files or directories being operated
+upon have the same UID (owner) as the script that is being executed. Checks whether the directory in which
+the script is operating has the same UID (owner) as the script that is being
+executed.</td>
+       </tr>
+
+       <tr>
+        <td><span class="function"><a href="http://www.php.net/manual/en/function.symlink.php" class="function">symlink()</a></span></td>
+        <td>Checks whether the files or directories being operated
+upon have the same UID (owner) as the script that is being executed. Checks whether the directory in which
+the script is operating has the same UID (owner) as the script that is being
+executed. (note: only the target is 
+        checked)</td>
+       </tr>
+
+       <tr>
+        <td><span class="function"><a href="http://www.php.net/manual/en/function.link.php" class="function">link()</a></span></td>
+        <td>Checks whether the files or directories being operated
+upon have the same UID (owner) as the script that is being executed. Checks whether the directory in which
+the script is operating has the same UID (owner) as the script that is being
+executed. (note: only the target is 
+        checked)</td>
+       </tr>
+
+       <tr>
+        <td><span class="function"><a href="http://www.php.net/manual/en/function.apache-request-headers.php" class="function">apache_request_headers()</a></span></td>
+        <td>In safe mode, headers beginning with <em>authorization</em> 
+        (case-insensitive) will not be returned.</td>
+       </tr>
+
+       <tr>
+        <td><span class="function"><a href="http://www.php.net/manual/en/function.header.php" class="function">header()</a></span></td>
+        <td>In safe mode, the uid of the script is added to the
+        <em>realm</em> part of the
+        <em>WWW-Authenticate</em> header if you set this
+        header (used for HTTP Authentication).</td>
+       </tr>
+
+       <tr>
+        <td><a href="http://www.php.net/manual/en/features.http-auth.php" class="link">PHP_AUTH variables</a></td>
+        <td>
+         In safe mode, the variables <var class="varname"><var class="varname">PHP_AUTH_USER</var></var>,
+         <var class="varname"><var class="varname">PHP_AUTH_PW</var></var>, and <var class="varname"><var class="varname">AUTH_TYPE</var></var>
+         are not available in <var class="varname"><var class="varname"><a href="http://www.php.net/manual/en/reserved.variables.server.php" class="classname">$_SERVER</a></var></var>. Regardless, you
+         can still use <var class="varname"><var class="varname">REMOTE_USER</var></var> for the USER.
+         (note: only affected since PHP 4.3.0)
+        </td>
+       </tr>
+
+       <tr>
+        <td>
+         <span class="function"><a href="http://www.php.net/manual/en/function.highlight-file.php" class="function">highlight_file()</a></span>,
+         <span class="function"><a href="http://www.php.net/manual/en/function.show-source.php" class="function">show_source()</a></span>
+        </td>
+        <td>
+         Checks whether the files or directories being operated
+upon have the same UID (owner) as the script that is being executed. Checks whether the directory in which
+the script is operating has the same UID (owner) as the script that is being
+executed. (note: only affected since PHP 4.2.1)
+        </td>
+       </tr>
+
+       <tr>
+        <td>
+         <span class="function"><a href="http://www.php.net/manual/en/function.parse-ini-file.php" class="function">parse_ini_file()</a></span>
+        </td>
+        <td>
+         Checks whether the files or directories being operated
+upon have the same UID (owner) as the script that is being executed. Checks whether the directory in which
+the script is operating has the same UID (owner) as the script that is being
+executed. (note: only affected since PHP 4.2.1)
+        </td>
+       </tr>
+
+       <tr>
+        <td>
+         <span class="function"><a href="http://www.php.net/manual/en/function.set-time-limit.php" class="function">set_time_limit()</a></span>
+        </td>
+        <td>
+         Has no effect when PHP is running in <a href="http://www.php.net/manual/en/ini.sect.safe-mode.php#ini.safe-mode" class="link">safe mode</a>.
+        </td>
+       </tr>
+
+       <tr>
+        <td>
+         <a href="http://www.php.net/manual/en/info.configuration.php#ini.max-execution-time" class="link">max_execution_time</a>
+        </td>
+        <td>
+         Has no effect when PHP is running in <a href="http://www.php.net/manual/en/ini.sect.safe-mode.php#ini.safe-mode" class="link">safe mode</a>.
+        </td>
+       </tr>
+
+       <tr>
+        <td>
+         <span class="function"><a href="http://www.php.net/manual/en/function.mail.php" class="function">mail()</a></span>
+        </td>
+        <td>
+         In safe mode, the fifth parameter is disabled. (note: only affected since PHP 4.2.3)
+        </td>
+       </tr>
+
+       <tr>
+        <td>
+         <span class="function"><a href="http://www.php.net/manual/en/function.session-start.php" class="function">session_start()</a></span>
+        </td>
+        <td>
+         The owner of a script must be the same as owner of a <a href="http://www.php.net/manual/en/session.configuration.php#ini.session.save-path" class="link">session.save_path</a> directory if
+         the default <em>files</em> <a href="http://www.php.net/manual/en/session.configuration.php#ini.session.save-handler" class="link">session.save_handler</a> is
+         used.
+        </td>
+       </tr>
+
+       <tr>
+        <td>
+         All filesystem and stream functions.
+        </td>
+        <td>
+         Checks whether the files or directories being operated
+upon have the same UID (owner) as the script that is being executed. Checks whether the directory in which
+the script is operating has the same UID (owner) as the script that is being
+executed. (see the <a href="http://www.php.net/manual/en/ini.sect.safe-mode.php#ini.safe-mode-include-dir" class="link">safe_mode_include_dir</a>
+         <var class="filename">php.ini</var> option.
+        </td>
+       </tr>
+
+      </tbody>
+     
+    </table>
+
+   <p></p>
+  </div><br><br><!--UdmComment-->
+<div class="manualnavbar manualnavbar_bottom">
+ <span class="next">
+  <a href="http://www.php.net/manual/en/features.commandline.php">Command line usage<img src="./PHP  Functions restricted disabled by safe mode - Manual_files/caret-r.gif" alt="&gt;" width="11" height="7"></a>
+ </span>
+ <span class="prev">
+  <a href="http://www.php.net/manual/en/ini.sect.safe-mode.php"><img src="./PHP  Functions restricted disabled by safe mode - Manual_files/caret-l.gif" alt="&lt;" width="11" height="7">Security and Safe Mode</a>
+ </span>
+ <hr>
+ <span class="lastupdated">[<a href="https://edit.php.net/?project=PHP&perm=en/features.safe-mode.functions.php">edit</a>] Last updated: Fri, 06 Apr 2012</span>
+ <div class="langchooser">
+  &nbsp;
+ </div>
+</div>
+<!--/UdmComment-->
+
+
+<div id="usernotes">
+ <div class="head"><a class="toggler shown" href="http://www.php.net/manual/en/features.safe-mode.functions.php#"><img src="./PHP  Functions restricted disabled by safe mode - Manual_files/notes-reject.gif" alt="reject note"></a> 
+  <span class="action"><a href="http://www.php.net/manual/add-note.php?sect=features.safe-mode.functions&redirect=http://www.php.net/manual/en/features.safe-mode.functions.php"><img src="./PHP  Functions restricted disabled by safe mode - Manual_files/notes-add.gif" alt="add a note" width="13" height="13" class="middle"></a> <small><a href="http://www.php.net/manual/add-note.php?sect=features.safe-mode.functions&redirect=http://www.php.net/manual/en/features.safe-mode.functions.php">add a note</a></small></span>
+  <small>User Contributed Notes</small>
+  <strong>Functions restricted/disabled by safe mode</strong>
+ </div><div id="allnotes">
+ <a name="92192"></a>
+ <div class="note">
+  <strong class="user">Stephen Dewey</strong>
+  <a href="http://www.php.net/manual/en/features.safe-mode.functions.php#92192" class="date">13-Jul-2009 12:39</a>
+  <div class="text">
+<div class="phpcode"><code><span class="html">
+curl_setopt() will not allow you to activate CURLOPT_FOLLOWLOCATION when in safe mode.</span>
+</code></div>
+  </div>
+ </div>
+ <a name="77981"></a>
+ <div class="note">
+  <strong class="user">tschmieder at bitworks dot de</strong>
+  <a href="http://www.php.net/manual/en/features.safe-mode.functions.php#77981" class="date">22-Sep-2007 06:04</a>
+  <div class="text">
+<div class="phpcode"><code><span class="html">
+refers to the previuos posting of<br>
+<br>
+bananarama<br>
+15-May-2006 10:11 <br>
+<br>
+"all file-handling and -management functions are restricted, just in case someones wondering why they're not listed here.<br>
+a script can run these functions on files without errors, if the files were created (are owned) by the same UID, the script was created (is owned) by."<br>
+<br>
+.... or if the directory, in which the file is located, has the same UID as the script, which tries to use a file in that directory...</span>
+</code></div>
+  </div>
+ </div>
+ <a name="66116"></a>
+ <div class="note">
+  <strong class="user">bananarama</strong>
+  <a href="http://www.php.net/manual/en/features.safe-mode.functions.php#66116" class="date">15-May-2006 01:11</a>
+  <div class="text">
+<div class="phpcode"><code><span class="html">
+all file-handling and -management functions are restricted, just in case someones wondering why they're not listed here.<br>
+a script can run these functions on files without errors, if the files were created (are owned) by the same UID, the script was created (is owned) by.<br>
+<br>
+example:<br>
+you upload a script, it is owned by UID 720. you upload a picture, it is owned by UID 720. the script creates a thumbnail of the picture. the thumb is owned by UID 30 (the server/apache). this makes it impossible (?) to run a gallery script, which checks for newly uploaded pictures in order to create and display thumbs of them if you want to check, if a thumbnail already exists. the script would be owned by UID 720, the thumb by UID 30.<br>
+you could upload a script which creates a file (e.g. from a text file) with .php ending. this script would be owned by UID 30 and could access the thumbs, but it couldnt read the upload pictures.<br>
+<br>
+&lt;? <br>
+&nbsp; $data = fread(fopen("test.txt", "r"), filesize("test.txt")); <br>
+&nbsp;&nbsp; <br>
+&nbsp; $file = "test.php";&nbsp;&nbsp; <br>
+&nbsp; if (!$file_handle = fopen($file,"a")) { echo "Cannot open file"; }&nbsp; <br>
+&nbsp; if (!fwrite($file_handle, $data)) { echo "Cannot write to file"; }&nbsp; &nbsp; <br>
+&nbsp; fclose($file_handle);<br>
+&nbsp; <br>
+&nbsp; chmod("test.php", 0777);<br>
+?&gt;</span>
+</code></div>
+  </div>
+ </div>
+ <a name="63390"></a>
+ <div class="note">
+  <strong class="user">zauker</strong>
+  <a href="http://www.php.net/manual/en/features.safe-mode.functions.php#63390" class="date">21-Mar-2006 02:57</a>
+  <div class="text">
+<div class="phpcode"><code><span class="html">
+The SAFE_MODE handling of glob() needs a checkup for security reasons.<br>
+<br>
+In short - always with SAFE_MODE on:<br>
+<br>
+1) glob() can still fetch all filenames in a directory not owned by the<br>
+same UID as the user, if just the first file in the directory (or more<br>
+specific, the glob-pattern) happens to be owned by the same user as the<br>
+PHP-script.<br>
+<br>
+2a) No warning is raised if glob is used on another owner's directory<br>
+and there is no match.<br>
+<br>
+2b) In those cases where SAFE_MODE correctly prohibits glob() from<br>
+fetching a list of files, the warning still discloses the first<br>
+filename.<br>
+<br>
+Solution: glob() in SAFE_MODE should be restricted in the same way as<br>
+opendir() is<br>
+<br>
+see the link <a href="http://bugs.php.net/bug.php?id=28932" rel="nofollow" target="_blank">http://bugs.php.net/bug.php?id=28932</a></span>
+</code></div>
+  </div>
+ </div>
+ <a name="58072"></a>
+ <div class="note">
+  <strong class="user">Jan</strong>
+  <a href="http://www.php.net/manual/en/features.safe-mode.functions.php#58072" class="date">23-Oct-2005 02:46</a>
+  <div class="text">
+<div class="phpcode"><code><span class="html">
+It seems that glob and file_exists functions are also restricted in safe-mode.</span>
+</code></div>
+  </div>
+ </div></div>
+
+ <div class="foot"><a href="http://www.php.net/manual/add-note.php?sect=features.safe-mode.functions&redirect=http://www.php.net/manual/en/features.safe-mode.functions.php"><img src="./PHP  Functions restricted disabled by safe mode - Manual_files/notes-add.gif" alt="add a note" width="13" height="13" class="middle"></a> <small><a href="http://www.php.net/manual/add-note.php?sect=features.safe-mode.functions&redirect=http://www.php.net/manual/en/features.safe-mode.functions.php">add a note</a></small></div>
+</div><br>
+ </div>
+ <div class="cleaner">&nbsp;</div>
+</div>
+
+<div id="footnav">
+   <a href="http://www.php.net/source.php?url=/manual/en/features.safe-mode.functions.php">show source</a> |
+ <a href="http://www.php.net/credits.php">credits</a> |
+ <a href="http://www.php.net/stats/">stats</a> |
+ <a href="http://www.php.net/sitemap.php">sitemap</a> |
+ <a href="http://www.php.net/contact.php">contact</a> |
+ <a href="http://www.php.net/contact.php#ads">advertising</a> |
+ <a href="http://www.php.net/mirrors.php">mirror sites</a>
+</div>
+
+<div id="pagefooter">
+ <div id="copyright">
+  <a href="http://www.php.net/copyright.php">Copyright © 2001-2012 The PHP Group</a><br>
+  All rights reserved.
+ </div>
+
+ <div id="thismirror">
+  <a href="http://www.php.net/mirror.php">This mirror</a> generously provided by:
+  <a href="http://developer.yahoo.com/">Yahoo! Inc.</a><br>
+  Last updated: Sun Apr  8 05:21:13 2012 UTC
+ </div>
+</div>
+<!--[if IE 6]>
+<script type="text/javascript">
+    /*Load jQuery if not already loaded*/ if(typeof jQuery == 'undefined'){ document.write("<script type=\"text/javascript\"   src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js\"></"+"script>"); var __noconflict = true; }
+    var IE6UPDATE_OPTIONS = {
+        icons_path: "/ie6update/images/"
+    }
+</script>
+<script type="text/javascript" src="/ie6update/ie6update.js"></script>
+<![endif]-->
+
+<yoono-share-selection-layer style="position: absolute !important; border-top-width: 3px !important; border-right-width: 3px !important; border-bottom-width: 3px !important; border-left-width: 3px !important; border-top-style: solid !important; border-right-style: solid !important; border-bottom-style: solid !important; border-left-style: solid !important; border-top-color: rgb(47, 148, 47) !important; border-right-color: rgb(47, 148, 47) !important; border-bottom-color: rgb(47, 148, 47) !important; border-left-color: rgb(47, 148, 47) !important; border-image: initial !important; display: none; z-index: 100000 !important; border-top-left-radius: 5px !important; border-top-right-radius: 5px !important; border-bottom-right-radius: 5px !important; border-bottom-left-radius: 5px !important; background-image: url(http://cache.yoono.com/static/sb/share/green-30.png) !important; cursor: pointer !important; "></yoono-share-selection-layer><yoono-share-selection-btn style="position: absolute !important; display: none; background-color: rgb(47, 148, 47) !important; color: white !important; height: 17px !important; padding-top: 3px !important; padding-right: 7px !important; text-decoration: underline !important; -webkit-user-select: none !important; cursor: pointer !important; z-index: 100000 !important; font-family: arial, sans-serif !important; font-size: 11px !important; "><yoono-share-selection-btn-ico style="float: left !important; width: 16px !important; height: 16px !important; margin-left: 8px !important; margin-right: 5px !important; background-image: url(http://cache.yoono.com/static/sb/share/share-icons.png) !important; background-position: -1px -1px; "></yoono-share-selection-btn-ico>select</yoono-share-selection-btn></body></html>

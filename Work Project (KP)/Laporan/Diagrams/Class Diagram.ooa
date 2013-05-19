@@ -1,0 +1,799 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE Project [
+    <!ELEMENT Project (Description?, Task*, Domain*, Bridge*, ModelPopulation*, MetamodelPopulation*, DomainChart?,
+                       Configuration*)>
+    <!ATTLIST Project
+        Name           CDATA #REQUIRED
+        Notation       (ShlaerMellor | ExecutableUML | ExecutableUML2) "ShlaerMellor"
+        Location       CDATA ""
+        LocationFormat CDATA #FIXED "OOA Interchange Format 0.04">
+    <!ELEMENT Description (#PCDATA)>
+    <!ATTLIST Description
+        TextFormat (Plain | HTML) "Plain">
+    <!ELEMENT Task (Description?)>
+    <!ATTLIST Task
+        Name CDATA #REQUIRED>
+    <!ELEMENT Domain (MissionStatement?, InformationModel?, Activity*)>
+    <!ATTLIST Domain
+        Name           CDATA #REQUIRED
+        DomainCategory (Application | Service | Architectural | Implementation) "Service">
+    <!ELEMENT MissionStatement (#PCDATA)>
+    <!ATTLIST MissionStatement
+        TextFormat (Plain | HTML) "Plain">
+    <!ELEMENT InformationModel (Description?,
+                                (BooleanType | EnumeratedType | SymbolicType | NumericType | ArbitraryIDType)*,
+                                Object*,
+                                (SimpleRelationship | AssociativeRelationship | ComposedRelationship
+                                                    | MathematicallyDependentRelationship | SubtypeSupertypeRelationship)*,
+                                Subsystem*,
+                                (LifecycleModel | SingleAssignerModel | MultipleAssignerModel
+                                                | Terminator | PolymorphicDestination)*,
+                                ((SubsystemRelationshipModel?, SubsystemCommunicationModel?)
+                                    | (ObjectInformationModel?, ObjectCommunicationModel?, Report?)),
+                                PatternFile*)>
+    <!ATTLIST InformationModel
+        Name                        CDATA #REQUIRED
+        ManualObjectNumbering       (False | True) "False"
+        ManualRelationshipNumbering (False | True) "False">
+    <!ELEMENT BooleanType (Description?)>
+    <!ATTLIST BooleanType
+        Name         CDATA #REQUIRED
+        Predefined   (False | True) "False"
+        FalseAlias   CDATA "FALSE"
+        TrueAlias    CDATA "TRUE"
+        DefaultValue CDATA #IMPLIED>
+    <!ELEMENT EnumeratedType (Description?, LegalValue+)>
+    <!ATTLIST EnumeratedType
+        Name         CDATA #REQUIRED
+        Predefined   (False | True) "False"
+        DefaultValue CDATA #IMPLIED>
+    <!ELEMENT LegalValue (Description?)>
+    <!ATTLIST LegalValue
+        Name CDATA #REQUIRED>
+    <!ELEMENT SymbolicType (Description?, Pattern?)>
+    <!ATTLIST SymbolicType
+        Name          CDATA #REQUIRED
+        Predefined   (False | True) "False"
+        MinimumLength CDATA "0"
+        MaximumLength CDATA #IMPLIED
+        DefaultValue  CDATA #IMPLIED>
+    <!ELEMENT Pattern (#PCDATA)>
+    <!ELEMENT NumericType (Description?)>
+    <!ATTLIST NumericType
+        Name                   CDATA #REQUIRED
+        Predefined             (False | True) "False"
+        ValueFormat            (Binary | Octal | Decimal | Hexadecimal | Time) "Decimal"
+        Unit                   CDATA ""
+        TimeUnit               (Year | Month | Day | Hour | Minute | Second
+                                     | Millisecond | Microsecond | Nanosecond) #IMPLIED
+        MinimumValue           CDATA #IMPLIED
+        MaximumValue           CDATA #IMPLIED
+        PreferredDecimalPlaces CDATA "0"
+        MaximumDecimalPlaces   CDATA #IMPLIED
+        Precision              CDATA #IMPLIED
+        DefaultValue           CDATA #IMPLIED>
+    <!ELEMENT ArbitraryIDType (Description?)>
+    <!ATTLIST ArbitraryIDType
+        Name                                    CDATA #REQUIRED
+        Predefined                              (False | True) "False"
+        Ordinal                                 (False | True) "False"
+        IdentifiedObject                        CDATA ""
+        ChildParentRelationship                 CDATA ""
+        ChildMappedToParent                     (False | True) #IMPLIED
+        MinimumValue                            CDATA "0"
+        MaximumValue                            CDATA #IMPLIED
+        UnallocatedPercentageBeforeReallocation CDATA #IMPLIED
+        MinimumUnallocatedBeforeReallocation    CDATA "1">
+    <!ELEMENT Object (Description?,
+                      (SimpleAttribute | ArbitraryIDAttribute | MathematicallyDependentAttribute
+                                       | ReferentialAttribute | PolymorphicAttribute)*,
+                      Identifier*)>
+    <!ATTLIST Object
+        Name           CDATA #REQUIRED
+        FirstLetters   CDATA #IMPLIED
+        CustomLetters  CDATA ""
+        KeyLetters     CDATA #IMPLIED
+        ManualNumber   CDATA ""
+        Number         CDATA #IMPLIED
+        ObjectCategory (TangibleThing | Role | Incident | Interaction | Specification) #IMPLIED
+        Prominent      (False | True) "False">
+    <!ELEMENT SimpleAttribute (Description?, ValueDomain?)>
+    <!ATTLIST SimpleAttribute
+        Name               CDATA #REQUIRED
+        Naming             (False | True) "False"
+        IdentifyingSuffix  CDATA #IMPLIED
+        ManualDataType     CDATA ""
+        DataType           CDATA #IMPLIED
+        DataTypeAcceptable (False | True) #IMPLIED
+        InitialValue       CDATA #IMPLIED
+        Final              (False | True) "False"
+        ManualConditional  (False | True) "False"
+        Conditional        (False | True) #IMPLIED>
+    <!ELEMENT ValueDomain (#PCDATA)>
+    <!ATTLIST ValueDomain
+        TextFormat (Plain | HTML) "Plain">
+    <!ELEMENT ArbitraryIDAttribute (Description?, ValueDomain?)>
+    <!ATTLIST ArbitraryIDAttribute
+        Name               CDATA #REQUIRED
+        IdentifyingSuffix  CDATA #IMPLIED
+        ManualDataType     CDATA ""
+        DataType           CDATA #IMPLIED
+        DataTypeAcceptable (False | True) #IMPLIED
+        ManualConditional  (False | True) "False"
+        Conditional        (False | True) #IMPLIED>
+    <!ELEMENT MathematicallyDependentAttribute (Description?, ValueDomain?)>
+    <!ATTLIST MathematicallyDependentAttribute
+        Name               CDATA #REQUIRED
+        IdentifyingSuffix  CDATA #IMPLIED
+        ManualDataType     CDATA ""
+        DataType           CDATA #IMPLIED
+        DataTypeAcceptable (False | True) #IMPLIED
+        ManualConditional  (False | True) "False"
+        Conditional        (False | True) #IMPLIED>
+    <!ELEMENT ReferentialAttribute (Description?)>
+    <!ATTLIST ReferentialAttribute
+        Name                  CDATA #REQUIRED
+        IdentifyingSuffix     CDATA #IMPLIED
+        ReferentialSuffix     CDATA #IMPLIED
+        BaseObject            CDATA #IMPLIED
+        BaseAttribute         CDATA #IMPLIED
+        BaseAttributeStatus   (Unresolved | PartiallyResolved | FullyResolved | Incompatible
+                                          | MultipleBaseAttributes | OnlyCircularReferences) #IMPLIED
+        ManualDataType        CDATA ""
+        DataType              CDATA #IMPLIED
+        DataTypeAcceptable    (False | True) #IMPLIED
+        LiteralValue          CDATA #IMPLIED
+        ManualConditional     (False | True) "False"
+        NavigationConditional (False | True) #IMPLIED
+        Conditional           (False | True) #IMPLIED>
+    <!ELEMENT PolymorphicAttribute (PolymorphicAttributeMapping*, Description?)>
+    <!ATTLIST PolymorphicAttribute
+        Name                         CDATA #REQUIRED
+        IdentifyingSuffix            CDATA #IMPLIED
+        SubtypeSupertypeRelationship CDATA ""
+        MappingComplete              (False | True) #IMPLIED
+        MappingCompatible            (False | True) #IMPLIED
+        ManualDataType               CDATA ""
+        DataType                     CDATA #IMPLIED
+        DataTypeAcceptable           (False | True) #IMPLIED
+        ManualConditional            (False | True) "False"
+        Conditional                  (False | True) #IMPLIED>
+    <!ELEMENT PolymorphicAttributeMapping EMPTY>
+    <!ATTLIST PolymorphicAttributeMapping
+        SubtypeObject    CDATA #REQUIRED
+        SubtypeAttribute CDATA #REQUIRED>
+    <!ELEMENT Identifier (IdentifyingAttribute+)>
+    <!ATTLIST Identifier
+        IdentifierID CDATA #IMPLIED
+        Preferred    (False | True) "False">
+    <!ELEMENT IdentifyingAttribute EMPTY>
+    <!ATTLIST IdentifyingAttribute
+        Attribute CDATA #REQUIRED>
+    <!ELEMENT SimpleRelationship (Description?,
+                                  ((FirstParticipant, SecondParticipant) | (SecondParticipant, FirstParticipant)),
+                                  LoopTraversalMapping*)>
+    <!ATTLIST SimpleRelationship
+        ManualNumber   CDATA ""
+        Number         CDATA #IMPLIED
+        RelationshipID CDATA #REQUIRED>
+    <!ELEMENT FirstParticipant (FirstToSecondMapping?)>
+    <!ATTLIST FirstParticipant
+        Object      CDATA #REQUIRED
+        Role        CDATA "FIRST"
+        VerbPhrase  CDATA ""
+        Many        (False | True) "False"
+        Conditional (False | True) "False">
+    <!ELEMENT FirstToSecondMapping (ReferentialAttributeMapping+)>
+    <!ATTLIST FirstToSecondMapping
+        TargetIdentifier CDATA #REQUIRED>
+    <!ELEMENT ReferentialAttributeMapping EMPTY>
+    <!ATTLIST ReferentialAttributeMapping
+        ReferentialAttribute CDATA #REQUIRED
+        IdentifyingAttribute CDATA #REQUIRED
+        Constrained          (False | True) "False"
+        LoopConstrained      (False | True) #IMPLIED>
+    <!ELEMENT SecondParticipant (SecondToFirstMapping?)>
+    <!ATTLIST SecondParticipant
+        Object      CDATA #REQUIRED
+        Role        CDATA "SECOND"
+        VerbPhrase  CDATA ""
+        Many        (False | True) "False"
+        Conditional (False | True) "False">
+    <!ELEMENT SecondToFirstMapping (ReferentialAttributeMapping+)>
+    <!ATTLIST SecondToFirstMapping
+        TargetIdentifier CDATA #REQUIRED>
+    <!ELEMENT LoopTraversalMapping EMPTY>
+    <!ATTLIST LoopTraversalMapping
+        TraversedRelationship CDATA #REQUIRED
+        SourceObject          CDATA #IMPLIED
+        SourceRole            CDATA #IMPLIED
+        SourceRoleRequired    CDATA #IMPLIED
+        TargetObject          CDATA #REQUIRED
+        TargetRole            CDATA #IMPLIED
+        TargetRoleRequired    CDATA #IMPLIED>
+    <!ELEMENT AssociativeRelationship (Description?, FirstParticipant, SecondParticipant, AssociativeParticipant,
+                                       LoopTraversalMapping*)>
+    <!ATTLIST AssociativeRelationship
+        ManualNumber   CDATA ""
+        Number         CDATA #IMPLIED
+        RelationshipID CDATA #REQUIRED>
+    <!ELEMENT AssociativeParticipant (AssociativeToFirstMapping?, AssociativeToSecondMapping?)>
+    <!ATTLIST AssociativeParticipant
+        Object          CDATA #REQUIRED
+        Role            CDATA #FIXED "ASSOCIATIVE"
+        VerbPhrase      CDATA ""
+        ConnectorPhrase CDATA ""
+        Many            (False | True) "False"
+        Conditional     (False | True) "False">
+    <!ELEMENT AssociativeToFirstMapping (ReferentialAttributeMapping+)>
+    <!ATTLIST AssociativeToFirstMapping
+        TargetIdentifier CDATA #REQUIRED>
+    <!ELEMENT AssociativeToSecondMapping (ReferentialAttributeMapping+)>
+    <!ATTLIST AssociativeToSecondMapping
+        TargetIdentifier CDATA #REQUIRED>
+    <!ELEMENT ComposedRelationship (Description?,
+                                    ((FirstParticipant, SecondParticipant) | (SecondParticipant, FirstParticipant)),
+                                    LoopTraversalMapping, LoopTraversalMapping+)>
+    <!ATTLIST ComposedRelationship
+        ManualNumber   CDATA ""
+        Number         CDATA #IMPLIED
+        RelationshipID CDATA #REQUIRED>
+    <!ELEMENT MathematicallyDependentRelationship (Description?, FirstParticipant, SecondParticipant,
+                                                   LoopTraversalMapping*)>
+    <!ATTLIST MathematicallyDependentRelationship
+        ManualNumber   CDATA ""
+        Number         CDATA #IMPLIED
+        RelationshipID CDATA #REQUIRED>
+    <!ELEMENT SubtypeSupertypeRelationship (Description?, SupertypeParticipant, SubtypeParticipant, SubtypeParticipant+)>
+    <!ATTLIST SubtypeSupertypeRelationship
+        ManualNumber   CDATA ""
+        Number         CDATA #IMPLIED
+        RelationshipID CDATA #REQUIRED>
+    <!ELEMENT SupertypeParticipant EMPTY>
+    <!ATTLIST SupertypeParticipant
+        Object CDATA #REQUIRED
+        Role   CDATA #FIXED "SUPERTYPE">
+    <!ELEMENT SubtypeParticipant (SubtypeToSupertypeMapping?)>
+    <!ATTLIST SubtypeParticipant
+        Object CDATA #REQUIRED
+        Role   CDATA #FIXED "SUBTYPE">
+    <!ELEMENT SubtypeToSupertypeMapping (ReferentialAttributeMapping+)>
+    <!ATTLIST SubtypeToSupertypeMapping
+        TargetIdentifier CDATA #REQUIRED>
+    <!ELEMENT Subsystem (Description?, AssignedObject*, AssignedRelationship*, Activity*,
+                         ObjectInformationModel?, ObjectCommunicationModel?, Report?)>
+    <!ATTLIST Subsystem
+        Name                CDATA #REQUIRED
+        PrefixLetters       CDATA ""
+        ManualLowestNumber  CDATA ""
+        ManualHighestNumber CDATA ""
+        LowestNumber        CDATA #IMPLIED
+        HighestNumber       CDATA #IMPLIED>
+    <!ELEMENT AssignedObject EMPTY>
+    <!ATTLIST AssignedObject
+        Object CDATA #REQUIRED>
+    <!ELEMENT AssignedRelationship EMPTY>
+    <!ATTLIST AssignedRelationship
+        Relationship CDATA #REQUIRED>
+    <!ELEMENT Activity (ShortNote?, LongNote?)>
+    <!ATTLIST Activity
+        Task   CDATA #REQUIRED
+        Row    CDATA #IMPLIED
+        Column CDATA #IMPLIED>
+    <!ELEMENT ShortNote (#PCDATA)>
+    <!ATTLIST ShortNote
+        TextFormat (Plain | HTML) "Plain">
+    <!ELEMENT LongNote (#PCDATA)>
+    <!ATTLIST LongNote
+        TextFormat (Plain | HTML) "Plain">
+    <!ELEMENT LifecycleModel (Description?,
+                              (AttributeDataItem | TransientDataItem)*,
+                              (CreationEvent | TransitionEvent)*,
+                              TransitionNote*,
+                              (SimpleState | CreationState | DeletionState)*,
+                              StateTransitionDiagram?)>
+    <!ATTLIST LifecycleModel
+        ActiveObject         CDATA #REQUIRED
+        ManualEventNumbering (False | True) "False"
+        LabelPrefix          CDATA #IMPLIED
+        ManualStateNumbering (False | True) "False">
+    <!ELEMENT AttributeDataItem (Description?)>
+    <!ATTLIST AttributeDataItem
+        Name        CDATA #REQUIRED
+        Object      CDATA #REQUIRED
+        Attribute   CDATA #REQUIRED
+        Many        (False | True) "False"
+        Conditional (False | True) "False">
+    <!ELEMENT TransientDataItem (Description?)>
+    <!ATTLIST TransientDataItem
+        Name        CDATA #REQUIRED
+        DataType    CDATA ""
+        Many        (False | True) "False"
+        Conditional (False | True) "False">
+    <!ELEMENT CreationEvent (CarriedDataItem*, Description?)>
+    <!ATTLIST CreationEvent
+        Meaning       CDATA #REQUIRED
+        ManualNumber  CDATA ""
+        Number        CDATA #IMPLIED
+        Label         CDATA #IMPLIED>
+    <!ELEMENT CarriedDataItem EMPTY>
+    <!ATTLIST CarriedDataItem
+        SupplementalDataItem CDATA #REQUIRED>
+    <!ELEMENT TransitionEvent (CarriedDataItem*, Description?)>
+    <!ATTLIST TransitionEvent
+        Meaning       CDATA #REQUIRED
+        ManualNumber  CDATA ""
+        Number        CDATA #IMPLIED
+        Label         CDATA #IMPLIED>
+    <!ELEMENT TransitionNote (Description?)>
+    <!ATTLIST TransitionNote
+        TransitionNoteID CDATA #IMPLIED>
+    <!ELEMENT SimpleState (Description?, ReceivedDataItem*, SimpleAction?, InternalEvent*,
+                           (NewStateTransition | EventIgnoredTransition | CannotHappenTransition)*)>
+    <!ATTLIST SimpleState
+        Name                       CDATA #REQUIRED
+        ManualNumber               CDATA ""
+        Number                     CDATA #IMPLIED
+        InitialState               (False | True) "False"
+        FinalState                 (False | True) #IMPLIED
+        WaitState                  (False | True) #IMPLIED
+        TransitionEventsCompatible (False | True) #IMPLIED>
+    <!ELEMENT ReceivedDataItem EMPTY>
+    <!ATTLIST ReceivedDataItem
+        SupplementalDataItem CDATA #REQUIRED>
+    <!ELEMENT SimpleAction (StatementBlock?)>
+    <!ATTLIST SimpleAction
+        MaximumVisibleLOC CDATA "">
+    <!ELEMENT StatementBlock (#PCDATA)>
+    <!ELEMENT InternalEvent EMPTY>
+    <!ATTLIST InternalEvent
+        Event CDATA #REQUIRED>
+    <!ELEMENT NewStateTransition EMPTY>
+    <!ATTLIST NewStateTransition
+        TransitionEvent    CDATA #REQUIRED
+        NewState           CDATA #REQUIRED
+        NewStateCompatible (False | True) #IMPLIED
+        TransferOfControl  (False | True) "False"
+        TransitionNote     CDATA "">
+    <!ELEMENT EventIgnoredTransition EMPTY>
+    <!ATTLIST EventIgnoredTransition
+        TransitionEvent CDATA #REQUIRED
+        TransitionNote  CDATA "">
+    <!ELEMENT CannotHappenTransition EMPTY>
+    <!ATTLIST CannotHappenTransition
+        TransitionEvent CDATA #REQUIRED
+        TransitionNote  CDATA "">
+    <!ELEMENT CreationState (Description?, ReceivedDataItem*, SimpleAction?, InternalEvent*,
+                             (NewStateTransition | EventIgnoredTransition | CannotHappenTransition)*)>
+    <!ATTLIST CreationState
+        Name                    CDATA #REQUIRED
+        ManualNumber            CDATA ""
+        Number                  CDATA #IMPLIED
+        CreationEvent           CDATA #REQUIRED
+        CreationEventCompatible (False | True) #IMPLIED
+        InitialState            (False | True) "False"
+        FinalState              (False | True) #IMPLIED
+        WaitState               (False | True) #IMPLIED>
+    <!ELEMENT DeletionState (Description?, ReceivedDataItem*, SimpleAction?, InternalEvent*)>
+    <!ATTLIST DeletionState
+        Name                       CDATA #REQUIRED
+        ManualNumber               CDATA ""
+        Number                     CDATA #IMPLIED
+        TransitionEventsCompatible (False | True) #IMPLIED>
+    <!ELEMENT SingleAssignerModel (Description?, (AttributeDataItem | TransientDataItem)*,
+                                   TransitionEvent*, TransitionNote*, SimpleState*, StateTransitionDiagram?)>
+    <!ATTLIST SingleAssignerModel
+        CompetitiveRelationship CDATA #REQUIRED
+        ManualEventNumbering    (False | True) "False"
+        LabelPrefix             CDATA #IMPLIED
+        ManualStateNumbering    (False | True) "False">
+    <!ELEMENT MultipleAssignerModel (Description?, (AttributeDataItem | TransientDataItem)*,
+                                     TransitionEvent*, TransitionNote*, SimpleState*, StateTransitionDiagram?)>
+    <!ATTLIST MultipleAssignerModel
+        CompetitiveRelationship CDATA #REQUIRED
+        PartitioningObject      CDATA #REQUIRED
+        ManualEventNumbering    (False | True) "False"
+        LabelPrefix             CDATA #IMPLIED
+        ManualStateNumbering    (False | True) "False">
+    <!ELEMENT Terminator (Description?, (AttributeDataItem | TransientDataItem)*, DomainCrossingEvent*, ExternalEvent*)>
+    <!ATTLIST Terminator
+        Name                 CDATA #REQUIRED
+        FirstLetters         CDATA #IMPLIED
+        CustomLetters        CDATA ""
+        KeyLetters           CDATA #IMPLIED
+        ManualEventNumbering (False | True) "False"
+        LabelPrefix          CDATA #IMPLIED>
+    <!ELEMENT DomainCrossingEvent (CarriedDataItem*, Description?)>
+    <!ATTLIST DomainCrossingEvent
+        Meaning       CDATA #REQUIRED
+        ManualNumber  CDATA ""
+        Number        CDATA #IMPLIED
+        Label         CDATA #IMPLIED>
+    <!ELEMENT ExternalEvent EMPTY>
+    <!ATTLIST ExternalEvent
+        Event CDATA #REQUIRED>
+    <!ELEMENT PolymorphicDestination (Description?, (AttributeDataItem | TransientDataItem)*, PolymorphicEvent*)>
+    <!ATTLIST PolymorphicDestination
+        SubtypeSupertypeRelationship CDATA #REQUIRED
+        ManualEventNumbering         (False | True) "False"
+        LabelPrefix                  CDATA #IMPLIED>
+    <!ELEMENT PolymorphicEvent (CarriedDataItem*, Description?, PolymorphicEventMapping*)>
+    <!ATTLIST PolymorphicEvent
+        Meaning           CDATA #REQUIRED
+        ManualNumber      CDATA ""
+        Number            CDATA #IMPLIED
+        Label             CDATA #IMPLIED
+        MappingComplete   CDATA #IMPLIED
+        MappingCompatible CDATA #IMPLIED>
+    <!ELEMENT PolymorphicEventMapping EMPTY>
+    <!ATTLIST PolymorphicEventMapping
+        SubtypeEvent CDATA #REQUIRED>
+    <!ELEMENT PatternFile (#PCDATA)>
+    <!ATTLIST PatternFile
+        Path         CDATA #IMPLIED
+        RelativePath CDATA #IMPLIED
+        Cached       (False | True) "False"
+        RuleSetName  CDATA #REQUIRED>
+    <!ELEMENT Bridge (ClientAssumptions?, ServerRequirements?)>
+    <!ATTLIST Bridge
+        ClientDomain CDATA #REQUIRED
+        ServerDomain CDATA #REQUIRED>
+    <!ELEMENT ClientAssumptions (#PCDATA)>
+    <!ATTLIST ClientAssumptions
+        TextFormat (Plain | HTML) "Plain">
+    <!ELEMENT ServerRequirements (#PCDATA)>
+    <!ATTLIST ServerRequirements
+        TextFormat (Plain | HTML) "Plain">
+    <!ELEMENT ModelPopulation (Description?, DomainPopulation*)>
+    <!ATTLIST ModelPopulation
+        Name CDATA #REQUIRED>
+    <!ELEMENT DomainPopulation (ObjectInstanceTable*, RelationshipInstanceTable*)>
+    <!ATTLIST DomainPopulation
+        Domain CDATA #REQUIRED>
+    <!ELEMENT ObjectInstanceTable (ObjectInstance*)>
+    <!ATTLIST ObjectInstanceTable
+        Object CDATA #REQUIRED>
+    <!ELEMENT ObjectInstance (AttributeInstance*)>
+    <!ATTLIST ObjectInstance
+        ObjectInstanceID CDATA #IMPLIED>
+    <!ELEMENT AttributeInstance EMPTY>
+    <!ATTLIST AttributeInstance
+        Attribute      CDATA #REQUIRED
+        AttributeValue CDATA #IMPLIED>
+    <!ELEMENT RelationshipInstanceTable (RelationshipInstance*)>
+    <!ATTLIST RelationshipInstanceTable
+        Relationship CDATA #REQUIRED>
+    <!ELEMENT RelationshipInstance (ParticipantInstance, ParticipantInstance, ParticipantInstance?)>
+    <!ELEMENT ParticipantInstance EMPTY>
+    <!ATTLIST ParticipantInstance
+        Object         CDATA #REQUIRED
+        Role           CDATA #IMPLIED
+        ObjectInstance CDATA #REQUIRED>
+    <!ELEMENT MetamodelPopulation EMPTY>
+    <!ATTLIST MetamodelPopulation
+        MetamodelVersion CDATA #REQUIRED>
+    <!ELEMENT Configuration (Description?, ArchetypeFile*, Translation*)>
+    <!ATTLIST Configuration
+        Name CDATA #REQUIRED>
+    <!ELEMENT ArchetypeFile (#PCDATA)>
+    <!ATTLIST ArchetypeFile
+        Path         CDATA #IMPLIED
+        RelativePath CDATA #IMPLIED
+        Cached       (False | True) "False">
+    <!ELEMENT Translation (ErrorMessages?, GeneratedFile*, Notes?)>
+    <!ATTLIST Translation
+        ArchetypeFile CDATA #REQUIRED
+        StartTime     CDATA #REQUIRED
+        Duration      CDATA #REQUIRED
+        ExitStatus    CDATA #REQUIRED>
+    <!ELEMENT ErrorMessages (#PCDATA)>
+    <!ATTLIST ErrorMessages
+        TextFormat (Plain | HTML) "Plain">
+    <!ELEMENT GeneratedFile (#PCDATA)>
+    <!ATTLIST GeneratedFile
+        Path         CDATA #IMPLIED
+        RelativePath CDATA #IMPLIED
+        Cached       (False | True) "False">
+    <!ELEMENT Notes (#PCDATA)>
+    <!ATTLIST Notes
+        TextFormat (Plain | HTML) "Plain">
+    <!ELEMENT DomainChart (Shape*, BinaryLink*)>
+    <!ATTLIST DomainChart
+        Path         CDATA #IMPLIED
+        RelativePath CDATA #IMPLIED
+        Width        CDATA #REQUIRED
+        Height       CDATA #REQUIRED
+        Font         CDATA #REQUIRED
+        Notation     (ShlaerMellor | ExecutableUML | ExecutableUML2) "ShlaerMellor">
+    <!ELEMENT SubsystemRelationshipModel (Shape*, BinaryLink*)>
+    <!ATTLIST SubsystemRelationshipModel
+        Path         CDATA #IMPLIED
+        RelativePath CDATA #IMPLIED
+        Width        CDATA #REQUIRED
+        Height       CDATA #REQUIRED
+        Font         CDATA #REQUIRED
+        Notation     (ShlaerMellor | ExecutableUML | ExecutableUML2) "ShlaerMellor">
+    <!ELEMENT SubsystemCommunicationModel (Shape*, BinaryLink*)>
+    <!ATTLIST SubsystemCommunicationModel
+        Path         CDATA #IMPLIED
+        RelativePath CDATA #IMPLIED
+        Width        CDATA #REQUIRED
+        Height       CDATA #REQUIRED
+        Font         CDATA #REQUIRED
+        Notation     (ShlaerMellor | ExecutableUML | ExecutableUML2) "ShlaerMellor">
+    <!ELEMENT ObjectInformationModel (Shape*, (BinaryLink | SpurLink | ParentLink | ChildLink)*)>
+    <!ATTLIST ObjectInformationModel
+        Path         CDATA #IMPLIED
+        RelativePath CDATA #IMPLIED
+        Width        CDATA #REQUIRED
+        Height       CDATA #REQUIRED
+        Font         CDATA #REQUIRED
+        Notation     (ShlaerMellor | ExecutableUML | ExecutableUML2) "ShlaerMellor">
+    <!ELEMENT ObjectCommunicationModel (Shape*, BinaryLink*)>
+    <!ATTLIST ObjectCommunicationModel
+        Path         CDATA #IMPLIED
+        RelativePath CDATA #IMPLIED
+        Width        CDATA #REQUIRED
+        Height       CDATA #REQUIRED
+        Font         CDATA #REQUIRED
+        Notation     (ShlaerMellor | ExecutableUML | ExecutableUML2) "ShlaerMellor">
+    <!ELEMENT StateTransitionDiagram (Shape*, (BinaryLink | SimpleUnaryLink)*)>
+    <!ATTLIST StateTransitionDiagram
+        Path         CDATA #IMPLIED
+        RelativePath CDATA #IMPLIED
+        Width        CDATA #REQUIRED
+        Height       CDATA #REQUIRED
+        Font         CDATA #REQUIRED
+        Notation     (ShlaerMellor | ExecutableUML | ExecutableUML2) "ShlaerMellor">
+    <!ELEMENT Shape EMPTY>
+    <!ATTLIST Shape
+        Name               CDATA #REQUIRED
+        X                  CDATA #REQUIRED
+        Y                  CDATA #REQUIRED
+        Width              CDATA #REQUIRED
+        Height             CDATA #REQUIRED
+        PreferredSizeUsage (None | UseAsSize | UseAsMinimumSize | UseAsMaximumSize) "UseAsSize">
+    <!ELEMENT BinaryLink (WayPoint*)>
+    <!ATTLIST BinaryLink
+        LinkID             CDATA #REQUIRED
+        SourceShape        CDATA #REQUIRED
+        TargetShape        CDATA #REQUIRED
+        LabelAnchorFlipped (False | True) "False">
+    <!ELEMENT WayPoint EMPTY>
+    <!ATTLIST WayPoint
+        X CDATA #REQUIRED
+        Y CDATA #REQUIRED>
+    <!ELEMENT SimpleUnaryLink (WayPoint*, TargetPoint)>
+    <!ATTLIST SimpleUnaryLink
+        LinkID      CDATA #REQUIRED
+        SourceShape CDATA #REQUIRED>
+    <!ELEMENT TargetPoint EMPTY>
+    <!ATTLIST TargetPoint
+        X CDATA #REQUIRED
+        Y CDATA #REQUIRED>
+    <!ELEMENT SpurLink (WayPoint*, TargetPoint)>
+    <!ATTLIST SpurLink
+        LinkID      CDATA #REQUIRED
+        SourceShape CDATA #REQUIRED>
+    <!ELEMENT ParentLink (WayPoint*, TargetPoint)>
+    <!ATTLIST ParentLink
+        LinkID      CDATA #REQUIRED
+        SourceShape CDATA #REQUIRED>
+    <!ELEMENT ChildLink (WayPoint*)>
+    <!ATTLIST ChildLink
+        LinkID      CDATA #REQUIRED
+        SourceShape CDATA #REQUIRED>
+    <!ELEMENT Report (Attachment*)>
+    <!ATTLIST Report
+        Path         CDATA #IMPLIED
+        RelativePath CDATA #IMPLIED
+        Id           CDATA #REQUIRED>
+    <!ELEMENT Attachment EMPTY>
+    <!ATTLIST Attachment
+        Path         CDATA #IMPLIED
+        RelativePath CDATA #IMPLIED
+        Id           CDATA #REQUIRED>
+]>
+<Project Name="Sistem Keuangan" Notation="ExecutableUML2" Location="file:///D:/Sistem%20Keuangan.ooa" LocationFormat="OOA Interchange Format 0.04">
+    <Domain Name="Sistem Keuangan" DomainCategory="Service">
+        <InformationModel Name="Sistem Keuangan">
+            <Object Name="Siswa">
+                <SimpleAttribute Name="nis">
+                </SimpleAttribute>
+                <SimpleAttribute Name="nama">
+                </SimpleAttribute>
+                <SimpleAttribute Name="jenjangKelas">
+                </SimpleAttribute>
+                <SimpleAttribute Name="idKelas">
+                </SimpleAttribute>
+                <SimpleAttribute Name="nominalSumbangan">
+                </SimpleAttribute>
+            </Object>
+            <Object Name="Rekap Setoran">
+                <SimpleAttribute Name="idSetoran">
+                </SimpleAttribute>
+                <SimpleAttribute Name="idIuran">
+                </SimpleAttribute>
+                <SimpleAttribute Name="nominalDisetorkan">
+                </SimpleAttribute>
+            </Object>
+            <Object Name="Rekap Iuran">
+                <SimpleAttribute Name="idRekap">
+                </SimpleAttribute>
+                <SimpleAttribute Name="idIuran">
+                </SimpleAttribute>
+                <SimpleAttribute Name="nisSiswa">
+                </SimpleAttribute>
+                <SimpleAttribute Name="nominalRekap">
+                </SimpleAttribute>
+            </Object>
+            <Object Name="Rekap Pengembalian" CustomLetters="RKB">
+                <SimpleAttribute Name="IdPengembalian">
+                </SimpleAttribute>
+                <SimpleAttribute Name="IdPeminjaman">
+                </SimpleAttribute>
+                <SimpleAttribute Name="NominalPengembalian">
+                </SimpleAttribute>
+            </Object>
+            <Object Name="Rekap Peminjaman">
+                <SimpleAttribute Name="idPeminjaman">
+                </SimpleAttribute>
+                <SimpleAttribute Name="namaPeminjam">
+                </SimpleAttribute>
+                <SimpleAttribute Name="nominalPeminjaman">
+                </SimpleAttribute>
+            </Object>
+            <Object Name="Nominal Iuran">
+                <SimpleAttribute Name="idKelas">
+                </SimpleAttribute>
+                <SimpleAttribute Name="idIuran">
+                </SimpleAttribute>
+                <SimpleAttribute Name="nominalIuran">
+                </SimpleAttribute>
+            </Object>
+            <Object Name="Jenis Iuran">
+                <SimpleAttribute Name="idIuran">
+                </SimpleAttribute>
+                <SimpleAttribute Name="namaIuran">
+                </SimpleAttribute>
+            </Object>
+            <Object Name="Kelas">
+                <SimpleAttribute Name="idKelas">
+                </SimpleAttribute>
+                <SimpleAttribute Name="namaKelas">
+                </SimpleAttribute>
+            </Object>
+            <Object Name="Rekap Umum">
+                <SimpleAttribute Name="IdRekap">
+                </SimpleAttribute>
+                <SimpleAttribute Name="idSetoran">
+                </SimpleAttribute>
+                <SimpleAttribute Name="idPeminjaman">
+                </SimpleAttribute>
+                <SimpleAttribute Name="idPengembalian">
+                </SimpleAttribute>
+            </Object>
+            <SimpleRelationship RelationshipID="R1">
+                <FirstParticipant Object="Jenis Iuran">
+                </FirstParticipant>
+                <SecondParticipant Object="Rekap Setoran" Many="True">
+                </SecondParticipant>
+            </SimpleRelationship>
+            <AssociativeRelationship RelationshipID="R2">
+                <FirstParticipant Object="Kelas" Many="True">
+                </FirstParticipant>
+                <SecondParticipant Object="Jenis Iuran" Many="True">
+                </SecondParticipant>
+                <AssociativeParticipant Object="Nominal Iuran">
+                </AssociativeParticipant>
+            </AssociativeRelationship>
+            <SimpleRelationship RelationshipID="R3">
+                <FirstParticipant Object="Jenis Iuran">
+                </FirstParticipant>
+                <SecondParticipant Object="Rekap Iuran" Many="True">
+                </SecondParticipant>
+            </SimpleRelationship>
+            <SimpleRelationship RelationshipID="R4">
+                <FirstParticipant Object="Kelas">
+                </FirstParticipant>
+                <SecondParticipant Object="Siswa" Many="True">
+                </SecondParticipant>
+            </SimpleRelationship>
+            <SimpleRelationship RelationshipID="R5">
+                <FirstParticipant Object="Rekap Pengembalian">
+                </FirstParticipant>
+                <SecondParticipant Object="Rekap Peminjaman">
+                </SecondParticipant>
+            </SimpleRelationship>
+            <SimpleRelationship RelationshipID="R6">
+                <FirstParticipant Object="Rekap Setoran">
+                </FirstParticipant>
+                <SecondParticipant Object="Rekap Umum" Many="True">
+                </SecondParticipant>
+            </SimpleRelationship>
+            <SimpleRelationship RelationshipID="R7">
+                <FirstParticipant Object="Rekap Umum" Many="True">
+                </FirstParticipant>
+                <SecondParticipant Object="Rekap Iuran">
+                </SecondParticipant>
+            </SimpleRelationship>
+            <SimpleRelationship RelationshipID="R8">
+                <FirstParticipant Object="Rekap Pengembalian">
+                </FirstParticipant>
+                <SecondParticipant Object="Rekap Umum" Many="True">
+                </SecondParticipant>
+            </SimpleRelationship>
+            <SimpleRelationship RelationshipID="R9">
+                <FirstParticipant Object="Rekap Peminjaman">
+                </FirstParticipant>
+                <SecondParticipant Object="Rekap Umum" Many="True">
+                </SecondParticipant>
+            </SimpleRelationship>
+            <SimpleRelationship RelationshipID="R10">
+                <FirstParticipant Object="Siswa">
+                </FirstParticipant>
+                <SecondParticipant Object="Rekap Iuran" Many="True">
+                </SecondParticipant>
+            </SimpleRelationship>
+            <Terminator Name="nmm">
+            </Terminator>
+            <ObjectInformationModel Width="800" Height="600" Font="SansSerif-plain-12" Notation="ExecutableUML2">
+                <Shape Name="Siswa" X="155" Y="157" Width="160" Height="80"/>
+                <Shape Name="Rekap Setoran" X="234" Y="429" Width="160" Height="80"/>
+                <Shape Name="Rekap Iuran" X="289" Y="496" Width="160" Height="80"/>
+                <Shape Name="Rekap Pengembalian" X="444" Y="338" Width="160" Height="80"/>
+                <Shape Name="Rekap Peminjaman" X="379" Y="214" Width="160" Height="80"/>
+                <Shape Name="Nominal Iuran" X="400" Y="80" Width="160" Height="80"/>
+                <Shape Name="Jenis Iuran" X="572" Y="485" Width="160" Height="80"/>
+                <Shape Name="Kelas" X="72" Y="449" Width="160" Height="80"/>
+                <Shape Name="Rekap Umum" X="505" Y="421" Width="160" Height="80"/>
+                <BinaryLink LinkID="R1" SourceShape="Jenis Iuran" TargetShape="Rekap Setoran">
+                </BinaryLink>
+                <BinaryLink LinkID="R2" SourceShape="Kelas" TargetShape="Jenis Iuran">
+                </BinaryLink>
+                <BinaryLink LinkID="R3" SourceShape="Jenis Iuran" TargetShape="Rekap Iuran">
+                </BinaryLink>
+                <BinaryLink LinkID="R4" SourceShape="Kelas" TargetShape="Siswa">
+                </BinaryLink>
+                <BinaryLink LinkID="R5" SourceShape="Rekap Pengembalian" TargetShape="Rekap Peminjaman">
+                </BinaryLink>
+                <BinaryLink LinkID="R6" SourceShape="Rekap Setoran" TargetShape="Rekap Umum">
+                </BinaryLink>
+                <BinaryLink LinkID="R7" SourceShape="Rekap Umum" TargetShape="Rekap Iuran">
+                </BinaryLink>
+                <BinaryLink LinkID="R8" SourceShape="Rekap Pengembalian" TargetShape="Rekap Umum">
+                </BinaryLink>
+                <BinaryLink LinkID="R9" SourceShape="Rekap Peminjaman" TargetShape="Rekap Umum">
+                </BinaryLink>
+                <BinaryLink LinkID="R10" SourceShape="Siswa" TargetShape="Rekap Iuran">
+                </BinaryLink>
+                <SpurLink LinkID="R2" SourceShape="Nominal Iuran">
+                    <TargetPoint X="480" Y="120"/>
+                </SpurLink>
+            </ObjectInformationModel>
+            <ObjectCommunicationModel Width="800" Height="600" Font="SansSerif-plain-12" Notation="ExecutableUML2">
+                <Shape Name="nmm" X="81" Y="142" Width="160" Height="80"/>
+            </ObjectCommunicationModel>
+            <Report Id="Information Model Report">
+                <Attachment RelativePath="GraphicalModel.png" Id="Graphical Model"/>
+            </Report>
+        </InformationModel>
+    </Domain>
+    <Domain Name="Sistem Akademik" DomainCategory="Service">
+    </Domain>
+    <Domain Name="Sistem Kepegawaian" DomainCategory="Service">
+    </Domain>
+    <Bridge ClientDomain="Sistem Keuangan" ServerDomain="Sistem Akademik">
+    </Bridge>
+    <Bridge ClientDomain="Sistem Keuangan" ServerDomain="Sistem Kepegawaian">
+    </Bridge>
+    <DomainChart Width="800" Height="600" Font="SansSerif-plain-12" Notation="ExecutableUML2">
+        <Shape Name="Sistem Keuangan" X="143" Y="176" Width="160" Height="80"/>
+        <Shape Name="Sistem Akademik" X="304" Y="359" Width="160" Height="80"/>
+        <Shape Name="Sistem Kepegawaian" X="226" Y="442" Width="160" Height="80"/>
+        <BinaryLink LinkID="B1" SourceShape="Sistem Keuangan" TargetShape="Sistem Akademik">
+        </BinaryLink>
+        <BinaryLink LinkID="B2" SourceShape="Sistem Keuangan" TargetShape="Sistem Kepegawaian">
+        </BinaryLink>
+    </DomainChart>
+</Project>

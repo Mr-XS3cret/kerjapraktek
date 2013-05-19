@@ -1,0 +1,1194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0056)http://www.id-joomla.com/tutorial/202-konfigurasi-phpini -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!--<base href="http://www.id-joomla.com/tutorial/202-konfigurasi-phpini">--><base href=".">
+  
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="joomla, indonesia">
+  <meta name="title" content="Konfigurasi php.ini">
+  <meta name="author" content="arie wijayanto">
+  <meta name="description" content="ID-Joomla, Komunitas Joomla Indonesia">
+  <meta name="generator" content="Joomla! 1.5 - Open Source Content Management">
+  <title>Konfigurasi php.ini</title>
+  <link href="http://www.id-joomla.com/templates/idjoomlav2/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <script type="text/javascript" src="./keamanan Konfigurasi php.ini_files/mootools.js"></script>
+  <script type="text/javascript" src="./keamanan Konfigurasi php.ini_files/caption.js"></script>
+  <link rel="stylesheet" href="./keamanan Konfigurasi php.ini_files/style.css" type="text/css">
+  <script type="text/javascript" src="./keamanan Konfigurasi php.ini_files/menu.js.php"></script><link href="./keamanan Konfigurasi php.ini_files/dropdowntpmenu.css" rel="stylesheet" type="text/css">
+
+ 
+
+<link rel="stylesheet" href="./keamanan Konfigurasi php.ini_files/css.gzip.php" type="text/css">
+<script type="text/javascript" src="./keamanan Konfigurasi php.ini_files/js.gzip.php"></script>
+<!--[if IE 6]><script type="text/javascript">
+var IEPNGFix = window.IEPNGFix || {};
+IEPNGFix.data = IEPNGFix.data || {};
+IEPNGFix.blankImg = 'http://www.id-joomla.com/templates/idjoomlav2/images/spacer.gif';
+</script>
+<style type="text/css">
+#logos, #menuwrp .pngfix, img  { behavior: url(http://www.id-joomla.com//templates/idjoomlav2/scripts/js/iepngfix.htc);
+ }</style>
+<![endif]-->
+
+<link href="./keamanan Konfigurasi php.ini_files/css.css" rel="stylesheet" type="text/css"></head>
+<body class="bodies">
+	<div id="maincpwrapper" align="center">
+		<div id="pagewrapper" style="width:960px;">
+			<div id="pagewrapper_inner" style="width:940px;">				
+						<div id="menuwrp">
+				<div id="menuwrp1">
+					<a href="http://www.id-joomla.com/">
+						<img src="./keamanan Konfigurasi php.ini_files/spacer.gif" alt="Logo" width="200" height="68" border="0">
+					</a>
+				</div>
+				<div id="menuwrp2" style="width:740px;">
+					<div id="tp-mainnavwrap"><div id="tp-mainnav" class="clearfix"><ul class="clearfix" id="tp-cssmenu"><li class="parent">
+<a class="haschild" href="http://www.id-joomla.com/beranda">Home<span class="tpsubtitle">Beranda</span></a><ul style="height: 0px; left: -999em; "><li class="">
+<a href="http://www.id-joomla.com/beranda/aturan-umum-id-joomla">Aturan Umum Id-joomla</a></li><li class="">
+<a href="http://www.id-joomla.com/beranda/aturan-forum-id-joomla">Aturan Forum Id-Joomla</a></li><li class="parent">
+<a class="haschild" href="http://www.id-joomla.com/beranda/contact-us">Contact Us</a><ul style="width: 0px; left: -999em; "><li class="">
+<a href="http://www.id-joomla.com/beranda/contact-us/pemasangan-iklan">Pemasangan Iklan</a></li>
+</ul></li><li class="">
+<a href="http://www.id-joomla.com/beranda/tim-id-joomla">Tim ID-Joomla</a></li>
+</ul></li><li class="">
+<a href="http://wiki.id-joomla.com/">Wiki</a></li><li class="">
+<a href="http://www.id-joomla.com/id-joomla-shop">Shop<span class="tpsubtitle">Beli Merchandise</span></a></li><li class="">
+<a href="http://www.id-joomla.com/forum">Forum<span class="tpsubtitle">Forum Komunitas</span></a></li><li class="parent">
+<a class="haschild" href="http://www.id-joomla.com/anggota-komunitas/userslist/Member%20Id-joomla">Komunitas</a><ul style="height: 0px; left: -999em; "><li class="">
+<a href="http://www.id-joomla.com/anggota-komunitas/microblogging-id-joomla/list">Microblogging id-joomla</a></li>
+</ul></li><li class="parent">
+<a class="haschild" href="http://www.id-joomla.com/agenda-kegiatan-id-joomla/categories">Agenda<span class="tpsubtitle">Kegiatan id-joomla</span></a><ul style="height: 0px; left: -999em; "><li class="">
+<a href="http://www.id-joomla.com/agenda-kegiatan-id-joomla/gathering-jug-meeting/categoryevents/1">Gathering - JUG Meeting</a></li><li class="">
+<a href="http://www.id-joomla.com/agenda-kegiatan-id-joomla/workshop-seminar/categoryevents/2">Workshop - Seminar</a></li><li class="">
+<a href="http://www.id-joomla.com/agenda-kegiatan-id-joomla/mendaftarkan-acara/editevent">Mendaftarkan Acara</a></li>
+</ul></li><li class="parent">
+<a class="haschild" href="http://www.id-joomla.com/donasi?view=donations">Donasi</a><ul style="height: 0px; left: -999em; "><li class="">
+<a href="http://www.id-joomla.com/donasi/donasi?view=donations">Donasi</a></li><li class="">
+<a href="http://www.id-joomla.com/donasi/rencana-donasi?view=planning">Rencana Donasi</a></li><li class="">
+<a href="http://www.id-joomla.com/donasi/donasi?view=donate&layout=form">Form Donasi</a></li><li class="">
+<a href="http://www.id-joomla.com/donasi/konfirmasi?view=confirm">Konfirmasi</a></li><li class="">
+<a href="http://www.id-joomla.com/donasi/report?view=report">Report</a></li><li class="">
+<a href="http://www.id-joomla.com/donasi/donasi-via-paypal">Donasi Via Paypal</a></li>
+</ul></li>
+</ul></div></div>
+				</div>
+			
+			</div>							
+					
+			
+				<!--  wrp1  >> logos - module positions : user8-->
+								
+				<div class="clrfix"></div>
+				
+				
+				
+				<!-- breadcrumb -->	
+																<div id="brdcmb"><span class="breadcrumbs pathway"><a href="http://www.id-joomla.com/" class="pathway">Home</a> <img src="./keamanan Konfigurasi php.ini_files/arrow.png" alt=""> <a href="http://www.id-joomla.com/tutorial" class="pathway">Tutorial</a> <img src="./keamanan Konfigurasi php.ini_files/arrow.png" alt=""> Konfigurasi php.ini</span></div>
+												
+				<!-- inset mod position -->
+								<div class="advert">
+					<div class="advert_inner">								
+						
+	<div class="thebadgedialog" style="text-align:right; float:right;"><div style="text-align:right; position:absolute; display:block; margin-left:-61px; margin-top:-8px;width:61px; height:69px; background: url(&#39;/templates/idjoomlav2/images/style1/badge-nobox.gif&#39;) no-repeat top right;"></div></div>
+		<div class="moduletable-nobox">
+						<div class="moduletable_inner"><div class="bannergroup-nobox">
+
+<div class="banneritem-nobox"><a href="http://www.id-joomla.com/component/banners/click/12" target="_blank"><img src="./keamanan Konfigurasi php.ini_files/banner-940x90.jpg" alt="Banner"></a><div class="clr"></div>
+	</div>
+
+</div></div>
+
+		</div>
+	
+					</div>
+				</div>
+								<!-- wrp2 4 modules -->
+						
+				<!--  wrp3 - 4  modules -->
+					
+
+				<!-- wrp4 4 modules -->
+				
+				<!-- ############# BODY ############### -->
+				<!--  wrp 5 - >> mainbody module : inset -advert2 - right - left  -->
+				<div id="wrp5">
+					<div id="wrp5_inner">
+						<div id="mbody_right" style="width:940px;">
+						
+							<div id="mcontent" style="width:738px;">
+									
+
+									<div id="mcontent_inner">					
+														
+										
+
+<div class="idj-titlwwrp">	
+<div class="tpautovatar"><a href="http://www.id-joomla.com/component/comprofiler/userprofile/arieonline"><img width="58" height="70" src="./keamanan Konfigurasi php.ini_files/tn189_486d8a6952521.jpg" alt="arieonline" border="0"></a></div><div class="cicon">
+
+
+
+			
+		
+		
+		<a href="http://www.id-joomla.com/component/mailto/?tmpl=component&link=aHR0cDovL3d3dy5pZC1qb29tbGEuY29tL3R1dG9yaWFsLzIwMi1rb25maWd1cmFzaS1waHBpbmk%3D" title="E-mail" onclick="window.open(this.href,&#39;win2&#39;,&#39;width=400,height=350,menubar=yes,resizable=yes&#39;); return false;"><img src="./keamanan Konfigurasi php.ini_files/emailButton.png" alt="E-mail"></a>
+					
+
+
+</div> <!-- end cicon -->
+<div class="contentheading nomad">
+	
+					Konfigurasi php.ini			
+		</div>
+
+
+
+
+
+
+
+
+						<span>
+							<a href="http://www.id-joomla.com/tutorial">						Tutorial							</a>					</span>
+		<br>
+
+
+
+			<strong>cupu, 
+</strong>
+	
+
+
+
+		Thursday, 14 February 2008 23:09
+
+
+
+
+
+
+
+
+<div class="clrfix"></div>
+</div>
+
+
+Disini akan saya paste mengenai konfigurasi php pada php.ini, hal ini dilakukan untuk meningkatkan performa dan seckuritas dari sebuah website. Semoga bermanfaat....
+
+<p><strong>Error&nbsp; handling &amp; logging</strong></p><p>error_reporting=E_ALL</p><p>Sebaiknya dalam tahap pengembangan ataupun deployment&nbsp; anda mengeset semua level error.</p><p>display_errors=Off</p><p>Sangat disarankan anda tidak menampilkan pesan error yang di-genenrate oleh php, kecuali pada saat pengembangan.</p><p>log_error=On</p><p>direktive ini menyatakan apakah error akan ditulis ke file log atau tidak, sebaiknya ini diaktifkan untuk mengganti pesan error di browser.</p><p>error_log="C:\tmp"</p><p>sesuaikan dengan lokasi file dimana log error akan ditulis, ini memudahkan kita saat mentrace error.</p><p><strong>Variable&nbsp;</strong></p><p>register_globals=Off</p><p>Meski dalam tahap pengembangan sebaiknya directive ini tidak diaktifkan. Sebagai ganti untuk pengambilan nilai variabel gunakan superglobal.</p><p>variables_order="GPCS"</p><p>variables_order="EGPCS"&nbsp; (php versi baru)</p><p>Untuk menetapkan urutan variabel-variabel yang diregister PHP, yaitu: $_GET, S_POST, SCOOKIE dan S_SERVER&nbsp;</p><p>register_argc_argv=Off</p><p>jika ini diaktifkan maka&nbsp; parameter-parameter URL akan mudah ditangkap.</p><p>magic_quotes_gpc=Off&nbsp;</p><p>Directive in menangani data GPC dan sebaiknya tetap di-disable.sebagai ganti untuk menangani tanda kutip gunakan fungsi dedicated database atau fungsi <em>addslashes()</em>&nbsp;</p><p>magic_quotes_runtime=Off&nbsp;</p><p>Directive ini berfungsi untuk menangani data yang digenerate saat runtime. Contohnya data dari SQL dan fungsi <em>exec()</em>&nbsp;</p><p><strong>Session &amp; Cookie&nbsp;</strong></p><p>session.save_path="C:\tmp"&nbsp;</p><p>Tentukan lokasi yang aman untuk menyimpan data session. Apabila platform sistem operasi mendukung shared memory, isikan mm.</p><p>session.use_cookie=1</p><p>Nilai 1 pada option ini menyatakan bahwa modul akan menggunakan cookie untuk menyimpan id session client.</p><p>session.use_only_cookies=1</p><p>Untuk mencegah&nbsp; penyerangan melalui parameter URL ketika bekerja dengan session maka aktifkan option ini.</p><p>session.auto_start=0</p><p>Disarankan agartidak menjalankan session secara otomatis, tetapi menggunakan&nbsp; <em>session_start()</em></p><p><strong>Batasan akses&nbsp;</strong></p><p>disable_function=exec, system, popen, pro_open, passthru,fsockopen,ftp_connect,dl_open,mail,phpinfo</p><p>Option ini digunakan untuk men-disable fungsi-fungsi PHP. Fungsi-fungsi diatas yang sensitif berpeluang digunakan sebagai sarana penyerangan.</p><p>disable_classes=NamaClass</p><p>Gunakan option ini untuk memproteksi class yang sifatnya sensitif. Cara mengisi nilainya seperti disable_function,tanda koma sebagai pemisah.</p><p>enable_dl=Off</p><p>Option ini mengijinkan ekstensi-ekstensi di-load saat runtime. Selain terkait masalah sekuriti, ini juga dapat mengurangi performa.</p><p>allow_url_fopen=Off</p><p>Jika option ini di-disable maka remote file tidak diijinkan. Artinya kita tidak akan bisa mengakses objek&nbsp; URL sebagai file.</p><p>extension_dir="C:\php5-1\ext"</p><p>Tetapkan lokasi file-file ekstensi (library) secara permanen melalui option ini.</p><p>file_uploads=Off</p><p>Upload file ke server seringkali menimbulkan masalah dan disarankan agar klien tidak diijinkan mengupload file. Bisa diganti mengggunakan FTP client.</p><p>safo_mode=On</p><p>Safe mode merupakan solusi yang coba memecahkan masalah-masalah sekuriti <em>shared server. J</em>ika ini diaktifkan maka akses ke filfe-file sensitif akan diperiksa terlebih dahulu<strong>.</strong></p><p><strong>Perfomansi</strong>&nbsp;</p><p>register_long_arrays=Off</p><p>Nilai Off pada option ini akan mengakibatkan superglobal lama <em>($HTTP_*_VARS)</em> tidak dikenal.&nbsp;</p><p>expose_php=Off</p><p>Option ini mengijinkan kita untuk menulis PHP di file dengan ekstensi lain misalnya .html, .htm. Ini menjadikan kode bisa di eksekusi lebih cepat oleh server.</p><p>session.gc_divisor=1000</p><p>Option ini untuk menetapkan nilai pembagi, dimana GC (Garbage Collection) akan dijalankan tiap request.</p><p>output_buffering=4096</p><p>Untuk meningkatkan performa, gunakan buffering output dan tetapkan nilai buffer 4096 Bytes (4KB).</p><p>&nbsp;</p><p>Sekian informasi ini semoga berguna, jika ada yang kurang tepat mohon di koreksi.</p><p>sumber: buku 101 Tip &amp; Trik Pemrograman PHP karya Didik Dwi Prasetyo, diterbitkan oleh PT. Gramedia Jkt.</p><p>&nbsp;</p><!-- START of joscomment -->
+<script type="text/javascript">
+ var _JOOMLACOMMENT_MSG_DELETE 	= "Are you sure you want to delete this comment?"; var _JOOMLACOMMENT_MSG_DELETEALL = "Are you sure you want to delete all comments?"; var _JOOMLACOMMENT_WRITECOMMENT 	= "Write comment"; var _JOOMLACOMMENT_SENDFORM 		= "Send"; var _JOOMLACOMMENT_EDITCOMMENT 	= "Edit comment"; var _JOOMLACOMMENT_EDIT 			= "Edit"; var _JOOMLACOMMENT_FORMVALIDATE 	= "Please insert at least a comment."; var _JOOMLACOMMENT_FORMVALIDATE_CAPTCHA = "Please input the anti-spam code that you can read in the image."; var _JOOMLACOMMENT_FORMVALIDATE_CAPTCHA_FAILED = "Anti-spam code is not correct. Please input the code that you can read in the image."; var _JOOMLACOMMENT_FORMVALIDATE_EMAIL = "To be notified, please enter your email"; var _JOOMLACOMMENT_ANONYMOUS 	= "Anonymous"; var _JOOMLACOMMENT_BEFORE_APPROVAL = "Your comment has been queued for moderation by site administrators and will be published after approval."; var _JOOMLACOMMENT_REQUEST_ERROR = "Request failed"; var _JOOMLACOMMENT_MSG_NEEDREFRESH = "";
+</script>
+
+<script type="text/javascript" src="./keamanan Konfigurasi php.ini_files/client.js"></script>
+<div id="comment">
+<table id="CommentMenu" width="100%" cellpadding="4" cellspacing="1" border="0">
+  <tbody><tr class="commentheader">
+    <td align="left" class="label">Comments</td>
+	<td align="right">
+	  <table cellpadding="0" cellspacing="0" border="0">
+	    <tbody><tr>
+		
+		
+		
+		<td><a id="_JOOMLACOMMENT_SEARCH" href="javascript:JOSC_searchForm()"><img src="./keamanan Konfigurasi php.ini_files/jc_search.png" alt="Search"></a></td>
+		
+		
+	    </tr>
+	  </tbody></table>
+	</td>
+  </tr>
+</tbody></table>
+
+
+<table align="center" id="CommentPageNav" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tbody><tr><td>
+<div id="joscPageNav"></div>
+</td><td id="JOSC_busypage"></td></tr>
+</tbody></table>
+
+<div id="Comments">
+<table class="postcontainer" id="post3988" width="100%" cellpadding="0" cellspacing="0" style="margin-left:0;"><!-- style='padding-left:0;'> -->
+	<tbody><tr>
+		<td><a name="josc3988"></a>
+<table width="100%" cellpadding="4" cellspacing="1" border="0">
+  <tbody class="sectiontableentry1">
+  <tr>
+  <td>
+  
+  <div class="posttitle">kalo yg ini bgmn biar bisa aktif supaya ga error</div>
+  
+  <div class="small"><a href="http://www.id-joomla.com/index.php?option=com_comprofiler&task=userProfile&user=32990">rumahelite</a>  2011-04-01 10:27:09</div>
+  <hr>
+  Character problem. empty comment
+  
+  </td></tr></tbody>
+</table>
+		</td>
+	</tr>
+</tbody></table>
+
+<script type="text/javascript"> var JOSC_postCSS=2;</script></div>
+
+<div id="JOSC_formpos">
+<div class="onlyregistered">Only registered users can write comments!</div><form name="joomlacommentform" method="post" action="http://www.id-joomla.com/tutorial/PHP_SELF"><input type="hidden" name="content_id" value="202"><input type="hidden" name="component" value=""><input type="hidden" name="joscsectionid" value="4"><table class="buttoncontainer" style="display:none;" cellpadding="0" cellspacing="0"><tbody><tr><td><input type="button" class="button" name="bsend" value="{_SENDFORM}" onclick="JOSC_editPost(-1,-1)"></td><td id="JOSC_busy"></td></tr></tbody></table></form>
+</div>
+
+<div id="poweredby" align="center" class="small">Powered by <a target="_blank" href="http://compojoom.com/">!JoomlaComment 3.26</a></div>
+<h4 style="display:none;">3.26 Copyright (C) 2008 Compojoom.com / Copyright (C) 2007 Alain Georgette / Copyright (C) 2006 Frantisek Hliva. All rights reserved."</h4></div>
+<script type="text/javascript">
+var JOSC_ajaxEnabled=1;if (!JOSC_http) JOSC_ajaxEnabled=false;var JOSC_sortDownward='0';var JOSC_captchaEnabled=true;var JOSC_template='http://www.id-joomla.com/components/com_comment/joscomment/templates/blogger_plazza';var JOSC_liveSite='http://www.id-joomla.com/components/com_comment/joscomment';var JOSC_ConfigLiveSite='http://www.id-joomla.com';var JOSC_linkToContent='http://www.id-joomla.com/tutorial/202-konfigurasi-phpini';var JOSC_autopublish='1';
+</script>
+
+<script type="text/javascript"><!--
+ if (!JOSC_cssStyleSheet)
+ { var JOSC_csslink = document.createElement('link');
+ var JOSC_cssStyleSheet = 'http://www.id-joomla.com/components/com_comment/joscomment/templates/blogger_plazza/css/css.css';
+ JOSC_csslink.setAttribute('href', JOSC_cssStyleSheet );
+ JOSC_csslink.setAttribute('rel', 'stylesheet');
+ JOSC_csslink.setAttribute('type', 'text/css');
+ var JOSC_csshead = document.getElementsByTagName('head').item(0);
+ JOSC_csshead.appendChild(JOSC_csslink);
+ }//-->
+</script><!-- END of joscomment -->
+
+
+		Last Updated on Wednesday, 09 April 2008 05:22
+
+
+
+
+
+<span class="article_separator">&nbsp;</span>
+
+								
+								</div>
+															</div>		
+														<div id="rightbox">
+								<div id="rightbox_inner">
+									
+	<div class="thebadgedialog" style="text-align:right; float:right;"><div style="text-align:right; position:absolute; display:block; margin-left:-61px; margin-top:-8px;width:61px; height:69px; background: url(&#39;/templates/idjoomlav2/images/style1/badge.gif&#39;) no-repeat top right;"></div></div>
+		<div class="moduletable">
+						
+			<h3><span>JUG Indonesia</span></h3>
+		
+					<div class="moduletable_inner"><p style="text-align: center;"><a href="http://community.joomla.org/user-groups.html"><img src="./keamanan Konfigurasi php.ini_files/joomla_rug_sm.png" border="0"></a></p>
+<p style="text-align: center;"><sub><strong>Id-joomla.com</strong> adalah situs resmi Joomla User Group (JUG) Indonesia dan Joomla Translation Team</sub></p>
+<p style="text-align: center;"><img src="./keamanan Konfigurasi php.ini_files/joomla_transteam_sm.png" border="0"></p>
+<p style="text-align: center;"><sub>Download Terjemahan Joomla terakreditasi dari <a href="http://joomlacode.org/gf/project/jtranslation/frs/?action=FrsReleaseBrowse&frs_package_id=4768"><strong>JoomlaCode </strong></a>dan laporkan bugs, ide dan saran nya di <a href="http://www.id-joomla.com/forum?func=showcat&catid=26"><strong>Sub Forum Hanacaraka</strong></a></sub></p></div>
+
+		</div>
+	
+	<div class="thebadgedialog" style="text-align:right; float:right;"><div style="text-align:right; position:absolute; display:block; margin-left:-61px; margin-top:-8px;width:61px; height:69px; background: url(&#39;/templates/idjoomlav2/images/style1/badge.gif&#39;) no-repeat top right;"></div></div>
+		<div class="moduletable">
+						
+			<h3><span>Login</span></h3>
+		
+					<div class="moduletable_inner"><form action="http://www.id-joomla.com/component/comprofiler/login" method="post" id="mod_loginform" style="margin:0px;">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="mod_login">
+<tbody><tr><td><span id="mod_login_usernametext"><label for="mod_login_username">Username</label></span><br>
+<input type="text" name="username" id="mod_login_username" class="inputbox" size="14"><br>
+<span id="mod_login_passwordtext"><label for="mod_login_password">Password</label></span><br><span><input type="password" name="passwd" id="mod_login_password" class="inputbox" size="14"></span><br>
+<input type="hidden" name="op2" value="login">
+<input type="hidden" name="lang" value="english">
+<input type="hidden" name="force_session" value="1">
+<input type="hidden" name="return" value="B:aHR0cDovL3d3dy5pZC1qb29tbGEuY29tL3R1dG9yaWFsLzIwMi1rb25maWd1cmFzaS1waHBpbmk=">
+<input type="hidden" name="message" value="0">
+<input type="hidden" name="loginfrom" value="loginmodule">
+<input type="hidden" name="cbsecuritym3" value="cbm_06e8c513_66783884_b49f65a25ec851ba4c3b9955d02cfd71">
+<input type="hidden" name="j2f6946cc9329e9214d11257f5d550253" value="1">
+<input type="checkbox" name="remember" id="mod_login_remember" value="yes"> <span id="mod_login_remembermetext"><label for="mod_login_remember">Remember me</label></span><br>
+
+
+
+<script language="JavaScript" charset="utf-8">
+
+
+		
+
+
+
+		// remote scripting library
+
+
+
+		// (c) copyright 2005 modernmethod, inc
+
+
+
+		var sajax_debug_mode = false;
+
+
+
+		var sajax_request_type = "GET";
+
+
+
+		var sajax_target_id = "";
+
+
+
+		var sajax_failure_redirect = "";
+
+
+
+		
+
+
+
+		function sajax_debug(text) {
+
+
+
+			if (sajax_debug_mode)
+
+
+
+				alert(text);
+
+
+
+		}
+
+
+
+		
+
+
+
+ 		function sajax_init_object() {
+
+
+
+ 			sajax_debug("sajax_init_object() called..")
+
+
+
+ 			
+
+
+
+ 			var A;
+
+
+
+ 			
+
+
+
+ 			var msxmlhttp = new Array(
+
+
+
+				'Msxml2.XMLHTTP.5.0',
+
+
+
+				'Msxml2.XMLHTTP.4.0',
+
+
+
+				'Msxml2.XMLHTTP.3.0',
+
+
+
+				'Msxml2.XMLHTTP',
+
+
+
+				'Microsoft.XMLHTTP');
+
+
+
+			for (var i = 0; i < msxmlhttp.length; i++) {
+
+
+
+				try {
+
+
+
+					A = new ActiveXObject(msxmlhttp[i]);
+
+
+
+				} catch (e) {
+
+
+
+					A = null;
+
+
+
+				}
+
+
+
+			}
+
+
+
+ 			
+
+
+
+			if(!A && typeof XMLHttpRequest != "undefined")
+
+
+
+				A = new XMLHttpRequest();
+
+
+
+			if (!A)
+
+
+
+				sajax_debug("Could not create connection object.");
+
+
+
+			return A;
+
+
+
+		}
+
+
+
+		
+
+
+
+		var sajax_requests = new Array();
+
+
+
+		
+
+
+
+		function sajax_cancel() {
+
+
+
+			for (var i = 0; i < sajax_requests.length; i++) 
+
+
+
+				sajax_requests[i].abort();
+
+
+
+		}
+
+
+
+		
+
+
+
+		function sajax_do_call(func_name, args) {
+
+
+
+			var i, x, n;
+
+
+
+			var uri;
+
+
+
+			var post_data;
+
+
+
+			var target_id;
+
+
+
+			
+
+
+
+			sajax_debug("in sajax_do_call().." + sajax_request_type + "/" + sajax_target_id);
+
+
+
+			target_id = sajax_target_id;
+
+
+
+			if (typeof(sajax_request_type) == "undefined" || sajax_request_type == "") 
+
+
+
+				sajax_request_type = "GET";
+
+
+
+			
+
+
+
+			uri = "http://www.id-joomla.com/tutorial/202-konfigurasi-phpini";
+
+
+			if (sajax_request_type == "GET") {
+
+
+
+			
+
+
+
+				if (uri.indexOf("?") == -1) 
+
+
+
+					uri += "?rs=" + escape(func_name);
+
+
+
+				else
+
+
+
+					uri += "&rs=" + escape(func_name);
+
+
+
+				uri += "&rst=" + escape(sajax_target_id);
+
+
+
+				uri += "&rsrnd=" + new Date().getTime();
+
+
+
+				
+
+
+
+				for (i = 0; i < args.length-1; i++) 
+
+
+
+					uri += "&rsargs[]=" + escape(args[i]);
+
+
+
+
+
+
+
+				post_data = null;
+
+
+
+			} 
+
+
+
+			else if (sajax_request_type == "POST") {
+
+
+
+				post_data = "rs=" + escape(func_name);
+
+
+
+				post_data += "&rst=" + escape(sajax_target_id);
+
+
+
+				post_data += "&rsrnd=" + new Date().getTime();
+
+
+
+				
+
+
+
+				for (i = 0; i < args.length-1; i++) 
+
+
+
+					post_data = post_data + "&rsargs[]=" + escape(args[i]);
+
+
+
+			}
+
+
+
+			else {
+
+
+
+				alert("Illegal request type: " + sajax_request_type);
+
+
+
+			}
+
+
+
+			
+
+
+
+			x = sajax_init_object();
+
+
+
+			if (x == null) {
+
+
+
+				if (sajax_failure_redirect != "") {
+
+
+
+					location.href = sajax_failure_redirect;
+
+
+
+					return false;
+
+
+
+				} else {
+
+
+
+					sajax_debug("NULL sajax object for user agent:\n" + navigator.userAgent);
+
+
+
+					return false;
+
+
+
+				}
+
+
+
+			} else {
+
+
+
+				x.open(sajax_request_type, uri, true);
+
+
+
+				// window.open(uri);
+
+
+
+				
+
+
+
+				sajax_requests[sajax_requests.length] = x;
+
+
+
+				
+
+
+
+				if (sajax_request_type == "POST") {
+
+
+
+					x.setRequestHeader("Method", "POST " + uri + " HTTP/1.1");
+
+
+
+					x.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+
+
+				}
+
+
+
+			
+
+
+
+				x.onreadystatechange = function() {
+
+
+
+					if (x.readyState != 4) 
+
+
+
+						return;
+
+
+
+
+
+
+
+					sajax_debug("received " + x.responseText);
+
+
+
+				
+
+
+
+					var status;
+
+
+
+					var data;
+
+
+
+					var txt = x.responseText.replace(/^\s*|\s*$/g,"");
+
+
+
+					status = txt.charAt(0);
+
+
+
+					data = txt.substring(2);
+
+
+
+
+
+
+
+					if (status == "") {
+
+
+
+						// let's just assume this is a pre-response bailout and let it slide for now
+
+
+
+					} else if (status == "-") 
+
+
+
+						alert("Error: " + data);
+
+
+
+					else {
+
+
+
+						if (target_id != "") 
+
+
+
+							document.getElementById(target_id).innerHTML = eval(data);
+
+
+
+						else {
+
+
+
+							try {
+
+
+
+								var callback;
+
+
+
+								var extra_data = false;
+
+
+
+								if (typeof args[args.length-1] == "object") {
+
+
+
+									callback = args[args.length-1].callback;
+
+
+
+									extra_data = args[args.length-1].extra_data;
+
+
+
+								} else {
+
+
+
+									callback = args[args.length-1];
+
+
+
+								}
+
+
+
+								callback(eval(data), extra_data);
+
+
+
+							} catch (e) {
+
+
+
+								sajax_debug("Caught error " + e + ": Could not eval " + data );
+
+
+
+							}
+
+
+
+						}
+
+
+
+					}
+
+
+
+				}
+
+
+
+			}
+
+
+
+			
+
+
+
+			sajax_debug(func_name + " uri = " + uri + "/post = " + post_data);
+
+
+
+			x.send(post_data);
+
+
+
+			sajax_debug(func_name + " waiting..");
+
+
+
+			delete x;
+
+
+
+			return true;
+
+
+
+		}
+
+
+
+		
+
+
+
+		
+
+
+		
+
+
+
+		// wrapper for whatru
+
+
+		
+
+
+
+		function x_whatru() {
+
+
+
+			sajax_do_call("whatru",
+
+
+
+				x_whatru.arguments);
+
+
+
+		}
+
+
+
+		
+
+
+
+		  
+
+	function do_save(status) {
+
+
+
+        document.getElementById('whatrudiv2').innerHTML = status;
+
+
+
+    }
+
+
+
+    function wrugetTextBox() {
+
+
+
+        document.getElementById("whatrudiv2").style.display = 'none'; 
+
+        document.getElementById("whatrudiv1").style.display = ''; 
+
+    }
+
+
+
+    function wrusaveStatus(id, uname, defaulttext){
+
+        var status;
+
+        document.getElementById("whatrudiv1").style.display = 'none';
+
+        document.getElementById("whatrudiv2").style.display = '';
+
+        status = document.getElementById("statusText").value; 
+        
+        //uncomment  the line below to enable utf8 encoding, you also need to adjust the field length of cb_rustatus in comprofiler table of your joomla database because it is limited to 255 characters
+        //status = convertChar2CP(status);
+               
+        x_whatru(id, uname, status, defaulttext, do_save);         
+
+    }       
+
+
+
+    function wruclearStatus(id, uname, defaulttext){
+
+        var status;
+
+        document.getElementById("whatrudiv1").style.display = 'none';
+
+        document.getElementById("whatrudiv2").style.display = '';       
+
+        document.getElementById("statusText").value = 'is';
+
+        status = document.getElementById("statusText").value;
+       
+        x_whatru(id, uname, status, defaulttext, do_save);
+
+    }
+    
+    
+    
+  function convertCP2DecNCR ( textString ) {
+  var outputString = "";
+  textString = textString.replace(/^\s+/, '');
+  if (textString.length == 0) { return ""; }
+  textString = textString.replace(/\s+/g, ' ');
+  var listArray = textString.split(' ');
+  for ( var i = 0; i < listArray.length; i++ ) {
+    var n = parseInt(listArray[i], 16);
+    outputString += ('&#' + n + ';');
+  }
+  return( outputString );
+  }
+  
+  function convertChar2CP ( textString ) { 
+    var haut = 0;
+    var n = 0;
+    CPstring = '';
+    for (var i = 0; i < textString.length; i++) {
+        var b = textString.charCodeAt(i); 
+        if (b < 0 || b > 0xFFFF) {
+            CPstring += 'Error ' + dec2hex(b) + '!';
+        }
+        if (haut != 0) {
+            if (0xDC00 <= b && b <= 0xDFFF) {
+                CPstring += dec2hex(0x10000 + ((haut - 0xD800) << 10) + (b - 0xDC00)) + ' ';
+                haut = 0;
+                continue;
+            }else {
+                CPstring += '!erreur ' + dec2hex(haut) + '!';
+                haut = 0;
+            }
+        }
+        if (0xD800 <= b && b <= 0xDBFF) {
+            haut = b;
+        }
+        else {
+            CPstring += dec2hex(b) + ' ';
+        }
+    }
+        CPstring = CPstring.substring(0, CPstring.length-1);
+    
+        return convertCP2DecNCR(CPstring) ;   
+  }
+  
+  function dec2hex ( textString ) {
+ return (textString+0).toString(16).toUpperCase();
+ }
+   
+  
+  
+  
+
+    
+    
+
+</script>
+
+<link rel="stylesheet" type="text/css" href="./keamanan Konfigurasi php.ini_files/whatru.css">
+
+
+<input type="submit" name="Submit" class="button" value="Login"></td></tr>
+<tr><td><a href="http://www.id-joomla.com/component/comprofiler/lostpassword" class="mod_login">Forgot login?</a></td></tr>
+<tr><td>No account yet? <a href="http://www.id-joomla.com/component/comprofiler/registers" class="mod_login">Register</a></td></tr>
+</tbody></table></form></div>
+
+		</div>
+	
+	<div class="thebadgedialog" style="text-align:right; float:right;"><div style="text-align:right; position:absolute; display:block; margin-left:-61px; margin-top:-8px;width:61px; height:69px; background: url(&#39;/templates/idjoomlav2/images/style1/badge-dark.gif&#39;) no-repeat top right;"></div></div>
+		<div class="moduletable-dark">
+						<div class="moduletable_inner">
+
+
+
+
+
+
+<div class="search-dark" style="background-color: transparent;  ">
+<form method="get" action="http://www.google.co.id/custom" target="_top">
+<input name="q" id="mod-dark" maxlength="20" alt="search" class="inputbox" type="text" size="22" value="search..." onblur="if(this.value==&#39;&#39;) this.value=&#39;search...&#39;;" onfocus="if(this.value==&#39;search...&#39;) this.value=&#39;&#39;;"><input type="hidden" name="sa" value="Search">
+<div><input type="radio" name="sitesearch" value="">Web<br><input type="radio" name="sitesearch" value="http://www.id-joomla.com" checked="checked">ID-Joomla<br></div><input type="hidden" name="channel" value="9801123179">
+<input type="hidden" name="client" value="pub-9365789199144840">
+<input type="hidden" name="forid" value="1">
+<input type="hidden" name="ie" value="UTF-8">
+<input type="hidden" name="oe" value="UTF-8">
+<input type="hidden" name="safe" value="active">
+<input type="hidden" name="cof" value="GALT:#228aaf;GL:1;DIV:#FFFFFF;VLC:228aaf;AH:center;BGC:FFFFFF;LBGC:FFFFFF;ALC:228aaf;LC:228aaf;T:000000;GFNT:228aaf;GIMP:228aaf;LH:50;LW:286;L:http://;S:http://;LP:1;FORID:1;">
+<input type="hidden" name="hl" value="en">
+</form>
+</div>
+</div>
+
+		</div>
+	
+	<div class="thebadgedialog" style="text-align:right; float:right;"><div style="text-align:right; position:absolute; display:block; margin-left:-61px; margin-top:-8px;width:61px; height:69px; background: url(&#39;/templates/idjoomlav2/images/style1/badge-nobox.gif&#39;) no-repeat top right;"></div></div>
+		<div class="moduletable-nobox">
+						<div class="moduletable_inner"><div class="bannergroup-nobox">
+
+<div class="banneritem-nobox"><a href="http://www.id-joomla.com/component/banners/click/17" target="_blank"><img src="./keamanan Konfigurasi php.ini_files/190x80-ardhosting.gif" alt="Banner"></a><div class="clr"></div>
+	</div>
+
+</div></div>
+
+		</div>
+	
+	<div class="thebadgedialog" style="text-align:right; float:right;"><div style="text-align:right; position:absolute; display:block; margin-left:-61px; margin-top:-8px;width:61px; height:69px; background: url(&#39;/templates/idjoomlav2/images/style1/badge.gif&#39;) no-repeat top right;"></div></div>
+		<div class="moduletable">
+						
+			<h3><span>Artikel</span></h3>
+		
+					<div class="moduletable_inner"><ul class="menu"><li class="item40"><a href="http://www.id-joomla.com/tip-dan-trik"><span>Tip Dan Trik</span></a></li><li class="item41"><a href="http://www.id-joomla.com/tutorial"><span>Tutorial</span></a></li><li class="item42"><a href="http://www.id-joomla.com/security"><span>Security</span></a></li><li id="current" class="active item43"><a href="http://www.id-joomla.com/referensi"><span>Referensi</span></a></li><li class="item55"><a href="http://www.id-joomla.com/component/maxcomment/?task=morefav"><span>Artikel Favorite</span></a></li><li class="item67"><a href="http://www.id-joomla.com/wawancara"><span>Wawancara</span></a></li></ul></div>
+
+		</div>
+	
+	<div class="thebadgedialog" style="text-align:right; float:right;"><div style="text-align:right; position:absolute; display:block; margin-left:-61px; margin-top:-8px;width:61px; height:69px; background: url(&#39;/templates/idjoomlav2/images/style1/badge.gif&#39;) no-repeat top right;"></div></div>
+		<div class="moduletable">
+						<div class="moduletable_inner"><div class="bannergroup">
+
+<div class="banneritem"><script>
+/** ID-Joomla - Skyscrap **/
+var sitti_pub_id = "BC0008520";
+var sitti_ad_width = "160";
+var sitti_ad_height = "600";
+var sitti_ad_type = "4";
+var sitti_ad_number = "6";
+var sitti_ad_name = "ID-Joomla - Skyscrap";
+var sitti_dep_id = "13345";
+</script>
+<script src="./keamanan Konfigurasi php.ini_files/sittiad.b1.js"></script><iframe src="./keamanan Konfigurasi php.ini_files/ad.htm" width="160" height="600" marginwidth="0" marginheight="0" vspace="0" hspace="0" scrolling="no" frameborder="0" style="margin:0px 0px 0px 0px;padding:0px;display:inline;">
+&lt;p&gt;Your browser does not support iframes.&lt;/p&gt;
+</iframe><div class="clr"></div>
+	</div>
+
+</div></div>
+
+		</div>
+	
+	<div class="thebadgedialog" style="text-align:right; float:right;"><div style="text-align:right; position:absolute; display:block; margin-left:-61px; margin-top:-8px;width:61px; height:69px; background: url(&#39;/templates/idjoomlav2/images/style1/badge-nobox.gif&#39;) no-repeat top right;"></div></div>
+		<div class="moduletable-nobox">
+						<div class="moduletable_inner"><div align="center" style="margin: 6px 0;">
+<a href="http://www.id-joomla.com/index.php?option=com_fireboard&Itemid=200003&func=view&catid=2&id=94033" target="_blank"><img src="./keamanan Konfigurasi php.ini_files/icon-winamp.gif" alt="Dengarkan siaran radio ID-Joomla" title="Dengarkan siaran radio ID-Joomla"></a> &nbsp;
+<a href="http://www.wireclub.com/Chat-Rooms/idjoomla" target="_blank"><img src="./keamanan Konfigurasi php.ini_files/icon-chat.gif" alt="Chatroom ID-Joomla" title="Chatroom ID-Joomla"></a> &nbsp; 
+<a href="http://www.facebook.com/pages/ID-Joomla/53335367335" target="_blank"><img src="./keamanan Konfigurasi php.ini_files/icon-facebook.gif" alt="Facebook Page ID-Joomla" title="Facebook Page ID-Joomla"></a>
+</div></div>
+
+		</div>
+	
+	<div class="thebadgedialog" style="text-align:right; float:right;"><div style="text-align:right; position:absolute; display:block; margin-left:-61px; margin-top:-8px;width:61px; height:69px; background: url(&#39;/templates/idjoomlav2/images/style1/badge-blue.gif&#39;) no-repeat top right;"></div></div>
+		<div class="moduletable-blue">
+						<div class="moduletable_inner"> We have&nbsp;916 guests&nbsp;online</div>
+
+		</div>
+	
+								</div>
+							</div>	
+												
+						</div>
+												
+					</div>		
+				</div>
+				<div class="clrfix"></div>
+				<!-- ########## END BODY ########-->					
+				<!--  wrp6 - 4  modules -->
+					
+				<!-- #wrp7 >> footer - module positions : user3 -->
+				<div id="wrp7">
+					<div id="wrp7_inner">
+						<div id="footer_wrapper">
+							<div id="footer_left">				
+								<div>
+									<div class="footimg">
+										<img src="./keamanan Konfigurasi php.ini_files/logofooter.png" alt="logo footer" border="0" class="pngfix" width="75" height="20" align="left">
+									</div>Komunitas Pengguna <a href="http://www.id-joomla.com/" target="_blank"><strong> Joomla Indonesia</strong></a>
+								</div>
+							</div>
+														<div id="footer_right">
+								<ul id="mainlevel-nav"><li><a href="http://www.id-joomla.com/tutorial" class="mainlevel-nav">Home</a></li><li><a href="http://www.id-joomla.com/peraturan-id-joomla" class="mainlevel-nav">Peraturan ID-Joomla</a></li><li><a href="http://www.id-joomla.com/beranda/contact-us" class="mainlevel-nav">Contact Us</a></li><li><a href="http://www.id-joomla.com/pemasangan-iklan" class="mainlevel-nav">Pemasangan Iklan</a></li><li><a href="http://www.id-joomla.com/sitemap" class="mainlevel-nav">Sitemap</a></li></ul>				
+							</div>
+														<div style="clear:both; line-height:1px;">&nbsp;</div>
+						</div>				
+					</div>
+				</div> <!--  end wrp5 -->	
+			</div><!-- end pagewrapper_inner -->
+						
+		</div><!-- end pagewrapper -->
+	</div><!-- end maincpwrapper -->	
+<div class="disclaimer" align="center">Joomla! is the trademark of Open Source Matters, Inc in the United States and other countries. The Joomla! name is used under a limited license granted by Open Source Matters.<br>Id-joomla.com is not affiliated with or endorsed by <a href="http://opensourcematters.org/" target="_blank">Open Source Matters</a> or the <a href="http://www.joomla.org/" target="_blank">Joomla! Project</a></div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="./keamanan Konfigurasi php.ini_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-143578-10");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<yoono-share-selection-layer style="position: absolute !important; border-top-width: 3px !important; border-right-width: 3px !important; border-bottom-width: 3px !important; border-left-width: 3px !important; border-top-style: solid !important; border-right-style: solid !important; border-bottom-style: solid !important; border-left-style: solid !important; border-top-color: rgb(47, 148, 47) !important; border-right-color: rgb(47, 148, 47) !important; border-bottom-color: rgb(47, 148, 47) !important; border-left-color: rgb(47, 148, 47) !important; border-image: initial !important; display: none; z-index: 100000 !important; border-top-left-radius: 5px !important; border-top-right-radius: 5px !important; border-bottom-right-radius: 5px !important; border-bottom-left-radius: 5px !important; background-image: url(http://cache.yoono.com/static/sb/share/green-30.png) !important; cursor: pointer !important; "></yoono-share-selection-layer><yoono-share-selection-btn style="position: absolute !important; display: none; background-color: rgb(47, 148, 47) !important; color: white !important; height: 17px !important; padding-top: 3px !important; padding-right: 7px !important; text-decoration: underline !important; -webkit-user-select: none !important; cursor: pointer !important; z-index: 100000 !important; font-family: arial, sans-serif !important; font-size: 11px !important; "><yoono-share-selection-btn-ico style="float: left !important; width: 16px !important; height: 16px !important; margin-left: 8px !important; margin-right: 5px !important; background-image: url(http://cache.yoono.com/static/sb/share/share-icons.png) !important; background-position: -1px -1px; "></yoono-share-selection-btn-ico>select</yoono-share-selection-btn><div class="tool-tip" style="position: absolute; top: 0px; left: 0px; visibility: hidden; zoom: 1; opacity: 0; "><div></div></div></body></html>

@@ -1,0 +1,390 @@
+/*
+ * ___________              .__                         _________                        
+ * \_   _____/__  _________ |  |   ___________   ____   \_   ___ \_______   ______  _  __
+ *  |    __)_\  \/  /\____ \|  |  /  _ \_  __ \_/ __ \  /    \  \/\_  __ \_/ __ \ \/ \/ /
+ *  |        \>    < |  |_> >  |_(  <_> )  | \/\  ___/  \     \____|  | \/\  ___/\     / 
+ * /_______  /__/\_ \|   __/|____/\____/|__|    \_____>  \______  /|__|    \___  >\/\_/  
+ *         \/      \/|__|    -==[ w3 4r3 th3 4nk3r t34m ]==-    \/             \/    
+ * 
+ * Copyrighted (c) 2010 Explore Crew  Allright Reserved
+ * Designed by samu1241 - Coded by ArRay
+ *
+ * All Resource (CSS Code, Template, Design, Program's Code) is private use only 
+ * Copying, Modifying, or Using a part or all parts of this site without authorized from the author are illegal
+ * It is protected under Indonesian Cyber Laws
+ * 
+ * Regard
+ * Explore Crew
+*/
+body {
+	margin: 0;
+	padding:0;
+	font-family: 'Courier New';
+	font-size: 11;
+	width: 100%;
+	background: #121212;
+}
+
+
+.error {
+	color: red;
+}
+
+input, textarea {
+	background: none;
+	border: 1px solid #2D3941;
+	color: #59595A;
+}
+
+.post_pvt {
+	color: red;
+}
+
+.post_smi {
+	color: orange;
+}
+
+.post_opn {
+	color: green;
+}
+
+/* MAIN LAYOUT */
+#container {
+	display: relative;
+	margin: 0px auto auto auto;
+	width: 780px;
+	height: 700px;
+	background: url("images/mbg.jpg") no-repeat center top;
+}
+
+#main {
+	float: left;
+	width: 780px;
+	height: 700px;
+	background: url("images/lbg2.jpg") no-repeat right top;
+}
+	
+	/* HEADER */
+	#header {
+		float: left;
+		width: 780px;
+		height: 116px;
+		margin-top: 30px;
+	}
+		
+		#header h3 {
+			color: #fff;
+			font-size: 15pt;
+			font-weight: bold;
+		}
+		
+		#logo {
+			float: left;
+			width: 262px;
+			height: 72px;
+			background: url("images/logo.jpg") no-repeat left top;
+		}
+		
+			#logo span {
+				display: none;
+			}
+		
+		/* MAINMENU */
+		#mainmenu {
+			float: left;
+			width: 590px;
+			height: 38px;
+			margin-top: 51px;
+			margin-left: -80px;
+		}
+		
+			#mainmenu ul {
+				padding: 0;
+				margin: 0;
+				float: left;
+				/*width: 480px;*/
+				height: 38px;
+			}
+			
+			#mainmenu li {
+				float: left;
+				display: inline;
+				padding: 10px;
+				margin: none;
+			}
+			
+			#mainmenu a{
+				text-decoration: none;
+				color: #7A7B7D;
+				text-transform: uppercase;
+			}				
+			
+				#mainmenu li:hover, #mainmenu li.mactive {
+					background: url("images/bgh2.png") no-repeat center center;
+				}
+				
+				#mainmenu li.home:hover, #mainmenu li.home.mactive {
+					background: url("images/bgh.png") no-repeat center center;
+				}
+				
+				
+				
+				#mainmenu li:hover a {
+					color: #D6D6D7;
+				}
+	
+	
+	/* ###[SIDEBAR]### */
+	
+	#sidebar {
+		float: left;
+		font-size: 11pt;
+		width: 180px;
+		color: #2D3941;
+	}
+	
+		#spacer {
+			float: left;
+			width: 180px;
+			height: 50px;
+		}
+		/*MENUCAT*/
+		#menucat {
+			float: left;
+			width: 180px;		
+		}
+		
+			#menucat ul {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				border-top: 1px dashed #1E1E20;
+			}
+			
+			#menucat a {
+				text-decoration: none;
+				color: #26557D;
+			}
+			
+			#menucat li {
+				padding: 10px;
+				border-bottom: 1px dashed #1E1E20;
+				text-transform: lowercase;
+				padding-left: 0;
+			}
+			
+				#menucat li:hover a, #menucat .active {
+					color: #C0AD55;
+				}
+		
+		/* SUB LIST */
+		#subli {
+			float: left;
+			width: 180px;
+			font-size: 11pt;
+		}
+		
+			#subli ul {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				border-top: 0px dashed #1E1E20;
+			}
+			
+			#subli a {
+				text-decoration: none;
+				color: #26557D;
+				display: block;
+				width: 100%;
+			}
+			
+			#subli li {
+				padding: 10px;
+				border-bottom: 1px dashed #1E1E20;
+				text-transform: lowercase;
+				color: #26557D;
+				padding-left: 0;
+			}
+			
+				#subli li a:hover, #subli .active {
+					color: #C0AD55;
+				}
+				
+				#subli li ul li{
+					padding: 0px;
+					padding-left: 5px;
+					border: none;
+					color: #2D3941;
+					font-size: 9pt;
+				}
+				
+				#subli li ul li a{
+					padding: 0px;
+					border: none;
+					color: #2D3941;
+				}
+
+	/* CONTENT */	
+	#content {
+		float: right;
+		width: 600px;
+		background: url("images/bgp.jpg") repeat-y right top ;
+		margin-top: 123px;
+	}
+	
+		#ccontent {
+			float: right;
+			width: 540px;
+			margin-top: -120px;
+			margin-right: 20px;
+			color: #59595A;
+			font-size: 10pt;
+		}
+		
+			#listarticle {
+				display: block;				
+			}
+			
+				#listarticle ul {
+					margin: 0;
+					padding: 0;
+					list-style: none;
+				}
+				
+				#listarticle li {
+					margin-top: 10px;
+					padding-top: 10px;
+					margin-bottom: 30px;					
+				}
+				
+				#listarticle li span {
+					display: block;
+					width: 100%;
+				}				
+				
+				#listarticle a{
+					font-weight: bold;
+					color: #2D3941;
+				}
+					
+					#listarticle .readmore {
+						text-decoration: none;
+						font-weight: normal;
+						font-size: 10pt;
+					}
+					
+					#listarticle  a:hover {
+						color: #C0AD55;
+					}
+				
+				#listarticle #author {
+					margin-top: 15px;
+					border-top: 1px dashed #2D3941;
+					border-bottom: 1px dashed #2D3941;
+					padding: 2px;
+					text-align: right;
+					font-size: 8pt;
+				}
+					
+					#listarticle #author #span {
+						display: normal;
+					}
+				
+					#listarticle #author a {
+						text-decoration: none;
+					}
+					
+						#listarticle #author a:hover {
+							text-decoration: underline;
+						}
+						
+			#postinfo {
+				float: left;
+				display: block;
+				width: 100%;
+				border-top: 1px dashed #2D3941;
+				border-bottom: 1px dashed #2D3941;
+				margin-bottom: 15px;
+			}
+							
+				#postinfo a{
+					font-weight: bold;
+					color: #2D3941;
+				}
+					
+					#postinfo  a:hover {
+						color: #C0AD55;
+					}
+				
+				#postinfo #author {				
+					padding: 2px;
+					text-align: right;
+					font-size: 8pt;
+					float: left;
+				}
+				
+					#postinfo  a {
+						text-decoration: none;
+					}
+					
+						#postinfo a:hover {
+							text-decoration: underline;
+						}
+				
+				#postinfo .cat {
+					float: right;
+				}
+						
+			
+			#ccontent .category .catdesc{
+				font-style:italic; 
+				font-size: 8pt;
+				line-height: 8pt;
+			}	
+				
+				#ccontent .category  {
+					margin: 0;
+					padding: 0;
+					line-height: 0pt;
+				}
+			
+			
+			#ccontent .judul, #ccontent .category  {
+				margin: 0;
+				padding: 0;
+				color: #989898;
+				font-weight: normal;
+				font-size: 19pt;
+			}
+			
+			#ccontent #code {
+				display: block;
+				width: 530px;
+				overflow: auto;
+				border: 1px dashed #D4D0C8;
+				padding: 5px;
+				color: #737373;
+				font-size: 10pt;
+			}
+	
+	/* FOOTER */
+	#footer {
+		float: right;
+		width: 600px;
+		height: 157px;
+		background: url("images/footer.jpg") right top no-repeat #121212;
+		color: #2D3941;
+		font-size: 9pt;
+		text-align: right;
+	}
+	
+		#footer p {
+			margin-top: 20px;
+			margin-right: 10px;
+		}
+		
+		#footer .dc {
+			font-size: 8pt;
+		}
+			
+		

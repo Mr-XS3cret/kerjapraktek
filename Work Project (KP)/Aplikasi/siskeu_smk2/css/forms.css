@@ -1,0 +1,23 @@
+body, input, select, textarea { 
+	font: 11px/20px Verdana, sans-serif; 
+}
+
+h4 { 
+	font-size: 18px; 
+}
+
+input { 
+	padding: 3px; 
+	border: 1px solid #999; 
+}
+
+td { 
+	padding: 5px; 
+}
+
+#result { 
+	background-color: #F0FFED; 
+	border: 1px solid #215800; 
+	padding: 10px; 
+	width: 610px; 
+	margin-bottom: 20px; }

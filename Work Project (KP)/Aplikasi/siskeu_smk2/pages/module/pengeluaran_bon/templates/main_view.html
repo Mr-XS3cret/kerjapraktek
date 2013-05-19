@@ -1,0 +1,28 @@
+<!-- patTemplate:tmpl name="article" -->
+<h3>{HEADLINE}</h3>
+<table class="table-common">
+	<tr>
+		<th>No.</th>
+		<th>Nama Peminjam</th>
+		<th>Tanggal Peminjaman</th>
+		<th>Jumlah Peminjaman</th>
+		<th>Jumlah Terbayar</th>
+		<th colspan=3>Aksi</th>
+	</tr>
+	<!-- patTemplate:tmpl name="data" -->
+	<tr class={CLASS_NAME}>
+		<td>{NO}</td>
+		<td>{NAMA}</td>
+		<td>{TANGGAL}</td>
+		<td>{JUMLAH_PINJAM}</td>
+		<td>{JUMLAH_BAYAR}</td>
+		<td><a href='{URL_CLEAR}' title="Pembayaran"><img src="../images/button-clear.gif" alt="Pembayaran"/></a></td>
+		<td><a href='{URL_EDIT}' title="Edit Data"><img src="../images/button-edit.gif" alt="Edit Data"/></a></td>
+		<td><a href='{URL_DETIL}' title="Detail Pembayaran"><img src="../images/button-detil.gif" alt="Detail Pembayaran"/></a></td>
+	</tr>
+	<!-- /patTemplate:tmpl -->
+</table>
+<div class="toolbar"> 
+	<a href='{URL_ADD}' title="Tambah Data"><img src="../images/button-add.gif">Input Peminjaman</a>
+</div>
+<!-- /patTemplate:tmpl -->

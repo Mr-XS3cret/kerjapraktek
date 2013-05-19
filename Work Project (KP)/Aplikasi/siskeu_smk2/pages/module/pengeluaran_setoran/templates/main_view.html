@@ -1,0 +1,26 @@
+<!-- patTemplate:tmpl name="article" -->
+<h3>{HEADLINE}</h3>
+<table class="table-common">
+	<tr>
+		<th>No.</th>
+		<th>Nama Setoran</th>
+		<th>Dana Masuk</th>
+		<th>Dana Disetorkan</th>
+		<th>Jumlah Dana Tersisa</th>
+		<th>Detil</th>
+	</tr>
+	<!-- patTemplate:tmpl name="data" -->
+	<tr class={CLASS_NAME}>
+		<td>{NO}</td>
+		<td>{NAMA}</td>
+		<td>{MASUK}</td>
+		<td>{KELUAR}</td>
+		<td>{SISA}</td>
+		<td><a href='{URL_DETAIL}' title="Detail"><img src="{IMAGE}" alt=""/></a></td>
+	</tr>
+	<!-- /patTemplate:tmpl -->
+</table>
+<div class="toolbar"> 
+	<a href='{URL_ADD}' title="Tambah Data"><img src="../images/button-add.gif">Input Setoran</a>
+</div>
+<!-- /patTemplate:tmpl -->

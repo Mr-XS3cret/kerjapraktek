@@ -1,0 +1,26 @@
+Gambar 1.1. Website UIN Sunan Kalijaga ketika di-deface 2
+Gambar 3.1. Reverse IP Domain Check domain PKSI   14
+Gambar 3.2.File passwd dari Server	16
+Gambar 3.3. Page admin tanpa session	19
+Gambar 3.4. Scanning Fingerprinting dengan PHP shell	20
+Gambar 3.5. Port scanning menggunakan RADMIN	23
+Gambar 3.6. PHP Shell pentesting I (FreeBSD 8.0) 24
+Gambar 3.7. Login PHP Shell  Pentesting II (FreeBSD 8.2)	24
+Gambar 3.8. PHP Shell Pentesting II (FreeBSD 8.2)	25
+Gambar 3.9. Back connect menggunakan netcat pentesting I  26
+Gambar 3.10. Proses Back connect Pentesting I	27
+Gambar 3.11. Akses shell dengan back connect pentesting I	28
+Gambar 2.12. Bind Connection pentesting II	29
+Gambar 3.13. Login ssh dengan user dan password dari bruteforce	30
+Gambar 3.14. Akses root dengan local root exploit	32
+Gambar 3.15. Gagal local root exploit pada FreeBSD 8.2 (pentesting II) 33
+Gambar 3.16. Id_rsa_pub attacker di home root server 35
+
+Gambar 3.17. Login ssh user root di server	36
+Gambar 3.18. Login root di server dengan RSA key	36
+Gambar 3.19. User web123 adalah root  36
+
+
+
+Tabel 3.1. Spesifikasi Komputer di PKSI UIN Sunan Kalijaga 11
+Tabel 3.2 Hasil proses fingerprinting	21

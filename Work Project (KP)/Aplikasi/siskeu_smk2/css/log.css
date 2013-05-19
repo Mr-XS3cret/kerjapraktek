@@ -1,0 +1,22 @@
+#bg{
+	clear:both;
+	height:500px;
+	width:450;
+	margin-top:40px;
+	background:url(../images/loginbg.jpg)no-repeat;
+}
+
+#log{
+	padding-top:240px;
+	padding-left:8px;
+}
+
+#log b{
+	font:13px bold Candara, Arial, Rachana;
+	color:#FFFFFF;
+}
+
+#log h3{
+	color:#FFFFFF;
+	font:bold 12px Candara, Arial, Rachana;
+}

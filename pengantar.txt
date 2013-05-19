@@ -1,0 +1,30 @@
+KATA PENGANTAR 
+ 
+Assalaamu’alaikum Wr. Wb. 
+  Segala  puji  bagi  Allah  SWT,  semoga  sholawat  dan 
+salam  selalu  tercurahkan  kepada  Rasulullah  Muhammad 
+SAW,  berserta  keluarganya,  para  sahabat  dan  orang-orang 
+yang mengikuti jejak Rasulullah sampai hari kiamat. 
+Alhamdulillah,  setelah  melewati  berbagai  proses, 
+akhirnya  revisi  terhadap  buku  panduan  Kerja  Praktek 
+Program  Studi  Teknik  Informatika  Fakultas  Sains  dan 
+Teknologi  ini  dapat  tersusun.  Walaupun  masih  sangat 
+sederhana  dan  masih  perlu  disempurnakan  secara  terus 
+menerus. Buku  panduan  ini mendeskripsikan  ruang  lingkup 
+Kerja Praktek, prosedur pelaksanaan dan penilaiannya. 
+Penyusunan  buku  panduan  ini  dimaksudkan  sebagai 
+buku  acuan  dan  petunjuk mahasiswa  Program  Studi  Teknik 
+Informatika maupun  semua  pihak  yang  terlibat  dalam Kerja 
+Praktek.  Dengan  buku  panduan  ini  diharapkan  proses 
+pelaksanaan  Kerja  Praktek  dapat  dipertangung-jawabkan  
+akuntabilitasnya sesuai program yang direncanakan.   iii 
+Kami menyadari masih  terdapat  banyak  kekurangan 
+yang  perlu  diperbaiki.  Untuk  itu  saran  dan  masukan  dari 
+pembaca sangat kami harapkan.  
+Akhirulkalam,  atas  nama  Pimpinan  Program  Studi, 
+kami  ucapkan  terima  kasih.  Semoga  seluruh  kerja  keras  ini 
+tercatat sebagai amal sholeh. Amin. 
+Wassalaamu’alaikum Wr, Wb. 
+ 
+Yogyakarta, 13 Februari 2012 
+Ketua Program Studi, 
